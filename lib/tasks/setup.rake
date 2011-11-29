@@ -8,6 +8,7 @@ task :setup do
   database     = File.join(Rails.root, 'config', 'database.yml')
   secret_token = File.join(Rails.root, 'config', 'initializers', 'secret_token.rb')
   omniauth     = File.join(Rails.root, 'config', 'initializers', 'omniauth.rb')
+  uni_web      = File.join(Rails.root, 'config', 'initializers', 'university_web.rb')
 
   unless File.exists?(database)
     FileUtils.cp(database + '.example', database)
@@ -27,6 +28,12 @@ task :setup do
     FileUtils.cp(omniauth + '.example', omniauth)
     puts "Omniauth config file created"
     `$EDITOR #{omniauth}`
+  end
+
+  unless File.exists?(university_web)
+    FileUtils.cp(university_web + '.example', university_web)
+    puts "University-web config file created"
+    `$EDITOR #{university_web}`
   end
 
   puts "Config files created"
