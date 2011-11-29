@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
 
       t.string  :twitter
       t.string  :website
+      t.string  :description
 
       t.boolean :admin, :default => false, :null => false
 
