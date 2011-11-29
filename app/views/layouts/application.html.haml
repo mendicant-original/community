@@ -1,0 +1,16 @@
+!!! 5
+%html{ :lang => "en"}
+  %head
+    %title
+      = yield(:title).blank? ? controller_name.humanize : yield(:title)
+      \- Mendicant Community
+
+
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tag
+
+    = yield(:header_bottom)
+
+  %body
+    = yield
