@@ -1,13 +1,20 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'test_notifier/runner/minitest'
+require 'capybara/rails'
+require 'support/services'
+require 'support/auth'
+require 'support/integration'
 
-class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-  #
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
-  # -- they do not yet inherit this setting
-  fixtures :all
+TestNotifier.silence_no_notifier_warning = true
+OmniAuth.config.test_mode                = true
 
-  # Add more helper methods to be used by all tests here...
+class ActionDispatch::IntegrationTest
+  include Capybara::DSL
+  include Support::Integration
+  include Support::Auth
+
+  teardown { Capybara.reset_sessions! }
 end
+
