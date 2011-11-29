@@ -16,6 +16,8 @@ gem 'jquery-rails'
 
 gem 'draper'
 
+gem "rest-client", '~> 1.6.3' # For University-Web
+
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'

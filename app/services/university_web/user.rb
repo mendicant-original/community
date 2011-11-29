@@ -27,9 +27,9 @@ module UniversityWeb
       def find(params = {})
         return [ new(params.merge("staff" => true)) ] if Rails.env.development?
 
-        resp = ::UniversityWeb.service[PATH].get :params => params
+        response = ::UniversityWeb.service[PATH].get :params => params
 
-        parse(resp).map {|hash| new(hash)}
+        parse(response).map {|hash| new(hash) }
       end
 
       def parse(response)

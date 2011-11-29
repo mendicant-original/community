@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :check_permissions, :only => [:create]
 
   def create
     unless user = User.find_by_uid(auth_hash['uid'])
@@ -31,6 +32,20 @@ class SessionsController < ApplicationController
     hash['uid'] = hash['uid'].to_s
 
     hash
+  end
+
+  def check_permissions
+    nick = auth_hash['info']['nickname']
+    user = UniversityWeb::User.find_by_github(nick)
+
+    alert = \
+      if user.nil?
+        "Your github account is not registered on University-web"
+      elsif !user.alumnus && !user.staff
+        "Sorry, but currently only Alumni and Staff have access to this site"
+      end
+
+    redirect_to root_path, :alert => alert if alert
   end
 
 end
