@@ -28,7 +28,7 @@
     line-height: 22px;
     white-space: nowrap;
     cursor: pointer;
-    color: #222;
+    color: #222 !important;
     background: #fff;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -86,7 +86,7 @@
 .btn-facebook {
     border-color: #29447e;
     border-bottom-color: #1a356e;
-    color: #fff;
+    color: #fff !important;
     background-color: #5872a7;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
     background-image: -webkit-linear-gradient(#637bad, #5872a7);
@@ -144,7 +144,7 @@
 .btn-github:focus {
     border-color: #518cc6;
     border-bottom-color: #2a65a0;
-    color: #fff;
+    color: #fff !important;
     background-color: #599bdc;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
     background-image: -webkit-linear-gradient(#599bdc, #3072b3);
@@ -198,7 +198,7 @@
 
 .btn-google {
     border-color: #3079ed;
-    color: #fff;
+    color: #fff !important;
     background: #4787ed;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4d90fe), to(#4787ed));
     background-image: -webkit-linear-gradient(#4d90fe, #4787ed);
@@ -273,7 +273,7 @@
 
 .btn-twitter {
     border-color: #a6cde6;
-    color: #327695;
+    color: #327695 !important;
     background: #cfe4f0;
     /* css3 */
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f5f7), to(rgba(255,255,255,0)));
