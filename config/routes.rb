@@ -6,4 +6,5 @@ Community::Application.routes.draw do
   match '/logout' => 'sessions#destroy', as: 'logout'
   match '/auth/github',                  as: 'login'
 
+  resources :people
 end
