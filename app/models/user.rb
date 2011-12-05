@@ -29,10 +29,11 @@ class User < ActiveRecord::Base
 
   def self.create_from_hash(hash)
     attributes = {
-      name:   hash['info']['name'],
-      email:  hash['info']['email'],
-      github: hash['info']['nickname'],
-      uid:    hash['uid']
+      name:    hash['info']['name'],
+      email:   hash['info']['email'],
+      github:  hash['info']['nickname'],
+      website: hash['info']['urls']['Blog'],
+      uid:     hash['uid']
     }
 
     create(attributes)
