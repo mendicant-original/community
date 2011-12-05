@@ -1,5 +1,5 @@
 Community::Application.routes.draw do
-  root to: 'landing#index'
+  root to: 'people#index'
 
   match '/auth/:provider/callback',      to: 'sessions#create'
   match '/auth/failure',                 to: 'sessions#failure'
