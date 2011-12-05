@@ -1,0 +1,26 @@
+#flash
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 100
+  width: 100%
+  text-align: center
+
+  .flash
+    text-align: center
+    padding: 0.5em 1em
+    font-size: 1.5em
+    margin: 0 auto
+    display: inline-block
+    +border-bottom-radius(10px)
+    +single-box-shadow(#666, 0, 0, 10px)
+
+    &.alert
+      background-color: #FDFAF2
+      color: #B3BC51
+    &.notice
+      background-color: #8c8
+      color: #252
+    &.error
+      background-color: #c88
+      color: #522
