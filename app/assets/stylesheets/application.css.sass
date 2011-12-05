@@ -1,10 +1,12 @@
 //= require_self
 //= require_tree '../../../vendor/assets/stylesheets'
 
+@import compass/reset
 @import blueprint/typography
 @import compass/css3/border-radius
 @import compass/css3/box-shadow
 @import compass/utilities/general/clearfix
+@import compass/layout/sticky-footer
 
 @import partials/flash
 @import partials/navigation
@@ -17,7 +19,14 @@ body
 #container
   width: 970px
   margin:  0 auto
+  padding: 1em 0
 
 .clear
   +clearfix
   clear: both
+
+@include sticky-footer(2em, "#root", "#root-footer", "footer")
+
+footer
+  text-align: center
+  color: #555

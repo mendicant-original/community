@@ -14,5 +14,10 @@
 
   %body
     = render :partial => "shared/flash", :locals => { :flash => flash }
-    = render :partial => "shared/navigation"
-    #container= yield
+    #root
+      #container
+        = render :partial => "shared/navigation"
+        = yield
+      #root-footer
+    %footer
+      A #{link_to "Mendicant University", "http://university.rubymendicant.com"} Project
