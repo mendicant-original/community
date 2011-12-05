@@ -18,4 +18,24 @@ class UserDecorator < ApplicationDecorator
       end
     ].join(' ').html_safe
   end
+
+  def github_link
+    return if user.github.blank?
+
+    h.link_to user.github, "https://github.com/#{user.github}",
+      :class => "btn-auth btn-github"
+  end
+
+  def twitter_link
+    return if user.twitter.blank?
+
+    h.link_to user.twitter, "https://twitter.com/#{user.twitter}",
+      :class => "btn-auth btn-twitter"
+  end
+
+  def website
+    return if user.website.blank?
+
+    h.link_to user.website, "http://#{user.website}", :class => "btn-auth"
+  end
 end

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  before_save :remove_http_from_website
+
   GITHUB_FORMAT = {
     :with        => /^(?!-)[a-z\d-]+/i,
     :message     => "can only contain alphanumeric characters and dashes.
@@ -34,5 +36,13 @@ class User < ActiveRecord::Base
     }
 
     create(attributes)
+  end
+
+  private
+
+  def remove_http_from_website
+    if website =~ /\Ahttp[s]?:\/\//i
+      self.website = website.gsub(/\Ahttp[s]?:\/\//i, '')
+    end
   end
 end
