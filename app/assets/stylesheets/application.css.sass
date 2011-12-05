@@ -1,6 +1,8 @@
 //= require_self
 //= require_tree '../../../vendor/assets/stylesheets'
 
+$blueprint-font-family: "helvetica, arial, freesans, clean, sans-serif"
+
 @import compass/reset
 @import blueprint/typography
 @import blueprint/form
@@ -14,8 +16,10 @@
 @import partials/list
 @import partials/profile
 
++blueprint-typography
+
 body
-  +blueprint-typography
+  font-size: 100%
 
 #container
   width: 970px
