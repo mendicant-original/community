@@ -14,7 +14,7 @@ class UserDecorator < ApplicationDecorator
 
     [ user.name,
       h.content_tag(:span, :class => 'description') do
-        ["is a", h.strip_tags(user.description)].join(' ')
+        ["-", h.strip_tags(user.description)].join(' ')
       end
     ].join(' ').html_safe
   end
