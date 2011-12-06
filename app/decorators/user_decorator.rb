@@ -13,9 +13,7 @@ class UserDecorator < ApplicationDecorator
     return user.name if user.description.blank?
 
     [ user.name,
-      h.content_tag(:span, :class => 'description') do
-        ["-", h.strip_tags(user.description)].join(' ')
-      end
+      h.content_tag(:span, h.strip_tags(user.description), :class => 'description')
     ].join(' ').html_safe
   end
 
