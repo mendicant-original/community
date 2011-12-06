@@ -9,7 +9,7 @@ class UserDecorator < ApplicationDecorator
     h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}")
   end
 
-  def description
+  def full_description
     return user.name if user.description.blank?
 
     [ user.name,

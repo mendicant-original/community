@@ -4,6 +4,6 @@
   - @people.each do |person|
     = link_to person_path(person.github) do
       = person.icon
-      = person.description
+      = person.full_description
 
 = will_paginate @people
