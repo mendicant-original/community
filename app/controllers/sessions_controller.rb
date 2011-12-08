@@ -47,7 +47,9 @@ class SessionsController < ApplicationController
         "Sorry, but currently only Alumni and Staff have access to this site"
       end
 
-    redirect_to root_path, :alert => alert if alert
+    unless alert.blank?
+      redirect_to root_path, :alert => alert
+    end
   end
 
 end
