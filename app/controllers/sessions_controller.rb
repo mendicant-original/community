@@ -40,8 +40,10 @@ class SessionsController < ApplicationController
 
     alert = \
       if user.nil?
+        logger.warn "[session] #{nick} doesn't exist"
         "Your github account is not registered on University-web"
       elsif !user.alumnus && !user.staff && !user.visiting_teacher
+         logger.warn "[session] #{nick} access denied"
         "Sorry, but currently only Alumni and Staff have access to this site"
       end
 
