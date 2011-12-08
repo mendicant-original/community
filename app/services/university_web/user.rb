@@ -6,7 +6,7 @@ module UniversityWeb
     RestClient::Resource.new(SITE, SERVICE_ID, SERVICE_PASS)
   end
 
-  class User < Struct.new(:github, :alumnus, :staff)
+  class User < Struct.new(:github, :alumnus, :staff, :visiting_teacher)
 
     PATH = "/users.json"
 
@@ -15,9 +15,10 @@ module UniversityWeb
     end
 
     def initialize(hash)
-      self.github  = hash["github"]
-      self.staff   = hash["staff"]
-      self.alumnus = hash["alumnus"]
+      self.github           = hash["github"]
+      self.staff            = hash["staff"]
+      self.alumnus          = hash["alumnus"]
+      self.visiting_teacher = hash["visiting_teacher"]
     end
 
     private

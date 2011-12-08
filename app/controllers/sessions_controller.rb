@@ -41,7 +41,7 @@ class SessionsController < ApplicationController
     alert = \
       if user.nil?
         "Your github account is not registered on University-web"
-      elsif !user.alumnus && !user.staff
+      elsif !user.alumnus && !user.staff && !user.visiting_teacher
         "Sorry, but currently only Alumni and Staff have access to this site"
       end
 
