@@ -15,6 +15,7 @@ gem 'cocoon'
 gem 'jquery-rails'
 
 gem 'draper'
+gem 'simple_slugs'
 
 gem "rest-client", '~> 1.6.3' # For University-Web
 
