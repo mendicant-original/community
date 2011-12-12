@@ -25,4 +25,12 @@ class ProjectDecorator < ApplicationDecorator
       show_path
     end
   end
+
+  def full_description
+    return project.name if project.description.blank?
+
+    [ project.name,
+      h.content_tag(:span, h.strip_tags(project.description), :class => 'description')
+    ].join(' ').html_safe
+  end
 end

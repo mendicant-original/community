@@ -8,6 +8,6 @@
 #projects.list
   - @projects.each do |project|
     = link_to project.show_path do
-      = project.name
+      = project.full_description
 
 = will_paginate @projects
