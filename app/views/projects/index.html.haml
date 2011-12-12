@@ -7,7 +7,7 @@
 
 #projects.list
   - @projects.each do |project|
-    = link_to project.show_path do
+    = link_to project.show_path, :class => ("core" if project.core_project) do
       = project.full_description
 
 = will_paginate @projects

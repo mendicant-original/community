@@ -1,6 +1,6 @@
 class ProjectDecorator < ApplicationDecorator
   decorates :project
-  allows :can_edit?, :name, :description, :user, :source_url, :slug
+  allows :can_edit?, :name, :description, :user, :source_url, :slug, :core_project
 
   def show_path
     if project.core_project
@@ -32,5 +32,11 @@ class ProjectDecorator < ApplicationDecorator
     [ project.name,
       h.content_tag(:span, h.strip_tags(project.description), :class => 'description')
     ].join(' ').html_safe
+  end
+
+  def source
+    return if project.source_url.blank?
+
+    h.link_to "Source Code", project.source_url
   end
 end
