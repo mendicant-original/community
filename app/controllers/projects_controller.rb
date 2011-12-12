@@ -54,13 +54,16 @@ class ProjectsController < ApplicationController
   private
 
   def find_project
-    if params[:id]
+    if params[:person_id] && params[:id]
       @user    = User.find_by_github(params[:person_id])
       @project = Project.find_by_slug_and_user_id(params[:id], @user.id)
-      @project = ProjectDecorator.decorate(@project)
+    elsif params[:id]
+      @project = Project.find_by_slug_and_core_project(params[:id], true)
     else
       @project = Project.new(:user => current_user)
     end
+
+    @project = ProjectDecorator.decorate(@project)
   end
 
   def creator_or_admin_required
