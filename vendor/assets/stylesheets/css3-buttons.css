@@ -4,7 +4,7 @@
  * https://github.com/ubuwaits/css3-as
  */
 
-a::-moz-focus-inner {
+a::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
   border: 0; }
 
 /* minimal
@@ -49,7 +49,7 @@ a.minimal {
 
 /* clean gray
 *******************************************************************************/
-a.clean-gray {
+a.clean-gray, input[type=submit] {
   background-color: #eeeeee;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#cccccc));
   /* Saf4+, Chrome */
@@ -71,9 +71,8 @@ a.clean-gray {
   padding: 5px 12px;
   text-align: center;
   text-shadow: 0 1px 0 #eee;
-  text-decoration: none;
-  width: 150px; }
-  a.clean-gray:hover {
+  text-decoration: none; }
+  a.clean-gray:hover, input[type=submit]:hover {
     background-color: #dddddd;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
     /* Saf4+, Chrome */
@@ -86,7 +85,7 @@ a.clean-gray {
     border-bottom: 1px solid #999;
     cursor: pointer;
     text-shadow: 0 1px 0 #ddd; }
-  a.clean-gray:active {
+  a.clean-gray:active, input[type=submit]:active {
     border: 1px solid #aaa;
     border-bottom: 1px solid #888;
     -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
