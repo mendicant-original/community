@@ -1,11 +1,9 @@
 %h1 People
 
-= filter_list(people_path(:format => 'js'))
+= filter_list(people_path(:format => 'js')) do
+  - if current_user
+    .controls
+      = button_to "Edit profile", edit_person_path(current_user.github),
+        :method => :get
 
-#people.list
-  - @people.each do |person|
-    = link_to person_path(person.github) do
-      = person.icon
-      = person.full_description
-
-= will_paginate @people
+#people.list= render :partial => "people"

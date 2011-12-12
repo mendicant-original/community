@@ -18,6 +18,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.js do
         @results = render_to_string(:partial => "projects").html_safe
+        render 'shared/update_list'
       end
       format.html
     end

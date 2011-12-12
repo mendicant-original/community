@@ -1,9 +1,25 @@
 class PeopleController < ApplicationController
 
   def index
-    users   = User.order("regexp_replace(name, '^.* ', '')").
-                paginate(:page => params[:page], :per_page => 50)
+    users = User.order("regexp_replace(name, '^.* ', '')")
+
+    if params[:filter]
+      users = users.where("name ILIKE :filter OR description ILIKE :filter",
+        :filter => "%#{params[:filter]}%"
+      )
+    end
+
+    users = users.paginate(:page => params[:page], :per_page => 50)
+
     @people = UserDecorator.decorate(users)
+
+    respond_to do |format|
+      format.js do
+        @results = render_to_string(:partial => "people").html_safe
+        render 'shared/update_list'
+      end
+      format.html
+    end
   end
 
   def show
