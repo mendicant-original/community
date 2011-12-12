@@ -7,4 +7,5 @@ Community::Application.routes.draw do
   match '/auth/github',                  as: 'login'
 
   resources :people
+  resources :projects
 end
