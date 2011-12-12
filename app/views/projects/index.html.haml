@@ -1,13 +1,16 @@
+- content_for :header_bottom do
+  :javascript
+    $(function(){
+      Filter.init('search', '#{projects_path(:format => 'js')}');
+    });
+
 %h1 Projects
 
-- if current_user
-  .controls
-    = button_to "New Project", new_project_path,
-      :method => :get
+.filters
+  = search_field_tag :search
+  - if current_user
+    .controls
+      = button_to "New Project", new_project_path,
+        :method => :get
 
-#projects.list
-  - @projects.each do |project|
-    = link_to project.show_path, :class => ("core" if project.core_project) do
-      = project.full_description
-
-= will_paginate @projects
+#projects.list= render :partial => "projects"

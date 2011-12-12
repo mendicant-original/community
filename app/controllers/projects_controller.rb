@@ -4,9 +4,23 @@ class ProjectsController < ApplicationController
   before_filter :creator_or_admin_required, :only => admin_actions
 
   def index
-    @projects = Project.order("name").
-                  paginate(:page => params[:page], :per_page => 50)
+    @projects = Project.order("name")
+
+    if params[:filter]
+      @projects = @projects.where("name ILIKE :filter OR description ILIKE :filter",
+        :filter => "%#{params[:filter]}%"
+      )
+    end
+
+    @projects = @projects.paginate(:page => params[:page], :per_page => 50)
     @projects = ProjectDecorator.decorate(@projects)
+
+    respond_to do |format|
+      format.js do
+        @results = render_to_string(:partial => "projects").html_safe
+      end
+      format.html
+    end
   end
 
   def show;end
