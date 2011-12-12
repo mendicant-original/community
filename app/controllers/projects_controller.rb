@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.order("name")
 
-    if params[:filter]
+    unless params[:filter].blank?
       @projects = @projects.where("name ILIKE :filter OR description ILIKE :filter",
         :filter => "%#{params[:filter]}%"
       )

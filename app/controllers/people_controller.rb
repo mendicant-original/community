@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   def index
     users = User.order("regexp_replace(name, '^.* ', '')")
 
-    if params[:filter]
+    unless params[:filter].blank?
       users = users.where("name ILIKE :filter OR description ILIKE :filter",
         :filter => "%#{params[:filter]}%"
       )

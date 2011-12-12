@@ -4,7 +4,7 @@ Filter.init = function(field, path){
   this.field = '#' + field;
   this.path  = path;
 
-  $(this.field).click(function(e){
+  $(this.field).bind('search', function(e){
     Filter.update();
   }).keyup(function(e){
     Filter.update();

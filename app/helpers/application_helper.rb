@@ -11,7 +11,7 @@ module ApplicationHelper
 
     content_tag(:div, {:class => "filters"}, false) do
       [
-        search_field_tag(:search, nil, :autocomplete => "off"),
+        search_field_tag(:search, nil, :results => 0, :autocomplete => "off"),
         (capture(&block) if block_given?)
       ].join.html_safe
     end
