@@ -2,7 +2,6 @@
   - flash.each do |flashtype, message|
     %div{:class => "flash #{flashtype}", :id => "flash-#{flashtype}"}
       = message
-      = link_to "hide", "#hide", :class => "hide"
   - unless flash.empty?
     :javascript
       Flash.init();
