@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
 
   def access_denied
     flash[:alert] = "Sorry, you can't access this area"
-    redirect :back
+    redirect_back_or_default root_path
   end
 
   def redirect_back_or_default(default)

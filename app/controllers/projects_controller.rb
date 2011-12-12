@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :find_project,              :only => [:show]
+  before_filter :find_project,              :only => admin_actions
   before_filter :user_required,             :only => admin_actions
   before_filter :creator_or_admin_required, :only => admin_actions
 
@@ -16,11 +16,15 @@ class ProjectsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find_by_slug(params[:id])
+    if params[:id]
+      @project = Project.find_by_slug(params[:id])
+    else
+      @project = Project.new(:user => current_user)
+    end
   end
 
   def creator_or_admin_required
-    access_denied unless current_user.admin? || @project.user == current_user
+    access_denied unless current_user.admin? || (@project.user == current_user)
   end
 
 end
