@@ -34,6 +34,6 @@ class UserDecorator < ApplicationDecorator
   def website
     return if user.website.blank?
 
-    h.link_to user.website, "http://#{user.website}", :class => "btn-auth"
+    h.link_to user.website, "http://#{user.website}", :class => "clean-gray"
   end
 end
