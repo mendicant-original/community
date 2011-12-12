@@ -1,12 +1,6 @@
-- content_for :header_bottom do
-  :javascript
-    $(function(){
-      Filter.init('search', '#{projects_path(:format => 'js')}');
-    });
-
 %h1 Projects
 
-= filter_list do
+= filter_list(projects_path(:format => 'js')) do
   - if current_user
     .controls
       = button_to "New Project", new_project_path,
