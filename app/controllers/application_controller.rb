@@ -25,8 +25,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def self.admin_actions
+    [:new, :create, :edit, :update, :destroy]
+  end
+
   def store_location
     session[:return_to] = request.fullpath
+  end
+
+  def access_denied
+    flash[:alert] = "Sorry, you can't access this area"
+    redirect :back
   end
 
   def redirect_back_or_default(default)
