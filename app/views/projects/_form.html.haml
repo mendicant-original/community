@@ -1,0 +1,15 @@
+= form_for @project, :url => @project.path do |f|
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :source_url
+    %br
+    = f.text_field :source_url
+  %p
+    = f.submit

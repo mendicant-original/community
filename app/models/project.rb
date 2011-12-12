@@ -8,4 +8,12 @@ class Project < ActiveRecord::Base
 
   attr_protected :core_project
 
+  def can_edit?(user)
+    if user && (user.admin? || self.user == user)
+      true
+    else
+      false
+    end
+  end
+
 end

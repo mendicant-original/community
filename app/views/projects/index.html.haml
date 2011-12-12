@@ -1,0 +1,13 @@
+%h1 Projects
+
+- if current_user
+  .controls
+    = button_to "New Project", new_project_path,
+      :method => :get
+
+#projects.list
+  - @projects.each do |project|
+    = link_to project.show_path do
+      = project.name
+
+= will_paginate @projects
