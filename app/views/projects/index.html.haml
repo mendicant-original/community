@@ -6,8 +6,7 @@
 
 %h1 Projects
 
-.filters
-  = search_field_tag :search
+= filter_list do
   - if current_user
     .controls
       = button_to "New Project", new_project_path,
