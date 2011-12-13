@@ -1,4 +1,6 @@
-= form_for @project, :url => @project.path do |f|
+= form_for @project, :url => ProjectDecorator.decorate(@project).path do |f|
+  = error_messages_for @project
+
   %p
     = f.label :name
     %br

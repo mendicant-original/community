@@ -39,7 +39,6 @@ class LearningMaterialsController < ApplicationController
       flash[:notice] = "Learning Material sucessfully created"
       redirect_to learning_material_path(@lm.slug)
     else
-      #TODO Handle Errors
       render :action => :new
     end
   end
@@ -49,7 +48,6 @@ class LearningMaterialsController < ApplicationController
       flash[:notice] = "Learning Material sucessfully updated"
       redirect_to learning_material_path(@lm.slug)
     else
-      #TODO Handle Errors
       render :action => :edit
     end
   end

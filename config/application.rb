@@ -53,3 +53,8 @@ module Community
     config.assets.version = '1.0'
   end
 end
+
+# Default uses divs which cause rendering issues
+ActionView::Base.field_error_proc = Proc.new { |html_tag, instance|
+  "<span class=\"field_with_errors\">#{html_tag}</span>".html_safe
+}

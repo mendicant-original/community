@@ -1,4 +1,6 @@
 = form_for @lm do |f|
+  = error_messages_for @lm
+
   %p
     = f.label :name
     %br

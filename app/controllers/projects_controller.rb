@@ -24,11 +24,14 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def show;end
+  def show
+    @project = ProjectDecorator.decorate(@project)
+  end
+
   def edit;end
 
   def new
-    @project = ProjectDecorator.decorate(Project.new)
+    @project = Project.new
   end
 
   def create
@@ -38,10 +41,8 @@ class ProjectsController < ApplicationController
 
     if @project.save
       flash[:notice] = "Project sucessfully created"
-      @project = ProjectDecorator.find(@project.id)
-      redirect_to @project.show_path
+      redirect_to ProjectDecorator.find(@project.id).show_path
     else
-      #TODO Handle Errors
       render :action => :new
     end
   end
@@ -49,18 +50,16 @@ class ProjectsController < ApplicationController
   def update
     params[:project].delete(:user_id)
 
-    if @project.model.update_attributes(params[:project])
+    if @project.update_attributes(params[:project])
       flash[:notice] = "Project sucessfully updated"
-      @project = ProjectDecorator.find(@project.id)
-      redirect_to @project.show_path
+      redirect_to ProjectDecorator.find(@project.id).show_path
     else
-      #TODO Handle Errors
       render :action => :edit
     end
   end
 
   def destroy
-    @project.model.destroy
+    @project.destroy
 
     flash[:notice] = "Project sucessfully destroyed"
     redirect_to projects_path
@@ -77,8 +76,6 @@ class ProjectsController < ApplicationController
     else
       @project = Project.new(:user => current_user)
     end
-
-    @project = ProjectDecorator.decorate(@project)
   end
 
   def creator_or_admin_required

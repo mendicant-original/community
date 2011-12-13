@@ -1,6 +1,8 @@
 %h1 Your Profile Information
 
 = form_for @person, :url => person_path(@person.github) do |f|
+  = error_messages_for @person
+
   %p
     = f.label :name
     %br
