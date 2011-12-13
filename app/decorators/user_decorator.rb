@@ -4,7 +4,7 @@ class UserDecorator < ApplicationDecorator
   decorates :user
 
   def icon(size=32)
-    return if user.email.blank?
+    return h.content_tag(:div, '', :class => "icon") if user.email.blank?
 
     hash = Digest::MD5.hexdigest(user.email.downcase)
 
