@@ -2,7 +2,8 @@
   = link_to "Projects", projects_path
   = link_to "Learning Materials", learning_materials_path
   = link_to "People", people_path
-  = image_tag "logo.png", :id => "logo"
+  = link_to image_tag("logo.png"), "http://university.rubymendicant.com",
+    :id => "logo"
   %span#account
     - if current_user
       = link_to "Profile", person_path(current_user.github)
