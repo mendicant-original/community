@@ -21,9 +21,6 @@ class User < ActiveRecord::Base
   validates :github,  :length => { :maximum => 40 },
                                    :format  => GITHUB_FORMAT
 
-  validates_format_of   :email,
-                        :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-
   validates_presence_of :name
   validates_presence_of :github
 
@@ -31,7 +28,7 @@ class User < ActiveRecord::Base
 
   def self.create_from_hash(hash)
     attributes = {
-      name:    hash['info']['name'],
+      name:    hash['info']['name'] || hash['info']['nickname'],
       email:   hash['info']['email'],
       github:  hash['info']['nickname'],
       website: hash['info']['urls']['Blog'],
