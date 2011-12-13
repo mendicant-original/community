@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :admin?
 
   private
 
@@ -17,10 +17,21 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.try(:id)
   end
 
+  def admin?
+    current_user && current_user.admin?
+  end
+
   def user_required
     unless signed_in?
       flash[:error] = "Please sign in to continue!"
       store_location
+      redirect_to root_path
+    end
+  end
+
+  def admin_required
+    unless admin?
+      flash[:error] = "You must be an admin to access this area!"
       redirect_to root_path
     end
   end

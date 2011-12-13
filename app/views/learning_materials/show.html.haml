@@ -1,0 +1,15 @@
+- content_for(:title) { @lm.name }
+
+#learning_material
+  %h1= @lm.name
+
+  %p= @lm.description
+
+  %p= @lm.url
+
+  - if admin?
+    .control-bar
+      = link_to "Edit", edit_learning_material_path(@lm.slug), :class => "clean-gray"
+      = link_to "Destroy", learning_material_path(@lm.slug), :method => "DELETE",
+        :confirm => "Are you sure you wish to delete these learning materials?",
+        :class   => "warn"

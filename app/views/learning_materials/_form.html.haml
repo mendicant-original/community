@@ -1,4 +1,4 @@
-= form_for @project, :url => @project.path do |f|
+= form_for @lm do |f|
   %p
     = f.label :name
     %br
@@ -8,8 +8,8 @@
     %br
     = f.text_field :description
   %p
-    = f.label :source_url
+    = f.label :url
     %br
-    = f.text_field :source_url
+    = f.text_field :url
   .control-bar
     = f.submit

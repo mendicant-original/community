@@ -1,0 +1,9 @@
+%h1 Learning Materials
+
+= filter_list(learning_materials_path(:format => 'js')) do
+  - if admin?
+    .controls
+      = button_to "New Learning Materials", new_learning_material_path,
+        :method => :get
+
+#learning_materials.list= render :partial => "learning_materials"

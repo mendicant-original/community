@@ -1,0 +1,5 @@
+- @lm.each do |lm|
+  = link_to learning_material_path(lm.slug) do
+    = lm.full_description
+
+= will_paginate @lm

@@ -11,4 +11,5 @@ Community::Application.routes.draw do
   end
 
   resources :projects
+  resources :learning_materials
 end
