@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
       user = User.create_from_hash(auth_hash)
     end
 
-    self.current_user = user
+    if user.errors.any?
+      flash[:error] = user.errors.full_messages.join(", ")
+    else
+      self.current_user = user
+    end
 
     redirect_back_or_default root_path
   end
