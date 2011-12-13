@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
       )
     end
 
-    @projects = @projects.paginate(:page => params[:page], :per_page => 50)
+    @projects = @projects.paginate(:page => params[:page], :per_page => 20)
     @projects = ProjectDecorator.decorate(@projects)
 
     respond_to do |format|

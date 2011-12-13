@@ -11,7 +11,7 @@ class LearningMaterialsController < ApplicationController
       )
     end
 
-    @lm = @lm.paginate(:page => params[:page], :per_page => 50)
+    @lm = @lm.paginate(:page => params[:page], :per_page => 20)
     @lm = LearningMaterialDecorator.decorate(@lm)
 
     respond_to do |format|

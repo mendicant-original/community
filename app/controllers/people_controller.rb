@@ -9,7 +9,7 @@ class PeopleController < ApplicationController
       )
     end
 
-    users = users.paginate(:page => params[:page], :per_page => 50)
+    users = users.paginate(:page => params[:page], :per_page => 20)
 
     @people = UserDecorator.decorate(users)
 
