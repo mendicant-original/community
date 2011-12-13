@@ -5,6 +5,8 @@
 
   %p= @project.description
 
+  %p= @project.submitted_by
+
   %p= @project.source
 
   - if @project.can_edit?(current_user)
