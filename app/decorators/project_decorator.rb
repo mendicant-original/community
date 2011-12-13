@@ -26,12 +26,12 @@ class ProjectDecorator < ApplicationDecorator
     end
   end
 
-  def full_description
+  def full_description(include_user = true)
     return project.name if project.description.blank?
 
     [ project.name,
       h.content_tag(:span, :class => 'description') do
-        [h.strip_tags(project.description), from].compact.join(" ")
+        [h.strip_tags(project.description), (from if include_user)].compact.join(" ")
       end
     ].join(' ').html_safe
   end
