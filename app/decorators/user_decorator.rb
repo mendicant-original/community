@@ -4,6 +4,8 @@ class UserDecorator < ApplicationDecorator
   decorates :user
 
   def icon(size=32)
+    return if user.email.blank?
+
     hash = Digest::MD5.hexdigest(user.email.downcase)
 
     h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}")
