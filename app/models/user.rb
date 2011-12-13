@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
   validates :github,  :length => { :maximum => 40 },
                                    :format  => GITHUB_FORMAT
 
-  validates_presence_of :name
-  validates_presence_of :github
+  validates_presence_of   :name, :github
+  validates_uniqueness_of :github
 
   attr_protected :admin
 
