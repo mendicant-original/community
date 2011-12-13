@@ -1,13 +1,15 @@
 - content_for(:title) { @project.name }
 
-%h1= @project.name
+#project
+  %h1= @project.name
 
-%p= @project.description
+  %p= @project.description
 
-%p= @project.source
+  %p= @project.source
 
-- if @project.can_edit?(current_user)
-  .controls
-    = link_to "Edit", @project.edit_path
-    = link_to "Destroy", @project.show_path, :method => "DELETE",
-      :confirm => "Are you sure you wish to delete this project?"
+  - if @project.can_edit?(current_user)
+    .control-bar
+      = link_to "Edit", @project.edit_path, :class => "clean-gray"
+      = link_to "Destroy", @project.show_path, :method => "DELETE",
+        :confirm => "Are you sure you wish to delete this project?",
+        :class   => "warn"

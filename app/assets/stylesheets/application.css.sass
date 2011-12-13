@@ -31,6 +31,18 @@ body
   +clearfix
   clear: both
 
+a.warn
+  color: #990000
+  &:hover
+    color: red
+
+.control-bar
+  padding: 0.5em
+  background-color: #eee
+  margin: 1em 0
+  a, input, button
+    margin-right: 1.5em
+
 @include sticky-footer(2em, "#root", "#root-footer", "footer")
 
 footer

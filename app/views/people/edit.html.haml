@@ -22,5 +22,6 @@
     = f.label :website
     %br
     = f.text_field :website
-  %p
+  .control-bar
     = f.submit "Save"
+    = link_to "View", person_path(@person.github)
