@@ -1,4 +1,6 @@
 class LearningMaterialsController < ApplicationController
+  add_crumb("Learning Materials") { |instance| instance.send :learning_materials_path }
+
   before_filter :find_learning_material, :only => admin_actions + [:show]
   before_filter :admin_required,         :only => admin_actions
 
@@ -25,6 +27,8 @@ class LearningMaterialsController < ApplicationController
 
   def show
     @lm = LearningMaterialDecorator.decorate(@lm)
+
+    add_crumb @lm.name, learning_material_path(@lm)
   end
   def edit;end
 

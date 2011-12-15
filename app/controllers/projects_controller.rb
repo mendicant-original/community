@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  add_crumb("Projects") { |instance| instance.send :projects_path }
+
   before_filter :find_project,              :only => admin_actions + [:show]
   before_filter :user_required,             :only => admin_actions
   before_filter :creator_or_admin_required, :only => admin_actions
@@ -26,6 +28,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = ProjectDecorator.decorate(@project)
+
+    add_crumb(@project.name, @project.show_path)
   end
 
   def edit;end
@@ -71,6 +75,8 @@ class ProjectsController < ApplicationController
     if params[:person_id] && params[:id]
       @user    = User.find_by_github(params[:person_id])
       @project = Project.find_by_slug_and_user_id(params[:id], @user.id)
+
+      add_crumb(@user.name, person_path(@user.github))
     elsif params[:id]
       @project = Project.find_by_slug_and_core_project(params[:id], true)
     else
