@@ -4,7 +4,7 @@ class LearningMaterialDecorator < ApplicationDecorator
   def full_description
     return learning_material.name if learning_material.description.blank?
 
-    [ learning_material.name,
+    [ learning_material.name + ":",
       h.content_tag(:span, h.strip_tags(learning_material.description), :class => 'description')
     ].join(' ').html_safe
   end

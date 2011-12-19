@@ -19,7 +19,7 @@
 
     .projects.list
       - @person.projects.each do |project|
-        = link_to project.full_description(false),
+        = link_to project.full_description,
           project.show_path
 
 

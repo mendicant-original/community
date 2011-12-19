@@ -14,7 +14,7 @@ class UserDecorator < ApplicationDecorator
   def full_description
     return user.name if user.description.blank?
 
-    [ user.name,
+    [ user.name + ":",
       h.content_tag(:span, h.strip_tags(user.description), :class => 'description')
     ].join(' ').html_safe
   end
