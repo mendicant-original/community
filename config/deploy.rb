@@ -13,8 +13,7 @@ set :deploy_via, :remote_cache
 
 set :branch, "master"
 
-# TODO Update to community.mendicantuniversity.org
-server "university.rubymendicant.com", :app, :web, :db, :primary => true
+server "community.mendicantuniversity.org", :app, :web, :db, :primary => true
 
 namespace :deploy do
   task :restart, :roles => :app do
