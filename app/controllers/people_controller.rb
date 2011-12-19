@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   add_crumb("People") { |instance| instance.send :people_path }
 
   def index
-    users = User.order("regexp_replace(name, '^.* ', '')")
+    users = User.order("name")
 
     unless params[:filter].blank?
       users = users.where("name ILIKE :filter OR description ILIKE :filter",
