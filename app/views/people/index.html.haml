@@ -1,4 +1,4 @@
-= filter_list(people_path(:format => 'js')) do
+= filter_list(people_path) do
   - if current_user
     .controls
       = button_to "Edit profile", edit_person_path(current_user.github),
