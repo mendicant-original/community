@@ -11,10 +11,15 @@
     = f.label :email
     %br
     = f.text_field :email
+  %hr
   %p
-    = f.label :description, "Short description"
+    = f.label :short_description
     %br
-    = f.text_field :description
+    = f.text_field :short_description
+  %p
+    = f.label :long_description
+    %br
+    = f.text_area :long_description
   %hr
   %p
     = f.label :twitter

@@ -12,10 +12,10 @@ class UserDecorator < ApplicationDecorator
   end
 
   def full_description
-    return user.name if user.description.blank?
+    return user.name if user.short_description.blank?
 
     [ user.name + ":",
-      h.content_tag(:span, h.strip_tags(user.description), :class => 'description')
+      h.content_tag(:span, h.strip_tags(user.short_description), :class => 'description')
     ].join(' ').html_safe
   end
 
@@ -37,6 +37,10 @@ class UserDecorator < ApplicationDecorator
     return if user.website.blank?
 
     h.link_to user.website, "http://#{user.website}", :class => "clean-gray"
+  end
+
+  def long_description
+    h.md(user.long_description)
   end
 
 end

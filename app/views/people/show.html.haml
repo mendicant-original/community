@@ -6,13 +6,12 @@
     = @person.icon(48)
     = @person.name
 
-  .description
-    = @person.description
-
   .social
     = @person.github_link
     = @person.twitter_link
     = @person.website
+
+  .description= @person.long_description
 
   - if current_user && current_user.id == @person.id
     .control-bar
