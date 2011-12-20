@@ -1,15 +1,18 @@
 nav
-  margin: 1em 0
-  padding: 0.5em 1em
-  background: #3A3D50 asset-url("nav.png", image) top left repeat-x
+  font-family: $display-font
+  margin-bottom: 1em
+  padding: 0.25em 1em
+  +background-image(linear-gradient(#4D506D, #3A3D50))
   color: #fff
   +single-box-shadow(#333, 0, 0, 5px)
   a, a:visited
+    font-size: 0.9em
+    +single-transition(all, .25s, ease-in, 0)
     color: #f9f9f9
     text-decoration: none
     margin-right: 1em
     &:hover
-      color: #C9CCE3
+      color: #D9DFFF
 
   span.nav
     float: right

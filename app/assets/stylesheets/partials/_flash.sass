@@ -1,16 +1,14 @@
 #flash
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 100
-  width: 100%
-  text-align: center
+  display: inline-block
 
   .flash
-    text-align: center
-    padding: 0.5em 1em
-    font-size: 1.5em
-    +single-box-shadow(#666, 0, 0, 10px)
+    display: inline-block
+    padding: 0 10px
+    +border-radius(3px)
+    margin: -1px 0
+    margin-right: 1em
+    border: 1px solid #2A2D3D
+    font-size: 0.9em
 
     &.alert
       background-color: #FDFAF2
