@@ -4,7 +4,8 @@ class PeopleController < ApplicationController
     users = User.order("name")
 
     unless params[:filter].blank?
-      users = users.where("name ILIKE :filter OR description ILIKE :filter",
+      users = users.where(%{name ILIKE :filter OR
+        short_description ILIKE :filter},
         :filter => "%#{params[:filter]}%"
       )
     end
