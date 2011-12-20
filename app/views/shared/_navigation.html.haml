@@ -4,8 +4,9 @@
       root_path
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
-    = link_to "News", "#TODO"
+    = link_to "Updates", "#TODO"
     = link_to "People", people_path
+    = link_to "About", "#TODO"
     %span#account
       - if current_user
         = link_to current_user.name, person_path(current_user.github)
