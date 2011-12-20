@@ -32,6 +32,8 @@ module ApplicationHelper
   end
 
   def md(content)
+    return if content.blank?
+
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
       :autolink            => true,
       :space_after_headers => true,
