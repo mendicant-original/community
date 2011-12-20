@@ -1,5 +1,7 @@
 %nav
-  %span.title= link_to "Community @ Mendicant University", root_path
+  %span.title
+    = link_to "<strong>Community</strong> @ Mendicant University".html_safe,
+      root_path
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
     = link_to "News", "#TODO"
@@ -9,5 +11,4 @@
         = link_to current_user.name, person_path(current_user.github)
         = link_to "Sign out", logout_path
       - else
-        = link_to login_path, :class => "btn-auth btn-github" do
-          Sign in with <b>Github</b>
+        = link_to "Sign in with Github", login_path
