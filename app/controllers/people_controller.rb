@@ -1,5 +1,4 @@
 class PeopleController < ApplicationController
-  add_crumb("People") { |instance| instance.send :people_path }
 
   def index
     users = User.order("name")
@@ -25,7 +24,6 @@ class PeopleController < ApplicationController
 
   def show
     @person = UserDecorator.find_by_github(params[:id]).decorate
-    add_crumb @person.name, person_path(@person.github)
   end
 
   def edit
