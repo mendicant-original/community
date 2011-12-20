@@ -1,25 +1,18 @@
 nav
-  position: relative
+  margin: 1em 0
   padding: 0.5em 1em
-  background-color: #f9f9f9
-  +border-radius(0.5em)
-  font-size: 1.1em
-  +single-box-shadow(#999, 0, 0, 2px, 0, true)
-  margin-bottom: 1em
-
-  a#logo
-    position: absolute
-    top: -20px
-    left: 427px
-    border: none
+  background: #3A3D50 asset-url("nav.png", image) top left repeat-x
+  color: #fff
+  +single-box-shadow(#333, 0, 0, 5px)
+  a, a:visited
+    color: #f9f9f9
     text-decoration: none
-
-  a
-    display: inline-block
     margin-right: 1em
+    &:hover
+      color: #C9CCE3
 
-  span#account
+  span.nav
     float: right
-    a
-      margin-right: 0
-      margin-left: 1em
+    span#account
+      border-left: 2px solid #71769E
+      padding-left: 1em

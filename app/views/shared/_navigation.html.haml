@@ -1,12 +1,11 @@
 %nav
-  = link_to "People", people_path
-  = link_to image_tag("logo.png"), "http://university.rubymendicant.com",
-    :id => "logo"
-  %span#account
-    - if current_user
-      = link_to "Profile", person_path(current_user.github)
-      = link_to "Sign out", logout_path
-    - else
-      = link_to login_path, :class => "btn-auth btn-github" do
-        Sign in with <b>Github</b>
-  .clear
+  %span.title= link_to "Community @ Mendicant University", root_path
+  %span.nav
+    = link_to "People", people_path
+    %span#account
+      - if current_user
+        = link_to "Profile", person_path(current_user.github)
+        = link_to "Sign out", logout_path
+      - else
+        = link_to login_path, :class => "btn-auth btn-github" do
+          Sign in with <b>Github</b>
