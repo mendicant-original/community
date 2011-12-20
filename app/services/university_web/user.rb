@@ -1,6 +1,6 @@
 module UniversityWeb
 
-  SITE = "http://university.rubymendicant.com"
+  SITE = "http://mendicantuniversity.org"
 
   def self.service
     RestClient::Resource.new(SITE, SERVICE_ID, SERVICE_PASS)
