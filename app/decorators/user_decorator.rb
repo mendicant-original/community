@@ -11,14 +11,6 @@ class UserDecorator < ApplicationDecorator
     h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}")
   end
 
-  def full_description
-    return user.name if user.short_description.blank?
-
-    [ user.name + ":",
-      h.content_tag(:span, h.strip_tags(user.short_description), :class => 'description')
-    ].join(' ').html_safe
-  end
-
   def github_link
     return if user.github.blank?
 
@@ -39,8 +31,8 @@ class UserDecorator < ApplicationDecorator
     h.link_to user.website, "http://#{user.website}", :class => "clean-gray"
   end
 
-  def long_description
-    h.md(user.long_description)
+  def description
+    h.md(user.description)
   end
 
 end
