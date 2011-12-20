@@ -14,16 +14,6 @@
     = @person.twitter_link
     = @person.website
 
-  - if @person.projects.any?
-    %h3 Projects
-
-    .projects.list
-      - @person.projects.each do |project|
-        = link_to project.full_description,
-          project.show_path
-
-
-
   - if current_user && current_user.id == @person.id
     .control-bar
       = link_to "Edit Profile", edit_person_path(current_user.github),

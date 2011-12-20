@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   before_save :remove_http_from_website
 
-  has_many :projects, :dependent => :destroy
-
   GITHUB_FORMAT = {
     :with        => /^(?!-)[a-z\d-]+/i,
     :message     => "can only contain alphanumeric characters and dashes.

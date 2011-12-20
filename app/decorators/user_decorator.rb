@@ -39,9 +39,4 @@ class UserDecorator < ApplicationDecorator
     h.link_to user.website, "http://#{user.website}", :class => "clean-gray"
   end
 
-  def projects
-    projects = user.projects.where(:core_project => false).order("name").limit(5)
-    ProjectDecorator.decorate(projects)
-  end
-
 end

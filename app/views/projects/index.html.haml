@@ -1,9 +1,0 @@
-%h1 Projects
-
-= filter_list(projects_path(:format => 'js')) do
-  - if current_user
-    .controls
-      = button_to "New Project", new_project_path,
-        :method => :get
-
-#projects.list= render :partial => "projects"
