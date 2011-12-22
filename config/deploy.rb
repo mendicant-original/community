@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 
 set :application, "community"
-set :repository,  "git://github.com/rmu/community.git"
+set :repository,  "git://github.com/mendicant-university/community.git"
 
 set :scm, :git
 set :deploy_to, "/var/rapp/#{application}"
