@@ -16,6 +16,7 @@
 
 .btn-auth {
     font-family: "Alte Haas Grotesk", sans-serif;
+    font-weight: bold;
     position: relative;
     display: inline-block;
     height: 22px;
@@ -191,6 +192,60 @@
 .btn-github.large:focus:before,
 .btn-github.large:active:before {
     background-position: -108px -22px;
+}
+
+/* Web
+ * This is a custom style for generic web links
+   ========================================================================== */
+
+.btn-web {
+    border-color: #d4d4d4;
+    background: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -webkit-linear-gradient(#f4f4f4, #ececec);
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.btn-web:hover,
+.btn-web:focus {
+    border-color: #C1C1C1;
+    background: #D8D8D8;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E9E9E9), to(#E5E5E5));
+    background-image: -webkit-linear-gradient(#E9E9E9, #E5E5E5);
+    background-image: -moz-linear-gradient(#E9E9E9, #E5E5E5);
+    background-image: -ms-linear-gradient(#E9E9E9, #E5E5E5);
+    background-image: -o-linear-gradient(#E9E9E9, #E5E5E5);
+    background-image: linear-gradient(#E9E9E9, #E5E5E5);
+}
+
+.btn-web:active {
+    border-color: #B8B8B8;
+    background: #D7D7D7;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D6D6D6), to(#D7D7D7));
+    background-image: -webkit-linear-gradient(#D6D6D6, #D7D7D7);
+    background-image: -moz-linear-gradient(#D6D6D6, #D7D7D7);
+    background-image: -ms-linear-gradient(#D6D6D6, #D7D7D7);
+    background-image: -o-linear-gradient(#D6D6D6, #D7D7D7);
+    background-image: linear-gradient(#D6D6D6, #D7D7D7);
+}
+
+/*
+ * Icon
+ */
+
+.btn-web:before {
+    margin: 0 0.6em 0 -0.6em;
+    background-position: -178px 0;
+}
+
+.btn-web:hover:before,
+.btn-web:focus:before,
+.btn-web:active:before {
+    /*background-position: -66px 0; */
 }
 
 

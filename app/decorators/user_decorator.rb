@@ -25,10 +25,11 @@ class UserDecorator < ApplicationDecorator
       :class => "btn-auth btn-twitter"
   end
 
-  def website
+  def website_link
     return if user.website.blank?
 
-    h.link_to user.website, "http://#{user.website}", :class => "clean-gray"
+    h.link_to user.website, "http://#{user.website}",
+      :class => "btn-auth btn-web"
   end
 
   def description
