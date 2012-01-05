@@ -16,6 +16,7 @@ gem 'jquery-rails'
 
 gem 'draper'
 gem 'redcarpet', '~> 2.0.0b3'
+gem 'slugger'
 
 gem "rest-client", '~> 1.6.3' # For University-Web
 

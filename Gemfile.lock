@@ -164,6 +164,8 @@ GEM
       ffi (~> 1.0.9)
       json_pure
       rubyzip
+    slugger (0.2.0)
+      activerecord (>= 3.0.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -207,6 +209,7 @@ DEPENDENCIES
   rest-client (~> 1.6.3)
   sass
   sass-rails (~> 3.1.5.rc.2)
+  slugger
   test_notifier (~> 1.0.0)
   therubyracer
   uglifier (>= 1.0.3)

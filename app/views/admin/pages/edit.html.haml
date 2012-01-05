@@ -1,0 +1,13 @@
+%h2 Edit Page
+
+= form_for @page, :url => admin_page_path(@page) do |f|
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  .control-bar
+    = f.submit "Save"

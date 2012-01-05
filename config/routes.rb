@@ -7,4 +7,10 @@ Community::Application.routes.draw do
   match '/auth/github',                  as: 'login'
 
   resources :people
+
+  namespace :admin do
+    resources :pages
+  end
+
+  match '/about', to: 'pages#show', id: 'about', as: 'about'
 end
