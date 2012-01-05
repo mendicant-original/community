@@ -18,7 +18,7 @@ task :setup do
 
   unless File.exists?(secret_token)
     secret   = SecureRandom.hex(64)
-    template = ERB.new(File.read(secret_token + '.erb'));
+    template = ERB.new(File.read(secret_token + '.erb'))
 
     File.open(secret_token, 'w') {|f| f.write(template.result(binding)) }
     puts "Secret Token Generated"
