@@ -3,7 +3,7 @@ class Admin::PagesController < ApplicationController
   before_filter :find_page, :only => [:edit, :update, :show]
 
   def index
-
+    @pages = Page.paginate(:page => params[:page])
   end
 
   def show

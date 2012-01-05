@@ -1,0 +1,8 @@
+%h2 Pages
+
+#pages.list
+  - @pages.each do |page|
+    = link_to admin_page_path(page) do
+      = page.title
+
+  = will_paginate @pages
