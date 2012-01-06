@@ -1,3 +1,6 @@
+- content_for :header_bottom do
+  = auto_discovery_link_tag
+
 #articles= render :partial => "article", :collection => @articles
 
 = will_paginate @articles
