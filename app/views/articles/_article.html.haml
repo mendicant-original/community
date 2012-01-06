@@ -1,7 +1,6 @@
 = content_tag_for :article, article do
   .article_title
-    = link_to article.title, article.url
-    %small= article.url_host
+    = article.title 
 
   .article_content= article.body
 
