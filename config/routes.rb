@@ -1,5 +1,5 @@
 Community::Application.routes.draw do
-  root to: 'pages#show', id: 'about'
+  root to: 'articles#index'
 
   match '/auth/:provider/callback',      to: 'sessions#create'
   match '/auth/failure',                 to: 'sessions#failure'
@@ -7,6 +7,7 @@ Community::Application.routes.draw do
   match '/auth/github',                  as: 'login'
 
   resources :people
+  resources :articles
 
   namespace :admin do
     resources :pages

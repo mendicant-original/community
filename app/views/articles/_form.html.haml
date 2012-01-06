@@ -1,0 +1,18 @@
+= form_for @article, :html => { :id => "article-form" } do |f|
+  = error_messages_for(@article)
+
+  .field
+    = f.label :title
+    = f.text_field :title, :tabindex => 1, :autofocus => true
+    %span.hint Create a short and descriptive title for your post.
+  .field
+    = f.label :url
+    = f.text_field :url, :tabindex => 2
+    %span.hint The url you want to link to.
+  .field
+    = f.label :body
+    = f.text_area :body, "data-preview" => true, :tabindex => 3
+  .control-bar
+    = f.submit 'Post!', :tabindex => 5
+    or
+    = link_to "get me out of here", root_path

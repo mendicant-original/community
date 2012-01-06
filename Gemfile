@@ -14,7 +14,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'cocoon'
 gem 'jquery-rails'
 
-gem 'draper'
+gem 'draper', :git => "git://github.com/jcasimir/draper.git"
 gem 'redcarpet', '~> 2.0.0b3'
 gem 'slugger'
 

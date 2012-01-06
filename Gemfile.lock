@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jcasimir/draper.git
+  revision: ef368a3a88f951661e9d7cb322c8ada88778e98b
+  specs:
+    draper (0.9.5)
+      activesupport (>= 2.3.10)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -63,8 +70,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    draper (0.9.5)
-      activesupport (>= 2.3.10)
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
@@ -197,7 +202,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   colorific (~> 1.0.0)
   compass (~> 0.12.alpha)
-  draper
+  draper!
   factory_girl_rails
   haml
   jquery-rails

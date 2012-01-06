@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
     create(attributes)
   end
 
+  def to_param
+    github
+  end
+
   private
 
   def remove_http_from_website

@@ -8,7 +8,11 @@ class UserDecorator < ApplicationDecorator
 
     hash = Digest::MD5.hexdigest(user.email.downcase)
 
-    h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}")
+    # Manually set height / width so layouts don't collapse while gravatars are
+    # loading
+    #
+    h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}",
+     :alt => user.name, :style => "width: #{size}px; height: #{size}px;")
   end
 
   def github_link
