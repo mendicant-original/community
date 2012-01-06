@@ -15,5 +15,5 @@
 
   - if current_user && current_user.id == @person.id
     .control-bar
-      = link_to "Edit Profile", edit_person_path(current_user.github),
+      = link_to "Edit Profile", edit_person_path(current_user),
         :class => "clean-gray"

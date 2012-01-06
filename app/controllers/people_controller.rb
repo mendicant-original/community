@@ -13,7 +13,7 @@ class PeopleController < ApplicationController
 
     if @person.update_attributes(params[:user])
       flash[:notice] = "Profile sucessfully updated"
-      redirect_to edit_person_path(@person.github)
+      redirect_to person_path(@person)
     else
       render :action => :edit
     end
