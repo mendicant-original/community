@@ -1,0 +1,13 @@
+= content_tag_for :article, article do
+  .article_content
+    .article_title
+      = link_to article.title, article.url
+      %small= article.url_host
+    .article_body= article.body
+  = render 'user_info', :article => article, :profile_size => "100"
+  - if article.editable_by?(current_user)
+    .control-bar
+      = link_to 'Edit', edit_article_path(article), :class => "clean-gray"
+      = link_to 'Destroy', article, :confirm => 'Are you sure?',
+        :method => :delete, :class => "clean-gray warn"
+= tag :hr, :class => "separator" if article != @articles.last

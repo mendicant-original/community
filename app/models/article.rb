@@ -8,6 +8,6 @@ class Article < ActiveRecord::Base
   end
 
   def editable_by?(user)
-    persisted? && (user.admin? || user == author)
+    persisted? && user && (user.admin? || user == author)
   end
 end

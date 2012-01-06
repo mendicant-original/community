@@ -50,6 +50,7 @@ a.minimal {
 /* clean gray
 *******************************************************************************/
 a.clean-gray, input[type=submit] {
+  display: inline-block;
   background-color: #eeeeee;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#cccccc));
   /* Saf4+, Chrome */

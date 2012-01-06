@@ -1,0 +1,32 @@
+#articles
+  article
+    +container
+    div.article_content
+      +column(12)
+      div.article_title
+        font-size: 1.5em
+        font-family: $display-font
+        margin-bottom: 1em
+        small
+          color: #666
+          font-size: 0.65em
+          margin-left: 0.75em
+      div.article_body
+        h1
+          font-size: 1.25em
+        h2
+          font-size: 1.1em
+        h3, h4
+          font-size: 1em
+    div.user_info
+      +column(8, true)
+      text-align: right
+      img
+        float: right
+        margin-left: 1em
+      p
+        margin-bottom: 0
+        margin-top: 50px
+    div.control-bar
+      +column(20)
+      margin-bottom: 0

@@ -1,11 +1,3 @@
-- @articles.each do |article|
-  = content_tag_for :article, article do
-    %div.article_content
-      %h2
-        = link_to article.title, article.url
-        %small= article.url_host
-      = article.body
-    = render 'user_info', :article => article, :profile_size => "100x100"
-  = tag :hr, :class => "separator" if article != @articles.last
+#articles= render :partial => "article", :collection => @articles
 
 = will_paginate @articles

@@ -1,11 +1,7 @@
-%div.user_info
+.user_info
   = article.author.icon(profile_size)
   %p
     by
     = link_to article.author.name, person_path(article.author)
     %br
     = l article.created_at.to_date, :format => :long
-    %br
-    - if signed_in? && article.editable_by?(current_user)
-      = link_to 'edit', edit_article_path(article)
-      = link_to 'destroy', article, :confirm => 'Are you sure?', :method => :delete
