@@ -6,4 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require md_preview
+//= require jquery.elastic
+//= require_tree '../../../vendor/assets/javascripts'
 //= require_tree .
