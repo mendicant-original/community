@@ -8,7 +8,7 @@ task :setup do
   database     = File.join(Rails.root, 'config', 'database.yml')
   secret_token = File.join(Rails.root, 'config', 'initializers', 'secret_token.rb')
   omniauth     = File.join(Rails.root, 'config', 'initializers', 'omniauth.rb')
-  uni_web      = File.join(Rails.root, 'config', 'initializers', 'university_web.rb')
+  university_web      = File.join(Rails.root, 'config', 'initializers', 'university_web.rb')
 
   unless File.exists?(database)
     FileUtils.cp(database + '.example', database)
