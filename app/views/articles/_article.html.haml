@@ -1,6 +1,9 @@
 = content_tag_for :article, article do
   .article_title
-    = link_to article.title, article_path(article)
+    - if @articles
+      = link_to article.title, article_path(article)
+    - else
+      = article.title
 
   .article_content= article.body
 
@@ -12,4 +15,5 @@
       = link_to 'Destroy', article, :confirm => 'Are you sure?',
         :method => :delete, :class => "clean-gray warn"
 
-= tag :hr, :class => "separator" if @articles && article != @articles.last
+= article.bottom(@articles)
+
