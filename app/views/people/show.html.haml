@@ -2,14 +2,14 @@
 
 #profile
 
-  %h1
-    = @person.icon(48)
-    = @person.name
+  .header
+    .avatar= @person.icon(100)
+    .name= @person.name
 
-  .social
-    = @person.github_link
-    = @person.twitter_link
-    = @person.website_link
+    .social
+      = @person.github_link
+      = @person.twitter_link
+      = @person.website_link
 
   .description= @person.description
 
