@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(params[:article])
 
     if @article.save
-      redirect_to(root_path, :notice => 'Article was successfully created.')
+      redirect_to(@article, :notice => 'Article was successfully created.')
     else
       render :action => "new"
     end
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update_attributes(params[:article])
-      redirect_to(root_path, :notice => 'Article was successfully updated.')
+      redirect_to(@article, :notice => 'Article was successfully updated.')
     else
       render :action => "edit"
     end
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to(root_path, :notice => 'Article was successfully destroyed.')
+    redirect_to(articles_path, :notice => 'Article was successfully destroyed.')
   end
 
   private
