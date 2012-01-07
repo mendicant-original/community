@@ -4,16 +4,19 @@ class UserDecorator < ApplicationDecorator
   decorates :user
 
   def icon(size=32)
-    return h.content_tag(:div, '', :class => "icon") if user.email.blank?
+    image_path = h.image_path("avatar.png")
 
-    hash    = Digest::MD5.hexdigest(user.email.downcase)
-    default = CGI.escape("http://#{h.request.host_with_port}#{h.image_path("avatar.png")}")
+    unless user.email.blank?
+      hash       = Digest::MD5.hexdigest(user.email.downcase)
+      default    = CGI.escape("http://#{h.request.host_with_port}#{image_path}")
+      image_path = "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{default}"
+    end
 
     # Manually set height / width so layouts don't collapse while gravatars are
     # loading
     #
-    h.image_tag("http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{default}",
-     :alt => user.name, :style => "width: #{size}px; height: #{size}px;")
+    h.image_tag(image_path, :alt => user.name,
+      :style => "width: #{size}px; height: #{size}px;")
   end
 
   def github_link
