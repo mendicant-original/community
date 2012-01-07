@@ -11,10 +11,11 @@
     = f.label :email
     %br
     = f.text_field :email
-  %p
-    = f.label :description
-    %br
-    = f.text_area :description, 'data-preview' => true
+  #profile
+    %p.description
+      = f.label :description
+      %br
+      = f.text_area :description, 'data-preview' => true
   %hr
   %p
     = f.label :twitter
