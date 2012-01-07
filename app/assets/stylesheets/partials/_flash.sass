@@ -1,14 +1,16 @@
 #flash
   display: inline-block
+  position: absolute
+  top: 2px
 
   .flash
     display: inline-block
-    padding: 0 10px
+    padding: 2px 8px
     +border-radius(3px)
-    margin: -1px 0
     margin-right: 1em
     border: 1px solid #2A2D3D
     font-size: 0.9em
+    +single-box-shadow(#444, 0, 0, 2px, $default-box-shadow-spread, inset)
 
     &.alert
       background-color: #FDFAF2
