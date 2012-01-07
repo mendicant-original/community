@@ -14,9 +14,9 @@ gem 'will_paginate', '~> 3.0'
 gem 'cocoon'
 gem 'jquery-rails'
 
-gem 'draper', :git => "git://github.com/jcasimir/draper.git"
+gem 'draper',  :git => "git://github.com/jcasimir/draper.git"
 gem 'redcarpet', '~> 2.0.0b3'
-gem 'slugger'
+gem 'slugger', :git => "git://github.com/jordanbyron/slugger.git"
 gem 'md_preview'
 
 gem "rest-client", '~> 1.6.3' # For University-Web

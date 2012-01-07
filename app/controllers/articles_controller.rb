@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
-  before_filter :user_required, :only => [:new, :create, :edit, :update, :destroy]
-  before_filter :find_article, :authorized_users_only, :only => [:edit, :update, :destroy]
+  before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
+  before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
+  before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
 
   def index
     @articles = Article.includes(:author).order("created_at desc").
@@ -11,6 +12,10 @@ class ArticlesController < ApplicationController
       format.html
       format.rss { render :layout => false }
     end
+  end
+
+  def show
+    @article = ArticleDecorator.decorate(@article)
   end
 
   def new
@@ -53,6 +58,6 @@ class ArticlesController < ApplicationController
   end
 
   def find_article
-    @article = Article.find(params[:id])
+    @article = Article.find_by_slug(params[:id])
   end
 end

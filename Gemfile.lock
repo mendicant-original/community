@@ -5,6 +5,13 @@ GIT
     draper (0.9.5)
       activesupport (>= 2.3.10)
 
+GIT
+  remote: git://github.com/jordanbyron/slugger.git
+  revision: 4d289bfb5c337643c4f4ff188fae283c6d3125da
+  specs:
+    slugger (0.2.0)
+      activerecord (>= 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -172,8 +179,6 @@ GEM
       ffi (~> 1.0.9)
       json_pure
       rubyzip
-    slugger (0.2.0)
-      activerecord (>= 3.0.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -218,7 +223,7 @@ DEPENDENCIES
   rest-client (~> 1.6.3)
   sass
   sass-rails (~> 3.1.5.rc.2)
-  slugger
+  slugger!
   test_notifier (~> 1.0.0)
   therubyracer
   uglifier (>= 1.0.3)
