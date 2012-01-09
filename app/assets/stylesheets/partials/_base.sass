@@ -5,14 +5,20 @@ html
 
 body
   font-size: 100%
+  background: asset-url('background.png', image) repeat
 
 h1, h2, h3, h4
   font-family: $display-font
 
 #container
   width: 800px
-  margin:  0 auto
-  padding: 0 0.5em
+  margin: 1em auto
+  padding: 1.5em
+  background-color: #fff
+  +single-box-shadow(#aaa, 0, 0, 5px)
+  +border-radius(4px)
+  *:last-child
+    margin-bottom: 0 !important
 
 .clear
   +clearfix
