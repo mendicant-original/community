@@ -1,7 +1,8 @@
 class Article < ActiveRecord::Base
   belongs_to :author, :class_name => "User"
 
-  has_slug 'title', :max_length => 40
+  has_slug 'title', :max_length  => 40,
+                    :on_conflict => :append_id
 
   validates_presence_of :title, :body, :author
   with_options :allow_blank => true do |opt|
