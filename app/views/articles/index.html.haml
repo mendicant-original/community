@@ -1,7 +1,7 @@
 - content_for(:title) { "Updates" }
 
 - content_for :header_bottom do
-  = auto_discovery_link_tag
+  = auto_discovery_link_tag(:rss, articles_url(:format => "rss"))
 
 #articles= render :partial => "article", :collection => @articles
 
