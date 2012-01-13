@@ -1,4 +1,7 @@
 - content_for(:title) { "Updates" }
+- content_for(:section_name) { "Updates" }
+- content_for :section_controls do
+  = link_to "Post an update", new_article_path, :class => "clean-gray"
 
 - content_for :header_bottom do
   = auto_discovery_link_tag(:rss, articles_url(:format => "rss"))
