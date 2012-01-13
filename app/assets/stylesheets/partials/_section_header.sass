@@ -1,26 +1,22 @@
 #section-header
   position: relative
   width: 800px
+  padding: 0 1.5em
   margin: 1em auto
   font-family: $display-font
-  padding: 0.25em 1.5em
-  +background-image(linear-gradient(#98CB93, #678A63))
-  color: #fff
-  +single-box-shadow(#444, 0, 0, 5px)
-  +border-radius(2px)
+  color: #111
+  height: 30px
 
   div
     display: inline-block
     &.name
-      +single-text-shadow(#444, 0px, 0px, 4px)
-      a
-        color: #fff
-        &:hover
-          color: #ddd
+      font-size: 1.25em
+      font-weight: bold
+      +single-text-shadow(#fff, 0, 1px, 0)
     &.controls
       position: absolute
       top: 2px
-      right: 6px
+      right: 1.5em
       a.clean-gray
         border: 1px solid #333
         border-bottom: 1px solid #555
