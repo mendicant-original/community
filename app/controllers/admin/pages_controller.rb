@@ -26,11 +26,4 @@ class Admin::PagesController < ApplicationController
   def find_page
     @page = Page.find_by_slug(params[:id])
   end
-
-  def admin_required
-    unless current_user.try(:admin)
-      flash[:error] = "Access denied"
-      redirect_to root_path
-    end
-  end
 end

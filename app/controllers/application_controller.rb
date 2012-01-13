@@ -23,16 +23,20 @@ class ApplicationController < ActionController::Base
 
   def user_required
     unless signed_in?
-      flash[:error] = "Please sign in to continue!"
       store_location
-      redirect_to root_path
+      redirect_to login_path
     end
   end
 
   def admin_required
     unless admin?
-      flash[:error] = "You must be an admin to access this area!"
-      redirect_to root_path
+      if current_user
+        flash[:error] = "You must be an admin to access this area!"
+        redirect_to root_path
+      else
+        store_location
+        redirect_to login_path
+      end
     end
   end
 
