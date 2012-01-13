@@ -8,6 +8,11 @@ Community::Application.routes.draw do
 
   resources :people
   resources :articles
+  resources :activities do
+    member do
+      post :register
+    end
+  end
 
   namespace :admin do
     resources :pages

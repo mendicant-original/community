@@ -1,0 +1,5 @@
+var button = '<%= escape_javascript @activity.registration_button %>';
+var participants = '<%= escape_javascript @activity.participants_link %>';
+
+$('#activity_<%= @activity.id %> span.registration').replaceWith(button);
+$('#activity_<%= @activity.id %> div.participants').replaceWith(participants);

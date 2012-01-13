@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116220134) do
+ActiveRecord::Schema.define(:version => 20120113162402) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "title"
+    t.string   "slug"
+    t.text     "body"
+    t.boolean  "registration_open",       :null => false
+    t.boolean  "participation_moderated", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "activity_registrations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "activity_id"
+    t.boolean  "approved",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"

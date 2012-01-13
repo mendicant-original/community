@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   before_save :clean_website
 
-  has_many :articles, :foreign_key => :author_id
+  has_many :articles,              :foreign_key => :author_id
+  has_many :activities,            :foreign_key => :author_id
+  has_many :activity_registrations
 
   GITHUB_FORMAT = {
     :with        => /^(?!-)[a-z\d-]+/i,

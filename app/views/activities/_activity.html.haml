@@ -1,0 +1,25 @@
+= content_tag_for :div, activity do
+  .activity_title
+    - if @activities
+      = link_to activity.title, activity_path(activity)
+    - else
+      = activity.title
+
+    = activity.registration_button
+
+  .activity_content= activity.body
+
+  .activity_info
+    = activity.participants_link
+    = activity.author_link
+    %br
+    = activity.created_at
+
+  - if false #activity.editable_by?(current_user)
+    .control-bar
+      = link_to 'Edit', edit_activity_path(activity), :class => "clean-gray"
+      = link_to 'Destroy', activity, :confirm => 'Are you sure?',
+        :method => :delete, :class => "clean-gray warn"
+
+= activity.bottom(@activities, activities_path)
+

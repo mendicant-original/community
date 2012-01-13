@@ -1,0 +1,37 @@
+div.activity
+  +container
+  div.activity_title
+    +column(20)
+    font-size: 1.5em
+    font-family: $display-font
+    margin-bottom: 1em
+    line-height: 0.9
+    span.registration
+      float: right
+      color: #666
+      a
+        font-size: 0.75em
+        color: #333
+        &.participating:before
+          content: ""
+          float: left
+          width: 26px
+          height: 1em
+          background: asset-url("icons/check.png", image) no-repeat
+        &:hover
+          color: #333
+    a
+      color: $link-active-color
+      &:hover
+        color: $link-color
+
+  div.activity_content
+    +column(15)
+    h1, h2, h3, h4
+      font-size: 1em
+  div.activity_info
+    +column(5, true)
+    text-align: right
+  div.control-bar
+    +column(20)
+    margin-bottom: 0
