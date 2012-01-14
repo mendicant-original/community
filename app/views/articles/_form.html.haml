@@ -7,8 +7,6 @@
     = f.text_field :title, :autofocus => true
     //%span.hint Create a short and descriptive title for your post.
   .field
-    = f.label :body
-    %br
     = f.text_area :body, "data-preview" => true
   .control-bar
     = f.submit @article.new_record? ? 'Post' : 'Update'
