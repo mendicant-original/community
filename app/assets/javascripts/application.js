@@ -10,3 +10,7 @@
 //= require jquery.elastic
 //= require_tree '../../../vendor/assets/javascripts'
 //= require_tree .
+
+$(function(){
+  $('a[rel~="twipsy"]').twipsy();
+})

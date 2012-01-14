@@ -22,9 +22,6 @@
       - @participants.each do |user|
         = link_to person_path(user), :class => "participant", :rel => "twipsy", :title => user.name do
           = user.icon(64)
-      :javascript
-        $('#participants a').twipsy();
-
 
 = activity.bottom(@activities, activities_path)
 

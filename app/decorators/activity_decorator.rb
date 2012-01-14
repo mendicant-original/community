@@ -5,16 +5,20 @@ class ActivityDecorator < ApplicationDecorator
     h.content_tag(:span, :class => "registration") do
       if activity.registration_open?
         if activity.approved_participants.include?(h.current_user)
-          text = "Participating"
+          text = "You're Participating"
           css_class = "participating"
+          title = "Drop out"
         elsif activity.users.include?(h.current_user)
           text = "Pending Approval"
+          title = "Drop out"
         else
           text = "Participate"
+          title = "Join in"
         end
 
         h.link_to(text, h.register_activity_path(activity),
           :class => "clean-gray #{css_class if css_class}",
+          :rel   => "twipsy", :title => title,
           :method => :post, :remote => true)
       else
         "Registration Closed"
