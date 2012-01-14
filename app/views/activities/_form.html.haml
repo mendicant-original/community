@@ -1,0 +1,19 @@
+= form_for @activity do |f|
+  = error_messages_for(@activity)
+
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title, :autofocus => true
+  .field
+    = f.check_box :registration_open
+    = f.label :registration_open
+  .field
+    = f.check_box :participation_moderated
+    = f.label :participation_moderated
+  .field
+    = f.text_area :body, "data-preview" => true
+  .control-bar
+    = f.submit @activity.new_record? ? 'Post' : 'Update'
+    or
+    = link_to "get me out of here", activities_path

@@ -1,0 +1,3 @@
+- content_for(:section_name) { link_to "Activities", activities_path }
+- content_for :section_controls do
+  = link_to "Post an activity", new_activity_path, :class => "clean-gray"

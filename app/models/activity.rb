@@ -1,7 +1,8 @@
 class Activity < ActiveRecord::Base
+  include WriteControl
 
   belongs_to :author, :class_name => "User"
-  has_many   :activity_registrations
+  has_many   :activity_registrations, :dependent => :destroy
   has_many   :users, :through => :activity_registrations
 
   has_slug 'title', :max_length  => 40,
