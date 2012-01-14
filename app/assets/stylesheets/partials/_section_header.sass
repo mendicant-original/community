@@ -4,7 +4,6 @@
   padding: 0 1.5em
   margin: 1em auto
   font-family: $display-font
-  color: #111
   height: 30px
 
   div
@@ -13,6 +12,12 @@
       font-size: 1.25em
       font-weight: bold
       +single-text-shadow(#fff, 0, 1px, 0)
+      a
+        text-decoration: none
+        color: #111
+        &:hover
+          text-decoration: underline
+
     &.controls
       position: absolute
       top: 2px
