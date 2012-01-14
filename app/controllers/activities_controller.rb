@@ -10,7 +10,8 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    @activity = ActivityDecorator.decorate(@activity)
+    @activity     = ActivityDecorator.decorate(@activity)
+    @participants = UserDecorator.decorate(@activity.approved_participants)
   end
 
 
@@ -41,7 +42,7 @@ class ActivitiesController < ApplicationController
 
   def destroy
     @activity.destroy
-    redirect_to(activitys_path, :notice => 'Activity was successfully destroyed.')
+    redirect_to(activities_path, :notice => 'Activity was successfully destroyed.')
   end
 
   def register

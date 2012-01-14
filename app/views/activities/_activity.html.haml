@@ -15,11 +15,16 @@
     %br
     = activity.created_at
 
-  - if false #activity.editable_by?(current_user)
-    .control-bar
-      = link_to 'Edit', edit_activity_path(activity), :class => "clean-gray"
-      = link_to 'Destroy', activity, :confirm => 'Are you sure?',
-        :method => :delete, :class => "clean-gray warn"
+  - if !@activities && @participants.any?
+    #participants
+      .label
+        %h3 Participants
+      - @participants.each do |user|
+        = link_to person_path(user), :class => "participant", :rel => "twipsy", :title => user.name do
+          = user.icon(64)
+      :javascript
+        $('#participants a').twipsy();
+
 
 = activity.bottom(@activities, activities_path)
 

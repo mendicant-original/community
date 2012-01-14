@@ -1,7 +1,7 @@
 div.activity
   +container
   div.activity_title
-    +column(20)
+    +column(20, true)
     font-size: 1.5em
     font-family: $display-font
     margin-bottom: 1em
@@ -35,3 +35,25 @@ div.activity
   div.control-bar
     +column(20)
     margin-bottom: 0
+
+  #participants
+    +column(20, true)
+    position: relative
+    margin-top: 2em
+    border-top: 1px solid #CCC
+    padding-top: 2em
+    .label
+      background-color: #fff
+      padding-right: 0.5em
+      position: absolute
+      left: 0
+      top: -16px
+      h3
+        color: #666
+
+    a.participant
+      display: inline-block
+      img
+        +image-box
+        margin-right: 0.5em
+        margin-bottom: 0.5em

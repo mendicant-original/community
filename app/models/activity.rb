@@ -16,6 +16,6 @@ class Activity < ActiveRecord::Base
 
   def approved_participants
     users.includes(:activity_registrations).
-      where("activity_registrations.approved = true")
+      where("activity_registrations.approved = true").order("users.name")
   end
 end
