@@ -18,4 +18,23 @@ class ArticleDecorator < ApplicationDecorator
         h.articles_path, :id => "back-link"
     end
   end
+
+  def twitter
+    via = "via @" + article.author.twitter unless article.author.twitter.blank?
+    url = short_url
+
+    tweet     = [url, via].compact.join(' ')
+    remaining = 160 - tweet.length - 1
+
+    tweet = [title[0..remaining], tweet].join(' ')
+
+    tweet
+  end
+
+  def short_url
+    url = Rails.application.routes.url_helpers.
+      article_url(article, :host => "community.mendicantuniversity.org").gsub(/\Ahttp:\/\//, '')
+
+    RestClient.post("http://is.gd/create.php", :format => "simple", :url => url)
+  end
 end

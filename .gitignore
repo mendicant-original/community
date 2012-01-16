@@ -17,3 +17,4 @@
 /config/initializers/omniauth.rb
 /config/initializers/secret_token.rb
 /config/initializers/university_web.rb
+/config/twitter.yml

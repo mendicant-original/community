@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107035401) do
+ActiveRecord::Schema.define(:version => 20120116220134) do
 
   create_table "articles", :force => true do |t|
     t.integer  "author_id"
@@ -21,32 +21,13 @@ ActiveRecord::Schema.define(:version => 20120107035401) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-  end
-
-  create_table "learning_materials", :force => true do |t|
-    t.text     "name"
-    t.text     "description"
-    t.text     "url"
-    t.text     "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.boolean  "posted_to_twitter", :default => false, :null => false
   end
 
   create_table "pages", :force => true do |t|
     t.text     "title"
     t.text     "body"
     t.text     "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "projects", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "name",                            :null => false
-    t.text     "description"
-    t.text     "slug",                            :null => false
-    t.text     "source_url"
-    t.boolean  "core_project", :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

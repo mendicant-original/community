@@ -1,5 +1,8 @@
 require 'bundler/capistrano'
 
+set :whenever_identifier, defer { application }
+require 'whenever/capistrano'
+
 set :application, "community"
 set :repository,  "git://github.com/mendicant-university/community.git"
 
@@ -23,6 +26,7 @@ end
 
 after 'deploy:update_code' do
   {"database.yml"      => "config/database.yml",
+   "twitter.yml"       => "config/twitter.yml",
    "omniauth.rb"       => "config/initializers/omniauth.rb",
    "secret_token.rb"   => "config/initializers/secret_token.rb",
    "university_web.rb" => "config/initializers/university_web.rb"}.

@@ -21,6 +21,9 @@ gem 'md_preview'
 
 gem "rest-client", '~> 1.6.3' # For University-Web
 
+gem "twitter",  :require => false
+gem "whenever", :require => false
+
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'
