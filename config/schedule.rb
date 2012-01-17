@@ -2,6 +2,6 @@
 
 job_type :rake, "cd :path && RAILS_ENV=:environment bundle exec rake :task --silent :output"
 
-every 1.hour do
+every 15.minutes do
   rake "twitter:post"
 end
