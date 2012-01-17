@@ -3,5 +3,5 @@
   %p
     by
     = link_to article.author.name, person_path(article.author)
-    %br
+  %p
     = l article.created_at.to_date, :format => :long
