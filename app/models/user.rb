@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  before_save :remove_http_from_website
+  before_save :clean_website
 
   has_many :articles, :foreign_key => :author_id
 
@@ -44,9 +44,15 @@ class User < ActiveRecord::Base
 
   private
 
-  def remove_http_from_website
+  def clean_website
+    # Remove http(s):// from the front of the website
     if website =~ /\Ahttp[s]?:\/\//i
       self.website = website.gsub(/\Ahttp[s]?:\/\//i, '')
+    end
+
+    # Remove any trailing slashes
+    if website =~ /\/\z/
+      self.website = website.gsub(/\/\z/, '')
     end
   end
 end
