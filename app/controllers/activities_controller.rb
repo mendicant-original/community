@@ -11,7 +11,9 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity     = ActivityDecorator.decorate(@activity)
-    @participants = UserDecorator.decorate(@activity.approved_participants)
+    participants  = @activity.approved_participants - [current_user]
+    @participants = UserDecorator.decorate(participants)
+    @user         = UserDecorator.decorate(current_user)
   end
 
 
@@ -56,6 +58,7 @@ class ActivitiesController < ApplicationController
     end
 
     @activity = ActivityDecorator.decorate(@activity)
+    @participating = @activity.approved_participants.include?(current_user)
 
     respond_to do |format|
       format.js

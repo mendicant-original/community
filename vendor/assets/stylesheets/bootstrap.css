@@ -16,7 +16,7 @@
   position: absolute;
   visibility: visible;
   padding: 5px;
-  font-size: 14px;
+  font-size: 12px;
   z-index: 1000;
   filter: alpha(opacity=80);
   -khtml-opacity: 0.8;

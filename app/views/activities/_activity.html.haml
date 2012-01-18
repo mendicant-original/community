@@ -19,9 +19,9 @@
     #participants
       .label
         %h3 Participants
-      - @participants.each do |user|
-        = link_to person_path(user), :class => "participant", :rel => "twipsy", :title => user.name do
-          = user.icon(64)
+      = render :partial => "participant", :collection => @participants
+      #current_user{:style => ("display: none;" unless @activity.approved_participants.include? current_user)}
+        = render :partial => "participant", :locals => { :participant => @user }
 
 = activity.bottom(@activities, activities_path)
 

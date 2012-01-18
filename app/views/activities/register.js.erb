@@ -1,5 +1,19 @@
 var button = '<%= escape_javascript @activity.registration_button %>';
 var participants = '<%= escape_javascript @activity.participants_link %>';
+var participating = <%= @participating %>;
 
 $('#activity_<%= @activity.id %> span.registration').replaceWith(button);
 $('#activity_<%= @activity.id %> div.participants').replaceWith(participants);
+
+if($('#participants').length > 0){
+  var currentUser = $('#current_user a.participant');
+
+  if(participating){
+    $('#current_user').show();
+    currentUser.removeClass('bounceOut').addClass('bounceIn');
+  }
+  else
+  {
+    currentUser.removeClass('bounceIn').addClass('bounceOut');
+  }
+}
