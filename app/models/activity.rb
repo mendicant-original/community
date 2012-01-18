@@ -14,6 +14,9 @@ class Activity < ActiveRecord::Base
 
   validates_presence_of :title, :body, :author
 
+  scope :active,   where(:archived => false)
+  scope :archived, where(:archived => true)
+
   def to_param
     slug
   end

@@ -3,7 +3,9 @@ class ActivityDecorator < ApplicationDecorator
 
   def registration_button
     h.content_tag(:span, :class => "registration") do
-      if activity.registration_open?
+      if activity.archived?
+        ""
+      elsif activity.registration_open?
         link_options = { method: :post, remote: true, class: "clean-gray" }
 
         if activity.approved_participants.include?(h.current_user)

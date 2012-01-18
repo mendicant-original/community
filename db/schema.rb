@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120113162402) do
+ActiveRecord::Schema.define(:version => 20120118213956) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
     t.string   "title"
     t.string   "slug"
     t.text     "body"
-    t.boolean  "registration_open",       :null => false
-    t.boolean  "participation_moderated", :null => false
+    t.boolean  "registration_open",                          :null => false
+    t.boolean  "participation_moderated",                    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "archived",                :default => false, :null => false
   end
 
   create_table "activity_registrations", :force => true do |t|
@@ -43,10 +44,30 @@ ActiveRecord::Schema.define(:version => 20120113162402) do
     t.boolean  "posted_to_twitter", :default => false, :null => false
   end
 
+  create_table "learning_materials", :force => true do |t|
+    t.text     "name"
+    t.text     "description"
+    t.text     "url"
+    t.text     "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pages", :force => true do |t|
     t.text     "title"
     t.text     "body"
     t.text     "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "name",                            :null => false
+    t.text     "description"
+    t.text     "slug",                            :null => false
+    t.text     "source_url"
+    t.boolean  "core_project", :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

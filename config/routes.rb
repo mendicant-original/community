@@ -11,6 +11,11 @@ Community::Application.routes.draw do
   resources :activities do
     member do
       post :register
+      post :archive
+      post :restore
+    end
+    collection do
+      get :archived
     end
   end
 

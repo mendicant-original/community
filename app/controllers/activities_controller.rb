@@ -1,10 +1,18 @@
 class ActivitiesController < ApplicationController
   before_filter :user_required
-  before_filter :find_activity, :only => [:show, :edit, :update, :destroy, :register]
-  before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
+  before_filter :find_activity, :only => [ :show, :edit, :update, :destroy,
+                                           :register, :archive, :restore ]
+  before_filter :authorized_users_only, :only => [ :edit, :update, :destroy,
+                                                   :archive, :restore ]
 
   def index
-    @activities = Activity.includes(:author).order("created_at desc").
+    @activities = Activity.active.includes(:author).order("created_at desc").
+                  paginate(:page => params[:page])
+    @activities = ActivityDecorator.decorate(@activities)
+  end
+
+  def archived
+    @activities = Activity.archived.includes(:author).order("created_at desc").
                   paginate(:page => params[:page])
     @activities = ActivityDecorator.decorate(@activities)
   end
@@ -47,6 +55,16 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.destroy
     redirect_to(activities_path, :notice => 'Activity was successfully destroyed.')
+  end
+
+  def archive
+    @activity.update_attribute(:archived, true)
+    redirect_to(activities_path, :notice => 'Activity was successfully archived.')
+  end
+
+  def restore
+    @activity.update_attribute(:archived, false)
+    redirect_to(activity_path(@activity), :notice => 'Activity was successfully restored.')
   end
 
   def register
