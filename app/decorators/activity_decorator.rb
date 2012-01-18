@@ -1,5 +1,6 @@
 class ActivityDecorator < ApplicationDecorator
   decorates :activity
+  decorates_association :author
 
   def registration_button
     h.content_tag(:span, :class => "registration") do

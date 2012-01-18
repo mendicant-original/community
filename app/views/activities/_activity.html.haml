@@ -10,10 +10,10 @@
   .activity_content= activity.body
 
   .activity_info
-    = activity.participants_link
-    = activity.author_link
-    %br
-    = activity.created_at
+    = link_to activity.author.icon(100), person_path(activity.author)
+    = activity.participants_link if @activities
+    %div= activity.author_link
+    %div= activity.created_at
 
   - if !@activities && @activity.approved_participants.any?
     #participants
