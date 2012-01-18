@@ -8,22 +8,17 @@ div.activity
     line-height: 0.9
     span.registration
       float: right
-      color: #666
+      display: inline-block
       a
         font-size: 15px
-        color: #444
-        padding: 5px 13px
-        &.participating
-          color: #0D6B0B
-          //:before
-          // content: ""
-          // float: left
-          // width: 26px
-          // height: 1em
-          // background: asset-url("icons/check.png", image) no-repeat
-        &:hover
-          color: #333
-    a
+        text-decoration: none
+        padding: 5px 10px
+        font-family: $display-font !important
+        font-size: 0.75em
+        font-weight: normal
+        width: 125px
+        display: block
+    > a
       color: $link-active-color
       &:hover
         color: $link-color

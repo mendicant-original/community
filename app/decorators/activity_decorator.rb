@@ -6,19 +6,21 @@ class ActivityDecorator < ApplicationDecorator
       if activity.archived?
         ""
       elsif activity.registration_open?
-        link_options = { method: :post, remote: true, class: "clean-gray" }
+        link_options = { method: :post, remote: true }
 
         if activity.approved_participants.include?(h.current_user)
-          text = "You're Participating"
-          link_options[:class] += " participating"
-          link_options[:title]  = "Click to stop participating"
-          link_options[:rel]    = "twipsy"
+          text = "Participating"
+          link_options[:class] = "cupid-blue"
+          link_options[:title] = "Click to stop participating"
+          link_options[:rel]   = "twipsy"
         elsif activity.users.include?(h.current_user)
-          text                 = "Pending Approval"
+          link_options[:class] = "cupid-gray"
+          text                 = "Applied"
           link_options[:title] = "Click to remove your request"
           link_options[:rel]   = "twipsy"
         else
           text = "Participate"
+          link_options[:class] = "cupid-dark-blue"
         end
 
         h.link_to(text, h.register_activity_path(activity), link_options)
