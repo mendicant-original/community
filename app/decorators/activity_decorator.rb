@@ -28,6 +28,10 @@ class ActivityDecorator < ApplicationDecorator
     end
   end
 
+  def body
+    h.md(activity.body)
+  end
+
   def created_at
     h.l activity.created_at.to_date, :format => :long
   end
