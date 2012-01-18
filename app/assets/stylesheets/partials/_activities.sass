@@ -66,9 +66,18 @@ div.activity
 form.edit_activity, form.new_activity
   label.checkbox
     font-weight: normal
+  p
+    clear: both
   div.nested-fields
-    margin-bottom: 0.5em
-    select
-      margin-right: 1.5em
+    clear: both
+    display: inline-block
+    margin-bottom: 1.5em
+    margin-right: 1.5em
+    .user
+      float: left
+      img
+        +image-box
+        margin-right: 0.75em
+        margin-bottom: 0.75em
     a.warn
-      margin-left: 1.5em
+      margin-top: 0.5em

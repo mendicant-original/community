@@ -15,7 +15,7 @@
     %br
     = activity.created_at
 
-  - if !@activities && @participants.any?
+  - if !@activities && @activity.approved_participants.any?
     #participants
       .label
         %h3 Participants

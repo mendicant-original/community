@@ -22,7 +22,9 @@
 
         = f.fields_for :activity_registrations do |a|
           = render 'activity_registration_fields', :f => a
-        %p= link_to_add_association "Add someone", f, :activity_registrations
+        %p
+          = link_to_add_association "Add another participant",
+          f, :activity_registrations, :class => "clean-gray"
 
   .control-bar
     = f.submit @activity.new_record? ? 'Post' : 'Update'

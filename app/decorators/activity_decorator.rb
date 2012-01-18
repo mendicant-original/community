@@ -13,7 +13,7 @@ class ActivityDecorator < ApplicationDecorator
           link_options[:rel]    = "twipsy"
         elsif activity.users.include?(h.current_user)
           text                 = "Pending Approval"
-          link_options[:title] = "Click to remove request"
+          link_options[:title] = "Click to remove your request"
           link_options[:rel]   = "twipsy"
         else
           text = "Participate"

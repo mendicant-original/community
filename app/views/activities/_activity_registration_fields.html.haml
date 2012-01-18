@@ -1,6 +1,13 @@
+- user = UserDecorator.decorate(f.object.user) if f.object.user
 .nested-fields
-  = f.select :user_id, User.order("name").map {|u| [u.name, u.id] }
+  - if f.object.persisted?
+    = f.hidden_field :user_id
+    .user= user.icon(64)
+    %strong= user.name
+  - else
+    = f.select :user_id, @users
+  %br
   = f.check_box :approved
   = f.label :approved, "Approved", :class => "checkbox"
-
+  %br
   = link_to_remove_association "Remove", f, :class => "warn clean-gray"

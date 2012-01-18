@@ -18,10 +18,11 @@ class ActivitiesController < ApplicationController
 
 
   def new
-    @activity = Activity.new
+    @activity = Activity.new(:registration_open => true)
   end
 
   def edit
+    collect_users
   end
 
   def create
@@ -38,6 +39,7 @@ class ActivitiesController < ApplicationController
     if @activity.update_attributes(params[:activity])
       redirect_to(@activity, :notice => 'Activity was successfully updated.')
     else
+      collect_users
       render :action => "edit"
     end
   end
@@ -76,5 +78,9 @@ class ActivitiesController < ApplicationController
       redirect_to activities_path,
         :alert => "You are not authorized to edit other user's activities!"
     end
+  end
+
+  def collect_users
+    @users = User.order("name").map {|u| [u.name, u.id] }
   end
 end
