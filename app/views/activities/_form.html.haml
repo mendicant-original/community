@@ -13,6 +13,17 @@
     = f.label :participation_moderated
   .field
     = f.text_area :body, "data-preview" => true
+
+  - if @activity.persisted?
+    .activity
+      #participants
+        .label
+          %h3 Participants
+
+        = f.fields_for :activity_registrations do |a|
+          = render 'activity_registration_fields', :f => a
+        %p= link_to_add_association "Add someone", f, :activity_registrations
+
   .control-bar
     = f.submit @activity.new_record? ? 'Post' : 'Update'
     or

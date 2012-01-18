@@ -4,12 +4,14 @@ class ActivityRegistration < ActiveRecord::Base
   belongs_to :user
   belongs_to :activity
 
-  attr_protected :approved
+  validates_uniqueness_of :user_id, :scope => :activity_id
 
   private
 
   def set_approval
-    self.approved = !activity.participation_moderated?
+    if approved.nil?
+      self.approved = !activity.participation_moderated?
+    end
 
     return true
   end

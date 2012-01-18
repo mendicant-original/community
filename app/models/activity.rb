@@ -5,6 +5,10 @@ class Activity < ActiveRecord::Base
   has_many   :activity_registrations, :dependent => :destroy
   has_many   :users, :through => :activity_registrations
 
+  accepts_nested_attributes_for :activity_registrations,
+    :allow_destroy => true,
+    :reject_if     => proc { |attributes| attributes['user_id'].blank? }
+
   has_slug 'title', :max_length  => 40,
                     :on_conflict => :append_id
 

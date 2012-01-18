@@ -13,6 +13,7 @@ gem 'sass'
 gem 'will_paginate', '~> 3.0'
 gem 'cocoon'
 gem 'jquery-rails'
+gem 'cocoon'
 
 gem 'draper',    :git => "git://github.com/jcasimir/draper.git"
 gem 'redcarpet', '~> 2.0.0b3'
