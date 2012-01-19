@@ -19,6 +19,7 @@ gem 'draper',    :git => "git://github.com/jcasimir/draper.git"
 gem 'redcarpet', '~> 2.0.0b3'
 gem 'slugger',   '0.3.0'
 gem 'md_preview'
+gem 'md_emoji'
 
 gem "rest-client", '~> 1.6.3' # For University-Web
 

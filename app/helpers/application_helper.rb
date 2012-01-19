@@ -15,15 +15,7 @@ module ApplicationHelper
   end
 
   def md(content)
-    return if content.blank?
-
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-      :autolink            => true,
-      :space_after_headers => true,
-      :no_intra_emphasis   => true,
-      :fenced_code_blocks  => true)
-
-    markdown.render(content).html_safe
+    MdPreview::Parser.parse(content)
   end
 
 end
