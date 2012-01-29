@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120118213956) do
+ActiveRecord::Schema.define(:version => 20120129211507) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20120118213956) do
     t.text     "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "protected",  :default => false, :null => false
   end
 
   create_table "projects", :force => true do |t|

@@ -1,38 +1,45 @@
 module Support
   module Auth
     include Support::Services
-    
-    def mock_auth_for(auth)
+
+    def mock_auth_for(user)
       OmniAuth.config.mock_auth[:github] = {
-        'provider' => auth.provider,
-        'uid' => auth.uid,
-        'user_info' => { 'name' => auth.user.name,
-                         'nickname' => auth.user.github, 
-                         'email' => auth.user.email
-                       }
+        'provider' => 'github',
+        'uid'      => user.uid,
+        'info'     => {
+          'name'     => user.name,
+          'nickname' => user.github,
+          'email'    => user.email
+        }
       }
     end
-            
+
     def sign_user_in_with_mocks(user, hash)
-      mock_auth_for(user.authorizations.first)
+      mock_auth_for(user)
       mock_uniweb_user(hash)
-      visit '/auth/github'   # TODO should be click_link 'Sign In' ?
+      click_link 'Sign in with Github'
     end
-    
+
     def sign_user_in(user=Factory(:user))
-      sign_user_in_with_mocks(user, 
-                              {'github' => 'dummy', 'alumnus' => true, 'staff' => false}
-                             )
+      sign_user_in_with_mocks(user,
+        'github'           => user.github,
+        'alumnus'          => true,
+        'staff'            => false,
+        'visiting_teacher' => false
+      )
     end
 
     def sign_admin_in(admin=Factory(:admin))
-      sign_user_in_with_mocks(admin, 
-                              {'github' => 'dummy', 'alumnus' => true, 'staff' => false}
-                             )
+      sign_user_in_with_mocks(admin,
+        'github'           => user.github,
+        'alumnus'          => false,
+        'staff'            => true,
+        'visiting_teacher' => false
+      )
     end
 
     def sign_out
-      click_link 'Sign Out'
+      click_link 'Sign out'
     end
 
   end
