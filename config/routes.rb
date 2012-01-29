@@ -23,5 +23,6 @@ Community::Application.routes.draw do
     resources :pages
   end
 
-  match '/about', to: 'pages#show', id: 'about', as: 'about'
+  match '/about',     to: 'pages#show', id: 'about', as: 'about'
+  match '/pages/:id', to: 'pages#show', as: 'page'
 end
