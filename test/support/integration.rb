@@ -65,7 +65,7 @@ module Support
     end
 
     def assert_no_content(content)
-      assert has_no_content?(content), "Content #{content.inspect} exist"
+      assert has_no_content?(content), "Content #{content.inspect} exists"
     end
 
     def assert_title(title)
