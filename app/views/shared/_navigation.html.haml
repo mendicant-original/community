@@ -5,8 +5,11 @@
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
     = link_to "Updates", articles_path
-    = link_to("Activities", activities_path) if current_user
-    = link_to "About", about_path
+    - if current_user
+      = link_to "Activities", activities_path
+      = link_to "Unicorns", page_path("unicorns")
+    - else
+      = link_to "About", about_path
     %span#account
       - if current_user
         = link_to current_user.name, person_path(current_user.github)
