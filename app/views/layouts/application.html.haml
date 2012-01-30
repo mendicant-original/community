@@ -13,6 +13,7 @@
     = yield(:header_bottom)
 
   %body
-    = render :partial => "shared/navigation", :locals => { :flash => flash }
-    = render :partial => "shared/section_header"
+    = render "shared/navigation"
+    = render "shared/section_header"
     #container= yield
+    = render "shared/footer"
