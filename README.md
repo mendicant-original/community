@@ -1,9 +1,6 @@
 ![Community Logo](https://github.com/mendicant-university/community/raw/master/doc/community.png)
 
-A community based site for [Mendicant University](http://mendicantuniversity.org) hosted at
-[community.mendicantuniversity.org](http://community.mendicantuniversity.org).
-
-For more information about the site, check out its
+A community based site for [Mendicant University](http://mendicantuniversity.org). For more information about the site, check out its
 [about page](http://community.mendicantuniversity.org/about).
 
 ## Installation
@@ -24,7 +21,7 @@ To install a development version of Community, follow these steps:
 
 To make things even easier, you can copy and paste this into your terminal once you've got the project cloned to your computer
 
-```bash
+```
 gem install bundler
 bundle install
 bundle exec rake setup
@@ -35,7 +32,7 @@ bundle exec rake setup
 Features and bugs are tracked through [Github Issues](https://github.com/mendicant-university/community/issues).
 
 Contributors retain copyright to their work but must agree to release their
-contributions under the [Affero GPL version 3](http://www.gnu.org/licenses/agpl.html)
+contributions under the [Affero GPL version 3](http://www.gnu.org/licenses/agpl.html).
 
 If you would like to help with developing Community, just file a ticket in our
 [issue tracker](https://github.com/mendicant-university/community/issues)
@@ -43,17 +40,17 @@ and we will find something to keep you busy.
 
 ### Submitting a Pull Request
 
-1. If a ticket doesn't exist for your bug or feature, create one on GitHub.
+1. If a ticket doesn't exist for your bug or feature, create one on GitHub
     - **NOTE:** Don't be afraid to get feedback on your idea before you begin development work. In fact it is encouraged!
-2. Fork the project.
-3. Create a topic branch.
-4. Implement your feature or bug fix.
-5. Add documentation for your feature or bug fix.
-6. Add tests for your feature or bug fix.
-7. Run `rake test`. If your changes are not 100% covered, go back to step 6.
+2. Fork the project
+3. Create a topic branch
+4. Implement your feature or bug fix
+5. Add documentation for your feature or bug fix
+6. Add tests for your feature or bug fix
+7. Run `rake test` If your changes are not 100% covered, go back to step 6
 8. If your change affects something in this README, please update it
-9. Commit and push your changes.
-10. Submit a pull request.
+9. Commit and push your changes
+10. Submit a pull request
 
 ### Contributors
 
