@@ -33,9 +33,10 @@ class User < ActiveRecord::Base
       name:    hash['info']['name'] || hash['info']['nickname'],
       email:   hash['info']['email'],
       github:  hash['info']['nickname'],
-      website: hash['info']['urls']['Blog'],
       uid:     hash['uid']
     }
+
+    attributes[:website] = hash['info']['urls']['Blog'] if hash['info']['urls']
 
     create(attributes)
   end
