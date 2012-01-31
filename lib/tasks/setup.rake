@@ -4,55 +4,106 @@ require 'securerandom'
 desc 'Setup project for development / deploy'
 task :setup do
 
-  # Setup config files
-  database     = File.join(Rails.root, 'config', 'database.yml')
-  secret_token = File.join(Rails.root, 'config', 'initializers', 'secret_token.rb')
-  omniauth     = File.join(Rails.root, 'config', 'initializers', 'omniauth.rb')
-  university_web      = File.join(Rails.root, 'config', 'initializers', 'university_web.rb')
+  section "Configuration Files" do
 
-  unless File.exists?(database)
-    FileUtils.cp(database + '.example', database)
-    puts "Database config file created"
-    `$EDITOR #{database}`
+    database       = File.join(Rails.root, 'config', 'database.yml')
+    secret_token   = File.join(Rails.root, 'config', 'initializers', 'secret_token.rb')
+    omniauth       = File.join(Rails.root, 'config', 'initializers', 'omniauth.rb')
+    university_web = File.join(Rails.root, 'config', 'initializers', 'university_web.rb')
+
+    unless File.exists?(database)
+      create_file(database, "Database config", true)
+    else
+      puts "Database config file already exists"
+    end
+
+    unless File.exists?(secret_token)
+      secret   = SecureRandom.hex(64)
+      template = ERB.new(File.read(secret_token + '.example'))
+
+      File.open(secret_token, 'w') {|f| f.write(template.result(binding)) }
+      puts "Secret Token Generated"
+    else
+      puts "Secret Token file already exists"
+    end
+
+    unless File.exists?(omniauth)
+      create_file(omniauth, "Omniauth config", true)
+    else
+      "Omniauth config file already exists"
+    end
+
+    unless File.exists?(university_web)
+      create_file(university_web, "University-web config")
+    else
+      "University-web config file already exists"
+    end
+
   end
 
-  unless File.exists?(secret_token)
-    secret   = SecureRandom.hex(64)
-    template = ERB.new(File.read(secret_token + '.erb'))
-
-    File.open(secret_token, 'w') {|f| f.write(template.result(binding)) }
-    puts "Secret Token Generated"
+  section "Database" do
+    begin
+      # Check if there are pending migrations
+      silence { Rake::Task["db:abort_if_pending_migrations"].invoke }
+      puts "Skip: Database already setup"
+    rescue Exception
+      silence do
+        Rake::Task["db:create"].invoke
+        Rake::Task["db:schema:load"].invoke
+      end
+      puts "Database setup"
+    end
   end
 
-  unless File.exists?(omniauth)
-    FileUtils.cp(omniauth + '.example', omniauth)
-    puts "Omniauth config file created"
-    `$EDITOR #{omniauth}`
+  # Load the Rails Env now that the databases are setup
+  Rake::Task["environment"].invoke
+
+  section "Seed Data" do
+    Rake::Task["db:seed"].invoke
   end
 
-  unless File.exists?(university_web)
-    FileUtils.cp(university_web + '.example', university_web)
-    puts "University-web config file created"
-    `$EDITOR #{university_web}`
+  puts # Empty Line
+  puts "==== Setup Complete ====".color(:green)
+  puts # Empty Line
+end
+
+private
+
+def section(description)
+  puts # Empty Line
+  puts description.underline
+  puts # Empty Line
+  yield
+end
+
+def silence
+  begin
+    orig_stderr = $stderr.clone
+    orig_stdout = $stdout.clone
+
+    $stderr.reopen File.new('/dev/null', 'w')
+    $stdout.reopen File.new('/dev/null', 'w')
+
+    return_value = yield
+  rescue Exception => e
+    $stdout.reopen orig_stdout
+    $stderr.reopen orig_stderr
+    raise e
+  ensure
+    $stdout.reopen orig_stdout
+    $stderr.reopen orig_stderr
   end
 
-  puts "Config files created"
+  return_value
+end
 
-  # Setup the database
-  Rake::Task["db:create"].invoke
-  Rake::Task["db:schema:load"].invoke
-  Rake::Task["db:test:prepare"].invoke
+def create_file(file, name, requires_edit=false)
+  FileUtils.cp(file + '.example', file)
+  puts "#{name} file created".color(:green)
 
-  puts "Database prepared"
-
-  # Setup seed data
-  Rake::Task["db:seed"].invoke
-
-  puts "Seed data loaded"
-
-  # Run the tests
-  Rake::Task["test"].invoke
-
-  puts "--- Setup Complete ---"
-
+  if requires_edit
+    puts "Update #{file} and run `bundle exec rake setup` to continue".color(:red)
+    `$EDITOR #{file}`
+    exit
+  end
 end

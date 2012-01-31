@@ -44,6 +44,10 @@ group 'test' do
   gem 'mocha'
 end
 
+group :development do
+  gem 'rainbow'
+end
+
 group :production do
   gem 'therubyracer'
 end
