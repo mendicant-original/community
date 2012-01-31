@@ -59,6 +59,10 @@ class ApplicationController < ActionController::Base
   end
 
   def login_path
-    '/auth/github'
+    if Rails.env.development?
+      '/auth/developer'
+    else
+      '/auth/github'
+    end
   end
 end
