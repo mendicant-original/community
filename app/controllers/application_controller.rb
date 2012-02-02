@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_user, :signed_in?, :admin?, :login_path
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
   private
 
@@ -64,5 +65,9 @@ class ApplicationController < ActionController::Base
     else
       '/auth/github'
     end
+  end
+
+  def record_not_found
+    render :text => "404 Not Found", :status => 404
   end
 end
