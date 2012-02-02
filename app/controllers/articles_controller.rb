@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  respond_to :html
+
   before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
   before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
   before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
@@ -60,6 +62,8 @@ class ArticlesController < ApplicationController
 
   def find_article
     @article = Article.find_by_slug(params[:id])
+
+    raise ActionController::RoutingError.new('Not Found') unless @article
   end
 
   def profile_required

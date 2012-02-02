@@ -1,4 +1,5 @@
 class PeopleController < ApplicationController
+  respond_to :html
 
   def show
     @person = UserDecorator.find_by_github(params[:id])
