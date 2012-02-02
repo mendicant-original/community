@@ -2,9 +2,9 @@ require 'test_helper'
 
 class UsersTest < ActionDispatch::IntegrationTest
   test "non-existent user's profile page should throw 404" do
-    get person_path(id: 'random')
-
-    assert_response :missing
+    assert_raise ActionController::RoutingError do
+      get person_path(id: 'random')
+    end
   end
 
   test "existent user's profile should be 200" do

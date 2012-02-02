@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   def show
     @person = UserDecorator.find_by_github(params[:id])
 
-    raise ActiveRecord::RecordNotFound unless @person
+    raise ActionController::RoutingError.new('Not Found') unless @person
 
     @person = @person.decorate
   end
