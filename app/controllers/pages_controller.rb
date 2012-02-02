@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  respond_to :html
+
   def show
     @page = PageDecorator.find_by_slug(params[:id])
 
