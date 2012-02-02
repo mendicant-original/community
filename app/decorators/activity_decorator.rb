@@ -11,17 +11,20 @@ class ActivityDecorator < ApplicationDecorator
 
         if activity.approved_participants.include?(h.current_user)
           text = "Participating"
-          link_options[:class] = "cupid-blue"
-          link_options[:title] = "Click to stop participating"
-          link_options[:rel]   = "twipsy"
+          link_options[:class]   = "cupid-blue"
+          link_options[:title]   = "Click to stop participating"
+          link_options[:rel]     = "twipsy"
+          link_options[:confirm] = "Are you sure you want to stop participating?"
         elsif activity.users.include?(h.current_user)
-          link_options[:class] = "cupid-gray"
-          text                 = "Applied"
-          link_options[:title] = "Click to remove your request"
-          link_options[:rel]   = "twipsy"
+          link_options[:class]   = "cupid-gray"
+          text                   = "Applied"
+          link_options[:title]   = "Click to remove your request"
+          link_options[:rel]     = "twipsy"
+          link_options[:confirm] = "Are you sure you want to remove your request?"
         else
-          text = "Participate"
-          link_options[:class] = "cupid-dark-blue"
+          text                   = "Participate"
+          link_options[:class]   = "cupid-dark-blue"
+          link_options[:confirm] = "Are you sure you want to participate?"
         end
 
         h.link_to(text, h.register_activity_path(activity), link_options)
