@@ -34,7 +34,6 @@ group :assets do
 end
 
 gem 'capistrano'
-gem 'exception_notification'
 
 group 'test' do
   gem 'minitest',          '~> 2.8.1'
@@ -51,4 +50,5 @@ end
 
 group :production do
   gem 'therubyracer'
+  gem 'exception_notification'
 end
