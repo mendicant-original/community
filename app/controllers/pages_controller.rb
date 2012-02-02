@@ -9,5 +9,7 @@ class PagesController < ApplicationController
     elsif @page.protected?
       user_required
     end
+
+    respond_with(@page)
   end
 end
