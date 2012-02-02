@@ -17,7 +17,11 @@ module Support
     def sign_user_in_with_mocks(user, hash)
       mock_auth_for(user)
       mock_uniweb_user(hash)
+
+      visit root_path
       click_link 'Sign in with Github'
+
+      user
     end
 
     def sign_user_in(user=Factory(:user))

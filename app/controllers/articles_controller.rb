@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
   before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
   before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
+  before_filter :profile_required,      :only => [:new, :create]
 
   def index
     @articles = Article.includes(:author).order("created_at desc").
@@ -59,5 +60,12 @@ class ArticlesController < ApplicationController
 
   def find_article
     @article = Article.find_by_slug(params[:id])
+  end
+
+  def profile_required
+    if current_user.description.blank?
+      flash[:error] = "Please add some information to your description and try again."
+      redirect_to edit_person_path(current_user)
+    end
   end
 end
