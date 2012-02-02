@@ -1,7 +1,11 @@
 class PeopleController < ApplicationController
 
   def show
-    @person = UserDecorator.find_by_github(params[:id]).decorate
+    @person = UserDecorator.find_by_github(params[:id])
+
+    raise ActionController::RoutingError.new('Not Found') unless @person
+
+    @person = @person.decorate
   end
 
   def edit
