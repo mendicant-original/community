@@ -11,14 +11,15 @@ class ArticlesController < ApplicationController
                   paginate(:page => params[:page])
     @articles = ArticleDecorator.decorate(@articles)
 
-    respond_to do |format|
-      format.html
+    respond_with(@articles) do |format|
       format.rss { render :layout => false }
     end
   end
 
   def show
     @article = ArticleDecorator.decorate(@article)
+
+    respond_with(@article)
   end
 
   def new

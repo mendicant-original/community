@@ -7,6 +7,8 @@ class PeopleController < ApplicationController
     raise ActionController::RoutingError.new('Not Found') unless @person
 
     @person = @person.decorate
+
+    respond_with(@person)
   end
 
   def edit
