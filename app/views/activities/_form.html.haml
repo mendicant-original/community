@@ -1,4 +1,4 @@
-= form_for @activity do |f|
+= form_for @activity, :html => { :data => { 'track-changes' => true } } do |f|
   = error_messages_for(@activity)
 
   .field

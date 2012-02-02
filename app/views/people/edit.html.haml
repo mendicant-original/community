@@ -1,6 +1,6 @@
 %h1 Your Profile Information
 
-= form_for @person, :url => person_path(@person) do |f|
+= form_for @person, :url => person_path(@person), :html => { :data => { 'track-changes' => true } } do |f|
   = error_messages_for @person
 
   %p

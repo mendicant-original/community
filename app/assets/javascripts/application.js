@@ -9,6 +9,7 @@
 //= require md_preview
 //= require jquery.elastic
 //= require cocoon
+//= require save
 //= require_tree '../../../vendor/assets/javascripts'
 //= require_tree .
 

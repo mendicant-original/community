@@ -1,6 +1,6 @@
 %h2 Edit Page
 
-= form_for @page, :url => admin_page_path(@page) do |f|
+= form_for @page, :url => admin_page_path(@page), :html => { :data => { 'track-changes' => true } } do |f|
   %p
     = f.label :title
     %br
