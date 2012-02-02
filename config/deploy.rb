@@ -29,7 +29,8 @@ after 'deploy:update_code' do
    "twitter.yml"       => "config/twitter.yml",
    "omniauth.rb"       => "config/initializers/omniauth.rb",
    "secret_token.rb"   => "config/initializers/secret_token.rb",
-   "university_web.rb" => "config/initializers/university_web.rb"}.
+   "university_web.rb" => "config/initializers/university_web.rb",
+   "mail.rb"           => "config/initializers/mail.rb"}.
   each do |from, to|
     run "ln -nfs #{shared_path}/#{from} #{release_path}/#{to}"
   end
