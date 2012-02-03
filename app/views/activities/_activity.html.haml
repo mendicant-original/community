@@ -7,7 +7,13 @@
 
     = activity.registration_button
 
-  .activity_content= activity.body
+  .activity_content
+    = activity.body
+    - if @activities
+      %p.discussion-list
+        %em
+          To discuss this activity, send an email to
+          = mail_to activity.discussion_list.email_address
 
   .activity_info
     = link_to activity.author.icon(100), person_path(activity.author)
@@ -15,13 +21,22 @@
     %div= activity.author_link
     %div= activity.created_at
 
-  - if !@activities && @activity.approved_participants.any?
-    #participants.section
-      .label
-        %h3 Participants
-      = render :partial => "participant", :collection => @participants
-      #current_user{:style => ("display: none;" unless @activity.approved_participants.include? current_user)}
-        = render :partial => "participant", :locals => { :participant => @user }
+  - if !@activities
+    - if @activity.approved_participants.any?
+      #participants.section
+        .label
+          %h3 Participants
+        = render :partial => "participant", :collection => @participants
+        - # TODO clean this up
+        #current_user{:style => ("display: none;" unless @activity.approved_participants.include? current_user)}
+          = render :partial => "participant", :locals => { :participant => @user }
+    - if @activity.discussion_list
+      .section
+        .label
+          %h3 Discussion List
+        To discuss this activity, send an email to
+        = mail_to @activity.discussion_list.email_address
+
 
 = activity.bottom(@activities, activities_path)
 
