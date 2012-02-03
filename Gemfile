@@ -4,8 +4,6 @@ gem 'rails', '~> 3.1.2'
 
 gem 'pg'
 
-# Omniauth
-
 gem 'omniauth-github', '~> 1.0.0'
 
 gem 'haml'
@@ -25,6 +23,8 @@ gem "rest-client", '~> 1.6.3' # For University-Web
 
 gem "twitter",  :require => false
 gem "whenever", :require => false
+
+gem 'newman', '~> 0.1.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
