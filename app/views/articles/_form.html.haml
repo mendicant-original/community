@@ -18,3 +18,8 @@
     = f.submit @article.new_record? ? 'Post' : 'Update'
     or
     = link_to "get me out of here", root_path
+
+    - if current_user.admin?
+      .highlight
+        = f.check_box :highlight
+        = f.label :highlight
