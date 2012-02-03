@@ -13,6 +13,7 @@ Community::Application.routes.draw do
       post :register
       post :archive
       post :restore
+      post :create_discussion_list
     end
     collection do
       get :archived

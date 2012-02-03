@@ -3,3 +3,8 @@
   &raquo; Edit your activity
 
 = render 'form'
+= render 'discussion_list'
+.control-bar
+  = submit_link 'Update', "edit_activity_#{@activity.id}"
+  or
+  = link_to "get me out of here", activities_path

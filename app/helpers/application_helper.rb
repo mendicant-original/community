@@ -18,4 +18,8 @@ module ApplicationHelper
     MdPreview::Parser.parse(content)
   end
 
+  def submit_link(name, form)
+    link_to name, '#', :class => "clean-gray", :'data-submit' => form
+  end
+
 end

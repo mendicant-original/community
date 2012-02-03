@@ -16,7 +16,7 @@
     %div= activity.created_at
 
   - if !@activities && @activity.approved_participants.any?
-    #participants
+    #participants.section
       .label
         %h3 Participants
       = render :partial => "participant", :collection => @participants

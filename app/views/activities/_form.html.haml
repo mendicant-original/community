@@ -16,7 +16,7 @@
 
   - if @activity.persisted?
     .activity
-      #participants
+      #participants.section
         .label
           %h3 Participants
 
@@ -25,8 +25,3 @@
         %p
           = link_to_add_association "Add another participant",
           f, :activity_registrations, :class => "clean-gray"
-
-  .control-bar
-    = f.submit @activity.new_record? ? 'Post' : 'Update'
-    or
-    = link_to "get me out of here", activities_path
