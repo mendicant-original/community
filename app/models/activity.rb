@@ -9,7 +9,7 @@ class Activity < ActiveRecord::Base
     :allow_destroy => true,
     :reject_if     => proc { |attributes| attributes['user_id'].blank? }
 
-  has_slug 'title', :max_length  => 40,
+  has_slug 'title', :max_length  => 20,
                     :on_conflict => :append_id
 
   validates_presence_of :title, :body, :author
