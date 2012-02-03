@@ -1,9 +1,11 @@
 class ActivitiesController < ApplicationController
   before_filter :user_required
   before_filter :find_activity, :only => [ :show, :edit, :update, :destroy,
-                                           :register, :archive, :restore ]
+                                           :register, :archive, :restore,
+                                           :create_discussion_list ]
   before_filter :authorized_users_only, :only => [ :edit, :update, :destroy,
-                                                   :archive, :restore ]
+                                                   :archive, :restore,
+                                                   :create_discussion_list ]
 
   def index
     @activities = Activity.active.includes(:author).order("created_at desc").
@@ -79,6 +81,14 @@ class ActivitiesController < ApplicationController
 
     @activity = ActivityDecorator.decorate(@activity)
     @participating = @activity.approved_participants.include?(current_user)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def create_discussion_list
+    @discussion_list = @activity.create_discussion_list(params[:name])
 
     respond_to do |format|
       format.js

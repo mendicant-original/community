@@ -19,3 +19,12 @@ $(function(){
     $(this).twipsy('hide');
   });
 })
+
+$('a[data-submit]').live('click', function(e){
+  var form = $(this).attr('data-submit');
+  $('#' + form).submit();
+
+  $(this).attr('disabled', true);
+
+  e.preventDefault();
+});

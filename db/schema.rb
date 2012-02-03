@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120129211507) do
+ActiveRecord::Schema.define(:version => 20120203185359) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20120129211507) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "archived",                :default => false, :null => false
+    t.boolean  "allow_discussion",        :default => false, :null => false
+    t.text     "discussion_list_name"
   end
 
   create_table "activity_registrations", :force => true do |t|
@@ -42,6 +44,13 @@ ActiveRecord::Schema.define(:version => 20120129211507) do
     t.datetime "updated_at"
     t.string   "slug"
     t.boolean  "posted_to_twitter", :default => false, :null => false
+  end
+
+  create_table "discussion_lists", :force => true do |t|
+    t.integer  "activity_id"
+    t.text     "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "learning_materials", :force => true do |t|
