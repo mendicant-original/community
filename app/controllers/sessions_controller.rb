@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
   before_filter :check_permissions, :only => [:create]
 
+  def new
+    if Rails.env.development?
+      redirect_to '/auth/developer'
+    else
+      redirect_to '/auth/github'
+    end
+  end
+
   def create
     unless user = User.find_by_uid(auth_hash['uid'])
       user = User.create_from_hash(auth_hash)
