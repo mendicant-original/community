@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?, :admin?, :login_path
+  helper_method :current_user, :signed_in?, :admin?
 
   private
 
@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
     unless signed_in?
       store_location
       redirect_to login_path
+      return true
     end
   end
 
@@ -56,13 +57,5 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
-  end
-
-  def login_path
-    if Rails.env.development?
-      '/auth/developer'
-    else
-      '/auth/github'
-    end
   end
 end
