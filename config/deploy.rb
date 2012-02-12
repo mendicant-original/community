@@ -34,6 +34,8 @@ after 'deploy:update_code' do
   each do |from, to|
     run "ln -nfs #{shared_path}/#{from} #{release_path}/#{to}"
   end
+
+  run "ln -nfs /var/rapp/mail_whale/shared/mail_whale.store #{release_path}/db/newman.store"
 end
 
 after "deploy", "deploy:migrate"
