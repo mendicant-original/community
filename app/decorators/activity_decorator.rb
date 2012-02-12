@@ -46,6 +46,13 @@ class ActivityDecorator < ApplicationDecorator
     "by #{h.link_to(activity.author.name, h.person_path(activity.author))}".html_safe
   end
 
+  def discussion_list_link
+    return unless activity.discussion_list
+
+    "To discuss this activity, send an email to ".html_safe +
+    h.mail_to(activity.discussion_list.email_address)
+  end
+
   def participants_link
     participants = activity.approved_participants
 
