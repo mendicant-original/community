@@ -1,5 +1,6 @@
 class DiscussionList < ActiveRecord::Base
   belongs_to :activity
+  after_create :add_participants
 
   validates_uniqueness_of :name
   validates_presence_of :name
@@ -18,5 +19,13 @@ class DiscussionList < ActiveRecord::Base
 
   def unsubscribe(email)
     list_manager.unsubscribe(email) if list_manager.subscriber?(email)
+  end
+
+  private
+
+  def add_participants
+    activity.approved_participants.each do |participant|
+      subscribe(participant.email)
+    end
   end
 end
