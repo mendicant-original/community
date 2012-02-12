@@ -11,9 +11,8 @@
     = activity.body
     - if @activities
       %p.discussion-list
-        %em
-          To discuss this activity, send an email to
-          = mail_to activity.discussion_list.email_address
+        %em= activity.discussion_list_link
+
 
   .activity_info
     = link_to activity.author.icon(100), person_path(activity.author)
@@ -30,12 +29,11 @@
         - # TODO clean this up
         #current_user{:style => ("display: none;" unless @activity.approved_participants.include? current_user)}
           = render :partial => "participant", :locals => { :participant => @user }
-    - if @activity.discussion_list
+    - if @activity.discussion_list && @activity.approved_participants.include?(current_user)
       .section
         .label
           %h3 Discussion List
-        To discuss this activity, send an email to
-        = mail_to @activity.discussion_list.email_address
+        = @activity.discussion_list_link
 
 
 = activity.bottom(@activities, activities_path)
