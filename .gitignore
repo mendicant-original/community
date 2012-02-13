@@ -7,6 +7,9 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore project rvmrc gemset
+/.rvmrc
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
