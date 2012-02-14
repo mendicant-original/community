@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
   def create
     unless user = User.find_by_uid(auth_hash['uid'])
-      user = User.create_from_hash(auth_hash)
+      user = User.create_from_hash(user_hash)
     end
 
     if user.errors.any?
@@ -46,9 +46,20 @@ class SessionsController < ApplicationController
     hash
   end
 
-  def check_permissions
+  def uniweb_user
+    return @uniweb_user if @uniweb_user
     nick = auth_hash['info']['nickname']
-    user = UniversityWeb::User.find_by_github(nick)
+    @uniweb_user ||= UniversityWeb::User.find_by_github(nick)
+  end
+  
+  def user_hash
+    auth_hash.merge(:name => uniweb_user.name, 
+                    :email => uniweb_user.email
+                   )
+  end
+  
+  def check_permissions
+    user = uniweb_user
 
     alert = \
       if user.nil?
