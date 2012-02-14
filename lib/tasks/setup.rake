@@ -103,7 +103,7 @@ def create_file(file, name, requires_edit=false)
 
   if requires_edit
     puts "Update #{file} and run `bundle exec rake setup` to continue".color(:red)
-    `$EDITOR #{file}`
+    system(ENV['EDITOR'], file) unless ENV['EDITOR'].blank?
     exit
   end
 end
