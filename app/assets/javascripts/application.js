@@ -18,6 +18,12 @@ $(function(){
   $('a[rel~="twipsy"]').live('ajax:before', function(){
     $(this).twipsy('hide');
   });
+
+  $('.bigtext').each(function() {
+    var fontsize = parseInt($('.bigtext').css('font-size'));
+    $(this).bigtext({maxfontsize: fontsize});
+  });
+
 })
 
 $('a[data-submit]').live('click', function(e){
