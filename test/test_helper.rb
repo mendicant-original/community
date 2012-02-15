@@ -15,6 +15,7 @@ class ActionDispatch::IntegrationTest
   include Support::Integration
   include Support::Auth
 
+  setup    { mock_uniweb_user({}) }
   teardown { Capybara.reset_sessions! }
 end
 
