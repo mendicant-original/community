@@ -57,10 +57,7 @@ class SessionsController < ApplicationController
     @uniweb_user ||= UniversityWeb::User.find_by_github(nick)
   end
   
-  def user_hash
-    
-  end
-  
+
   def check_permissions
     user = uniweb_user
 
