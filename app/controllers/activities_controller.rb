@@ -24,6 +24,9 @@ class ActivitiesController < ApplicationController
     participants  = @activity.approved_participants - [current_user]
     @participants = UserDecorator.decorate(participants)
     @user         = UserDecorator.decorate(current_user)
+
+    @activity.mark_read_by!(current_user) if signed_in?
+    set_unread_count
   end
 
 

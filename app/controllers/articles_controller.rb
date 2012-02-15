@@ -22,7 +22,8 @@ class ArticlesController < ApplicationController
     return if !@article.public? && user_required
 
     @article = ArticleDecorator.decorate(@article)
-
+    @article.mark_read_by!(current_user) if signed_in?
+    set_unread_count
     respond_with(@article)
   end
 
