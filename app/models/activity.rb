@@ -1,6 +1,8 @@
 class Activity < ActiveRecord::Base
   include WriteControl
 
+  mark_as_readable
+
   belongs_to :author, :class_name => "User"
   has_many   :activity_registrations, :dependent => :destroy
   has_many   :users, :through => :activity_registrations

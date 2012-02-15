@@ -1,5 +1,5 @@
 = content_tag_for :article, article do
-  .article_title
+  .article_title{:class => (:unread unless article.read_by?(current_user))}
     - if @articles
       = link_to article.title, article_path(article)
     - else

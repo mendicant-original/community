@@ -1,5 +1,5 @@
 = content_tag_for :div, activity do
-  .activity_title
+  .activity_title{:class => (:unread unless activity.read_by?(current_user))}
     - if @activities
       = link_to activity.title, activity_path(activity)
     - else
