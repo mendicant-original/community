@@ -8,6 +8,9 @@
     //%span.hint Create a short and descriptive title for your post.
   .field
     = f.text_area :body, "data-preview" => true
+  .field
+    = f.check_box :sticky
+    = f.label :sticky
   .control-bar
     = f.submit @article.new_record? ? 'Post' : 'Update'
     or

@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   before_filter :profile_required,      :only => [:new, :create]
 
   def index
-    @articles = Article.includes(:author).order("created_at desc").
+    @articles = Article.includes(:author).newest.
                   paginate(:page => params[:page])
     @articles = ArticleDecorator.decorate(@articles)
 
