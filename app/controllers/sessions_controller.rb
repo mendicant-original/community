@@ -10,11 +10,13 @@ class SessionsController < ApplicationController
   end
 
   def create
+    logger.info "[SessionsController#create] github auth: #{auth_hash.inspect}"
+    logger.info "[SessionsController#create] uniweb_user: #{uniweb_user.inspect}"
+
     unless user = User.find_by_uid(auth_hash['uid'])
-      user_hash = auth_hash.merge(:name => uniweb_user.name, 
-                                  :email => uniweb_user.email
-                                 )
-      user = User.create_from_hash(user_hash)
+      user = User.create_from_hash(user_hash, :name  => uniweb_user.name,
+                                              :email => uniweb_user.email
+                                  )
     end
 
     if user.errors.any?

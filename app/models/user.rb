@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
 
   attr_protected :admin
 
-  def self.create_from_hash(hash)
+  def self.create_from_hash(hash, overrides={})
     attributes = {
       name:    hash['info']['name'] || hash['info']['nickname'],
       email:   hash['info']['email'],
@@ -37,8 +37,8 @@ class User < ActiveRecord::Base
     }
 
     attributes[:website] = hash['info']['urls']['Blog'] if hash['info']['urls']
-
-    create(attributes)
+    
+    create(attributes.merge(overrides))
   end
 
   def to_param
