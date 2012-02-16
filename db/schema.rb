@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120203185359) do
+ActiveRecord::Schema.define(:version => 20120215015127) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
@@ -44,20 +44,12 @@ ActiveRecord::Schema.define(:version => 20120203185359) do
     t.datetime "updated_at"
     t.string   "slug"
     t.boolean  "posted_to_twitter", :default => false, :null => false
+    t.boolean  "sticky",            :default => false
   end
 
   create_table "discussion_lists", :force => true do |t|
     t.integer  "activity_id"
     t.text     "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "learning_materials", :force => true do |t|
-    t.text     "name"
-    t.text     "description"
-    t.text     "url"
-    t.text     "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,17 +61,6 @@ ActiveRecord::Schema.define(:version => 20120203185359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "protected",  :default => false, :null => false
-  end
-
-  create_table "projects", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "name",                            :null => false
-    t.text     "description"
-    t.text     "slug",                            :null => false
-    t.text     "source_url"
-    t.boolean  "core_project", :default => false, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
