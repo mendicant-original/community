@@ -5,16 +5,15 @@
     = f.label :title
     %br
     = f.text_field :title, :autofocus => true
-    //%span.hint Create a short and descriptive title for your post.
-  .field
-    = f.text_area :body, "data-preview" => true
   .field
     = f.check_box :public
-    = f.label :public
+    = f.label :public, "Allow the general public to view this update"
   - if current_user.admin?
     .field
       = f.check_box :sticky
-      = f.label :sticky
+      = f.label :sticky, "Make this update sticky"
+  .field
+    = f.text_area :body, "data-preview" => true
   .control-bar
     = f.submit @article.new_record? ? 'Post' : 'Update'
     or
