@@ -12,3 +12,10 @@ Factory.define :admin, :class => User do |f|
   f.admin  true
   f.uid    '456'
 end
+
+Factory.define :bart, :class => User do |f|
+  f.name   'Bart Simpson'
+  f.github 'bartsimpson'
+  f.email  'faker@mcfakerstein.com'
+  f.uid    '789'
+end

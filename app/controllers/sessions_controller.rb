@@ -10,8 +10,13 @@ class SessionsController < ApplicationController
   end
 
   def create
+    logger.info "[SessionsController#create] github auth: #{auth_hash.inspect}"
+    logger.info "[SessionsController#create] uniweb_user: #{uniweb_user.inspect}"
+
     unless user = User.find_by_uid(auth_hash['uid'])
-      user = User.create_from_hash(user_hash)
+      user = User.create_from_hash(auth_hash, :name  => uniweb_user.name,
+                                              :email => uniweb_user.email
+                                  )
     end
 
     if user.errors.any?
@@ -46,18 +51,15 @@ class SessionsController < ApplicationController
     hash
   end
 
+  def nick
+    auth_hash['info']['nickname']
+  end
+  
   def uniweb_user
-    return @uniweb_user if @uniweb_user
-    nick = auth_hash['info']['nickname']
     @uniweb_user ||= UniversityWeb::User.find_by_github(nick)
   end
   
-  def user_hash
-    auth_hash.merge(:name => uniweb_user.name, 
-                    :email => uniweb_user.email
-                   )
-  end
-  
+
   def check_permissions
     user = uniweb_user
 
