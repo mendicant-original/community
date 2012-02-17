@@ -11,8 +11,8 @@ class Article < ActiveRecord::Base
     opt.validates_length_of :title, :minimum => 3
   end
 
-  scope :newest, order("sticky desc, created_at desc")
-  scope :public_only, where(public_access: true)
+  scope :newest,      order("sticky desc, created_at desc")
+  scope :public_only, where(:public_access => true)
 
   def to_param
     slug

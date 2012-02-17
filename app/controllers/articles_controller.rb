@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
 
   before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
   before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
-  before_filter :check_article_access,  :only => [:show]
   before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
   before_filter :profile_required,      :only => [:new, :create]
 
@@ -19,6 +18,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    raise ActionController::RoutingError.new('Not Found') if @article.nil?
+
+    return if !@article.public_access? && user_required
+
     @article = ArticleDecorator.decorate(@article)
 
     respond_with(@article)
@@ -73,12 +76,6 @@ class ArticlesController < ApplicationController
     if current_user.description.blank?
       flash[:error] = "Please add some information to your description and try again."
       redirect_to edit_person_path(current_user)
-    end
-  end
-
-  def check_article_access
-    unless @article.public_access? || signed_in?
-      redirect_to(root_path, alert: "Sorry, this article is restricted to members.")
     end
   end
 end
