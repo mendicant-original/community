@@ -9,8 +9,8 @@
   .field
     = f.text_area :body, "data-preview" => true
   .field
-    = f.check_box :public_access
-    = f.label :public_access
+    = f.check_box :public
+    = f.label :public
   - if current_user.admin?
     .field
       = f.check_box :sticky

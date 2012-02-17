@@ -3,7 +3,8 @@ require 'test_helper'
 class ArticlesTest < ActionDispatch::IntegrationTest
   def setup
     @user = FactoryGirl.create(:user)
-    @article = FactoryGirl.create(:article, title: "Restricted Unicorns!", public_access: false, author: @user)
+    @article = FactoryGirl.create(:article, title: "Restricted Unicorns!",
+      public: false, author: @user)
   end
 
   test "articles can only be created by users with profiles" do
@@ -37,7 +38,7 @@ class ArticlesTest < ActionDispatch::IntegrationTest
 
   test "guest cannot access non-public articles" do
     visit article_path(@article)
-    assert_content("Sorry, this article is restricted to members.")
+    assert_current_path root_path
   end
 
   test "unicorns can access non-public articles" do

@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20120217002323) do
     t.string   "slug"
     t.boolean  "posted_to_twitter", :default => false, :null => false
     t.boolean  "sticky",            :default => false
-    t.boolean  "public_access",     :default => true
+    t.boolean  "public",            :default => true
   end
 
   create_table "discussion_lists", :force => true do |t|
