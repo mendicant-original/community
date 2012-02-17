@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     logger.info "[SessionsController#create] uniweb_user: #{uniweb_user.inspect}"
 
     unless user = User.find_by_uid(auth_hash['uid'])
-      user = User.create_from_hash(user_hash, :name  => uniweb_user.name,
+      user = User.create_from_hash(auth_hash, :name  => uniweb_user.name,
                                               :email => uniweb_user.email
                                   )
     end

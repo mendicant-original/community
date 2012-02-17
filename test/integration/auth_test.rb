@@ -1,9 +1,18 @@
 require 'test_helper'
 
+class MockGithubUser < Struct.new(:name, :github, :email, :uid)
+
+  def self.from_factory(key=:user)
+    attrs = Factory.attributes_for(key)
+    user = new(attrs[:name], attrs[:github], attrs[:email], attrs[:uid])
+  end
+  
+end
+
 class AuthTest < ActionDispatch::IntegrationTest
 
   test "user not in university-web should flash not registered alert" do
-    sign_user_in_with_mocks(Factory(:user), {})
+    sign_user_in_with_mocks(MockGithubUser.from_factory(:user), {})
     
     page.has_selector?("div#flash-alert")
     page.has_content?(
@@ -13,7 +22,7 @@ class AuthTest < ActionDispatch::IntegrationTest
   
   [:alumnus, :staff, :visiting_teacher].each do |user_category|
     test "user not #{user_category} should flash not authorized alert" do      
-      mock_user = Factory(:user)
+      mock_user = MockGithubUser.from_factory(:user)
       uniweb_hash = { :github  => mock_user.github, 
                       :name    => mock_user.name, 
                       :email   => mock_user.email, 
@@ -31,7 +40,7 @@ class AuthTest < ActionDispatch::IntegrationTest
     end
     
     test "#{user_category} user should not flash alert" do
-      mock_user = Factory(:user)
+      mock_user = MockGithubUser.from_factory(:user)
       uniweb_hash = { :github  => mock_user.github, 
                       :name    => mock_user.name, 
                       :email   => mock_user.email, 
@@ -49,7 +58,7 @@ class AuthTest < ActionDispatch::IntegrationTest
   
   test "non-existent authorized user should be added with name and email taken from university-web" do
     
-    mock_user = Factory(:bart)
+    mock_user = MockGithubUser.from_factory(:bart)
     uniweb_hash = { :github  => mock_user.github, 
                     :name    => "Evil Twin of Bart Simpson", 
                     :email   => "dont.have.a.cow.man@gmail.com", 
