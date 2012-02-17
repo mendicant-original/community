@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
                                                    :create_discussion_list ]
 
   def index
-    @activities = Activity.active.includes(:author).order("created_at desc").
+    @activities = Activity.active.deadline_sensitive.includes(:author).
                   paginate(:page => params[:page])
     @activities = ActivityDecorator.decorate(@activities)
   end

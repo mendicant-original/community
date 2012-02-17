@@ -24,3 +24,6 @@
 
 # Ignore database files
 /db/newman.store
+
+# Ignore Mac files
+.DS_Store

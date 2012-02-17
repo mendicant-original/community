@@ -12,6 +12,10 @@
     = f.check_box :participation_moderated
     = f.label :participation_moderated
   .field
+    = f.label :deadline
+    %br
+    = f.text_field :deadline
+  .field
     = f.text_area :body, "data-preview" => true
 
   - if @activity.persisted?
@@ -25,3 +29,12 @@
         %p
           = link_to_add_association "Add another participant",
           f, :activity_registrations, :class => "clean-gray"
+
+
+= content_for :header_bottom do
+  :javascript
+    $(function (){
+      $('#activity_deadline').datepicker({
+        dateFormat: 'yy-mm-dd'
+      });
+    });

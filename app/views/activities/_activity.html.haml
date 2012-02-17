@@ -18,7 +18,10 @@
     = link_to activity.author.icon(100), person_path(activity.author)
     = activity.participants_link if @activities
     %div= activity.author_link
-    %div= activity.created_at
+    - if activity.deadline.present?
+      %div.deadline
+        %span{:title => 'deadline'}= activity.deadline
+    %div.posted= "Added: #{activity.created_at}"
 
   - if !@activities
     - if @activity.approved_participants.any?

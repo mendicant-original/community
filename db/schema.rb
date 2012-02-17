@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214183417) do
+ActiveRecord::Schema.define(:version => 20120217001335) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120214183417) do
     t.boolean  "archived",                :default => false, :null => false
     t.boolean  "allow_discussion",        :default => false, :null => false
     t.text     "discussion_list_name"
+    t.datetime "deadline"
   end
 
   create_table "activity_registrations", :force => true do |t|
