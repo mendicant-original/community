@@ -12,6 +12,7 @@ class Article < ActiveRecord::Base
   end
 
   scope :newest, order("sticky desc, created_at desc")
+  scope :public_only, where(public_access: true)
 
   def to_param
     slug

@@ -3,12 +3,14 @@ class ArticlesController < ApplicationController
 
   before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
   before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
+  before_filter :check_article_access,  :only => [:show]
   before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
   before_filter :profile_required,      :only => [:new, :create]
 
   def index
-    @articles = Article.includes(:author).newest.
-                  paginate(:page => params[:page])
+    @articles = Article.includes(:author).newest.paginate(:page => params[:page])
+    @articles = @articles.public_only unless signed_in?
+
     @articles = ArticleDecorator.decorate(@articles)
 
     respond_with(@articles) do |format|
@@ -71,6 +73,12 @@ class ArticlesController < ApplicationController
     if current_user.description.blank?
       flash[:error] = "Please add some information to your description and try again."
       redirect_to edit_person_path(current_user)
+    end
+  end
+
+  def check_article_access
+    unless @article.public_access? || signed_in?
+      redirect_to(root_path, alert: "Sorry, this article is restricted to members.")
     end
   end
 end

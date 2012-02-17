@@ -52,4 +52,11 @@ class ArticleTest < ActiveSupport::TestCase
 
     assert_equal(["Article #1"], titles)
   end
+
+  test "list only public articles" do
+    FactoryGirl.create(:article, title: "Article #1", author: @user)
+    FactoryGirl.create(:article, title: "Article #2", author: @user, public_access: false)
+
+    assert_equal(1, Article.public_only.count)
+  end
 end

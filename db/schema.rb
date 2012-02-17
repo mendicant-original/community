@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215015127) do
+ActiveRecord::Schema.define(:version => 20120217002323) do
 
   create_table "activities", :force => true do |t|
     t.integer  "author_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20120215015127) do
     t.string   "slug"
     t.boolean  "posted_to_twitter", :default => false, :null => false
     t.boolean  "sticky",            :default => false
+    t.boolean  "public_access",     :default => true
   end
 
   create_table "discussion_lists", :force => true do |t|
