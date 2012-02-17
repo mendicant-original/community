@@ -37,7 +37,9 @@ class User < ActiveRecord::Base
     }
 
     attributes[:website] = hash['info']['urls']['Blog'] if hash['info']['urls']
-    
+
+    overrides.reject! {|_, value| value.blank? }
+
     create(attributes.merge(overrides))
   end
 
