@@ -18,8 +18,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    raise ActionController::RoutingError.new('Not Found') if @article.nil?
-
     return if !@article.public? && user_required
 
     @article = ArticleDecorator.decorate(@article)
