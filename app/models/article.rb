@@ -1,6 +1,8 @@
 class Article < ActiveRecord::Base
   include WriteControl
 
+  mark_as_readable
+
   belongs_to :author, :class_name => "User"
 
   has_slug 'title', :max_length  => 40,

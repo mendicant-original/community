@@ -1,5 +1,4 @@
 class ApplicationDecorator < Draper::Base
-
   def bottom(collection, collection_path)
     if collection
       h.tag(:hr, :class => "separator") if model != collection.last
@@ -8,5 +7,4 @@ class ApplicationDecorator < Draper::Base
         collection_path, :id => "back-link"
     end
   end
-
 end

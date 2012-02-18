@@ -5,8 +5,10 @@
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
     = link_to "Updates", articles_path
+    %span.unread_count= @unread_updates_count
     - if current_user
       = link_to "Activities", activities_path
+      %span.unread_count= @unread_activities_count
       = link_to "Unicorns", page_path("unicorns")
     - else
       = link_to "About", about_path

@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_user, :signed_in?, :admin?
+  
+  before_filter :set_unread_count
 
   private
 
@@ -57,5 +59,12 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end
+
+  def set_unread_count
+    return unless signed_in?
+
+    @unread_updates_count = Article.unread_count_by(current_user)
+    @unread_activities_count = Activity.unread_count_by(current_user)
   end
 end

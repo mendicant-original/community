@@ -64,6 +64,17 @@ ActiveRecord::Schema.define(:version => 20120217002323) do
     t.boolean  "protected",  :default => false, :null => false
   end
 
+  create_table "readings", :force => true do |t|
+    t.string   "readable_type"
+    t.integer  "readable_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "readings", ["user_id", "readable_id", "readable_type"], :name => "index_readings_on_user_id_and_readable_id_and_readable_type", :unique => true
+  add_index "readings", ["user_id"], :name => "index_readings_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "name",                           :null => false
     t.string   "email"
