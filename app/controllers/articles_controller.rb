@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   before_filter :user_required,         :only => [:new, :create, :edit, :update, :destroy]
   before_filter :find_article,          :only => [:show, :edit, :update, :destroy]
+  before_filter :mark_as_read,          :only => [:show]
   before_filter :authorized_users_only, :only => [:edit, :update, :destroy]
   before_filter :profile_required,      :only => [:new, :create]
 
@@ -22,8 +23,7 @@ class ArticlesController < ApplicationController
     return if !@article.public? && user_required
 
     @article = ArticleDecorator.decorate(@article)
-    @article.mark_read_by!(current_user) if signed_in?
-    set_unread_count
+
     respond_with(@article)
   end
 
@@ -76,6 +76,13 @@ class ArticlesController < ApplicationController
     if current_user.description.blank?
       flash[:error] = "Please add some information to your description and try again."
       redirect_to edit_person_path(current_user)
+    end
+  end
+
+  def mark_as_read
+    unless @article.read_by?(current_user)
+      @article.mark_as_read(current_user)
+      update_unread_count
     end
   end
 end

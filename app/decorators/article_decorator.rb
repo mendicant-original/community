@@ -32,8 +32,9 @@ class ArticleDecorator < ApplicationDecorator
   def css
     css_classes = []
 
-    css_classes << 'sticky' if article.sticky?
+    css_classes << 'sticky'  if article.sticky?
     css_classes << 'private' unless article.public?
+    css_class   << 'unread'  unless article.read_by?(h.current_user)
 
     css_classes.join(' ')
   end
