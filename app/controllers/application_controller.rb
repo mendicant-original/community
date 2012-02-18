@@ -62,9 +62,6 @@ class ApplicationController < ActionController::Base
   end
 
   def update_unread_count
-    return unless signed_in?
-
-    @unread_updates_count    = Article.unread_count_by(current_user)
-    @unread_activities_count = Activity.unread_count_by(current_user)
+    @inbox = Inbox.new(current_user)
   end
 end
