@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
   include WriteControl
-
-  mark_as_readable
+  include Readable
 
   belongs_to :author, :class_name => "User"
 

@@ -63,4 +63,11 @@ class ActivityDecorator < ApplicationDecorator
 
     h.content_tag(:div, link || "", :class => "participants").html_safe
   end
+
+  def css_class
+    css_class = []
+    css_class << 'unread' unless activity.read_by?(h.current_user)
+
+    css_class.join(' ')
+  end
 end

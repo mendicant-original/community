@@ -2,11 +2,6 @@ class ArticleDecorator < ApplicationDecorator
   decorates :article
   decorates_association :author
 
-  # Needed for helpers.capture
-  #
-  helpers.extend(Haml::Helpers)
-  helpers.init_haml_helpers
-
   def author_rss
     "#{article.author.email} (#{article.author.name})"
   end
@@ -34,13 +29,11 @@ class ArticleDecorator < ApplicationDecorator
     RestClient.post("http://is.gd/create.php", :format => "simple", :url => url)
   end
 
-  def div(&block)
+  def css_class
     css_class = []
     css_class << 'sticky' if article.sticky?
     css_class << 'unread' unless article.read_by?(h.current_user)
 
-    h.content_tag_for(:article, article, :class => css_class.join(' ')) do
-      h.capture(&block)
-    end
+    css_class.join(' ')
   end
 end

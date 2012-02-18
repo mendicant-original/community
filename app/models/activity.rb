@@ -1,7 +1,6 @@
 class Activity < ActiveRecord::Base
   include WriteControl
-
-  mark_as_readable
+  include Readable
 
   belongs_to :author, :class_name => "User"
   has_many   :activity_registrations, :dependent => :destroy
@@ -19,6 +18,10 @@ class Activity < ActiveRecord::Base
 
   scope :active,   where(:archived => false)
   scope :archived, where(:archived => true)
+
+  def self.readable
+    active
+  end
 
   def to_param
     slug

@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
   before_filter :find_activity, :only => [ :show, :edit, :update, :destroy,
                                            :register, :archive, :restore,
                                            :create_discussion_list ]
+  before_filter :mark_as_read,  :only => [ :show ]
   before_filter :authorized_users_only, :only => [ :edit, :update, :destroy,
                                                    :archive, :restore,
                                                    :create_discussion_list ]
@@ -24,9 +25,6 @@ class ActivitiesController < ApplicationController
     participants  = @activity.approved_participants - [current_user]
     @participants = UserDecorator.decorate(participants)
     @user         = UserDecorator.decorate(current_user)
-
-    @activity.mark_read_by!(current_user) if signed_in?
-    set_unread_count
   end
 
 
@@ -113,5 +111,12 @@ class ActivitiesController < ApplicationController
 
   def collect_users
     @users = User.order("name").map {|u| [u.name, u.id] }
+  end
+
+  def mark_as_read
+    unless @activity.read_by?(current_user)
+      @activity.mark_as_read(current_user)
+      update_unread_count
+    end
   end
 end

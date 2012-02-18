@@ -1,27 +1,28 @@
 module Readable
-  def mark_as_readable
-    has_many :readings, :as => :readable
-    scope :read_by, lambda{|user| joins(:readings).where("readings.user_id = ?", user.id) }
+  extend ActiveSupport::Concern
 
-    extend ClassMethods
-    include InstanceMethods
+  included do
+    has_many :readings, :as => :readable
+
+    scope :read_by, ->(user) {
+      joins(:readings).where("readings.user_id = ?", user.id)
+    }
   end
 
   module ClassMethods
     def unread_count_by(user)
-      count - read_by(user).count
+      total = count
+      total = readable.count if respond_to?(:readable)
+
+      total - read_by(user).count
     end
   end
 
-  module InstanceMethods
-    def mark_read_by!(user)
-      Reading.find_or_create_by_user_id_and_readable_id_and_readable_type(user.id, id, self.class.name)
-    end
+  def mark_as_read(user)
+    Reading.where(user_id: user, readable_type: self.class, readable_id: id).create
+  end
 
-    def read_by?(user)
-      Reading.has_read?(user, self)
-    end
+  def read_by?(user)
+    Reading.has_read?(user, self)
   end
 end
-
-ActiveRecord::Base.extend(Readable)

@@ -1,4 +1,4 @@
-= article.div do
+= content_tag_for(:article, article, :class => article.css_class) do
   .article_title
     - if @articles
       = link_to article.title, article_path(article)
