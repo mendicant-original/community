@@ -19,7 +19,8 @@ module Readable
   end
 
   def mark_as_read(user)
-    Reading.where(user_id: user, readable_type: self.class, readable_id: id).create
+    reading = Reading.where(user_id: user, readable_type: self.class, readable_id: id)
+    reading.first || reading.create
   end
 
   def read_by?(user)

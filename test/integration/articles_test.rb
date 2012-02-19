@@ -46,4 +46,15 @@ class ArticlesTest < ActionDispatch::IntegrationTest
     visit article_path(@article)
     assert_content("Restricted Unicorns!")
   end
+
+  test "unicorns see an unread article" do
+    visit articles_path
+    assert_no_content("1 Updates")
+
+    sign_user_in(@user)
+    assert_content("1 Updates")
+
+    visit article_path(@article)
+    assert_no_content("1 Updates")
+  end
 end
