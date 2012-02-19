@@ -4,12 +4,10 @@
       root_path
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
-    - # TODO Only display when unread counts > 0
-    %span.unread_count= @inbox.articles
+    = unread_count(@inbox.articles)
     = link_to "Updates", articles_path
     - if current_user
-      - # TODO Only display when unread counts > 0
-      %span.unread_count= @inbox.activities
+      = unread_count(@inbox.activities)
       = link_to "Activities", activities_path
       = link_to "Unicorns", page_path("unicorns")
     - else

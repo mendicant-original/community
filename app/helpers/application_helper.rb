@@ -22,4 +22,7 @@ module ApplicationHelper
     link_to name, '#', :class => "clean-gray", :'data-submit' => form
   end
 
+  def unread_count(count)
+    content_tag(:span, count, :class => 'unread_count') if count > 0
+  end
 end
