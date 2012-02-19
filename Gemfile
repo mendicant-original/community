@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'cocoon'
 
 gem 'draper',    :git => "git://github.com/jcasimir/draper.git"
-gem 'redcarpet', '~> 2.0.0b3'
+gem 'redcarpet', '~> 2.1.0'
 gem 'slugger',   '0.3.0'
 gem 'md_preview'
 gem 'md_emoji'
