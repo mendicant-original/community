@@ -4,10 +4,12 @@
       root_path
   = render :partial => "shared/flash", :locals => { :flash => flash }
   %span.nav
-    = unread_count(@inbox.articles)
+    = render :partial => "shared/unread_count",
+      :locals => { :count => @inbox.articles }
     = link_to "Updates", articles_path
     - if current_user
-      = unread_count(@inbox.activities)
+      = render :partial => "shared/unread_count",
+        :locals => { :count => @inbox.activities }
       = link_to "Activities", activities_path
       = link_to "Unicorns", page_path("unicorns")
     - else

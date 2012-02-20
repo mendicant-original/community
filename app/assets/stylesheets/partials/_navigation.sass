@@ -16,12 +16,15 @@ nav
       color: #D9DFFF
 
   span.unread_count
-    padding: 2px 8px
     background-color: #313246
     color: #fe5421
     font-size: 0.9em
-    border: 1px solid #2A2D3D
+    +single-box-shadow(#2A2D3D, 0, 0, 4px, $default-box-shadow-spread, inset)
     +border-radius(5px)
+    display: inline-block
+    margin-right: 0.5em
+    text-align: center
+    min-width: 2em
 
   span.nav
     float: right
