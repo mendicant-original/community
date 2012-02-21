@@ -29,12 +29,3 @@
         %p
           = link_to_add_association "Add another participant",
           f, :activity_registrations, :class => "clean-gray"
-
-
-= content_for :header_bottom do
-  :javascript
-    $(function (){
-      $('#activity_deadline').datepicker({
-        dateFormat: 'yy-mm-dd'
-      });
-    });
