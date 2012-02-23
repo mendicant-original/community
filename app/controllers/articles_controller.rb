@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
     respond_with(@articles) do |format|
       format.rss { render :layout => false }
+      format.atom
     end
   end
 
