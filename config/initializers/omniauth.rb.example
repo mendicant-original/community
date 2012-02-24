@@ -1,16 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
+  provider :developer, fields: [:name, :email, :nickname] unless Rails.env.production?
   provider :github, "consumer_key", "consumer_secret"
-end
-
-# Patch OmniAuth::Strategies::Developer to track "nickname" in development
-#
-if Rails.env.development?
-  module OmniAuth
-    module Strategies
-      class Developer
-        option :fields, [:name, :email, :nickname]
-      end
-    end
-  end
 end
