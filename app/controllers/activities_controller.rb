@@ -99,6 +99,8 @@ class ActivitiesController < ApplicationController
 
   def find_activity
     @activity = Activity.find_by_slug(params[:id])
+
+    raise ActionController::RoutingError.new('Not Found') unless @activity
   end
 
   def authorized_users_only
