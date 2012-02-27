@@ -16,7 +16,7 @@ namespace :twitter do
       config.oauth_token_secret = twitter_config['oauth_token_secret']
     end
 
-    articles = Article.where(:posted_to_twitter => false)
+    articles = Article.where(:posted_to_twitter => false).public_only
     articles = ArticleDecorator.decorate(articles)
 
     articles.each do |article|
