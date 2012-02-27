@@ -12,7 +12,7 @@
     .field
       = f.check_box :sticky
       = f.label :sticky, "Make this update sticky"
-  .field
+  .field.markdown-preview
     = f.text_area :body, "data-preview" => true
   .control-bar
     = f.submit @article.new_record? ? 'Post' : 'Update'
