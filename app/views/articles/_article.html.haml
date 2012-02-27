@@ -1,4 +1,4 @@
-= content_tag_for :article, article, class: "#{'sticky' if article.sticky?}" do
+= content_tag_for :article, article, class: article.css do
   .article_title
     - if @articles
       = link_to article.title, article_path(article)

@@ -35,7 +35,9 @@ article
     +column(20)
     margin-bottom: 0
 
-article.sticky
-  .article_title
+  &.sticky .article_title
     padding-left: 30px
     background: asset-url('icons/pin.png', image) 0 0 no-repeat
+  &.private .article_title
+    padding-left: 30px
+    background: asset-url('icons/butterfly.png', image) 0 0 no-repeat

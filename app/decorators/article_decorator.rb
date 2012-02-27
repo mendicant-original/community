@@ -28,4 +28,13 @@ class ArticleDecorator < ApplicationDecorator
 
     RestClient.post("http://is.gd/create.php", :format => "simple", :url => url)
   end
+
+  def css
+    css_classes = []
+
+    css_classes << 'sticky' if article.sticky?
+    css_classes << 'private' unless article.public?
+
+    css_classes.join(' ')
+  end
 end
