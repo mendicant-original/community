@@ -26,4 +26,10 @@ class PeopleController < ApplicationController
     end
   end
 
+  def read_all
+    params[:type].classify.constantize.read_all(current_user)
+
+    redirect_to :back
+  end
+
 end

@@ -1,4 +1,5 @@
 - content_for(:section_name) { link_to "Activities", activities_path }
 - content_for :section_controls do
+  = link_to "Mark all as read", read_all_path("activities"), :class => "clean-gray"
   = link_to "View archives", archived_activities_path, :class => "clean-gray"
   = link_to "Post an activity", new_activity_path, :class => "clean-gray"

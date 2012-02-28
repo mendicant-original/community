@@ -14,8 +14,8 @@
 //= require_tree .
 
 $(function(){
-  $('a[rel~="twipsy"]').twipsy({live: true});
-  $('a[rel~="twipsy"]').live('ajax:before', function(){
+  $('*[rel~="twipsy"]').twipsy({live: true});
+  $('*[rel~="twipsy"]').live('ajax:before', function(){
     $(this).twipsy('hide');
   });
 

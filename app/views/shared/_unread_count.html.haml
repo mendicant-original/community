@@ -1,2 +1,3 @@
 - if count > 0
-  %span.unread_count= count
+  %span.unread_count{rel: 'twipsy', title: "Unread #{type}",
+    data: { placement: 'below' }}= count

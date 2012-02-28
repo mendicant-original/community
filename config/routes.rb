@@ -6,6 +6,8 @@ Community::Application.routes.draw do
   match '/login'                   => 'sessions#new',     as: 'login'
   match '/logout'                  => 'sessions#destroy', as: 'logout'
 
+  match '/read_all/:type' => 'people#read_all', as: 'read_all'
+
   resources :people
   resources :articles
   resources :activities do

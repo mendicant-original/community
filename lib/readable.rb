@@ -16,6 +16,17 @@ module Readable
 
       total - read_by(user).count
     end
+
+    def read_all(user)
+      read   = read_by(user)
+      if read.empty?
+        unread = all
+      else
+        unread = where("#{table_name}.id NOT IN (?)", read)
+      end
+
+      unread.each {|readable| readable.mark_as_read(user) }
+    end
   end
 
   def mark_as_read(user)
