@@ -1,7 +1,5 @@
 article
   +container
-  &.unread div.article_title
-    font-weight: bold
   div.article_title
     +column(20)
     font-size: 1.5em
@@ -43,3 +41,5 @@ article
   &.private .article_title
     padding-left: 30px
     background: asset-url('icons/butterfly.png', image) 0 0 no-repeat
+  &.unread .article_title
+    font-weight: bold
