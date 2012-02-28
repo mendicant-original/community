@@ -6,15 +6,16 @@
     %br
     = f.text_field :title, :autofocus => true
   .field
+    = f.label :deadline
+    %br
+    = f.text_field :deadline, :class => "datepicker",
+      :value => (@activity.deadline.to_date if @activity.deadline)
+  .field
     = f.check_box :registration_open
     = f.label :registration_open
   .field
     = f.check_box :participation_moderated
     = f.label :participation_moderated
-  .field
-    = f.label :deadline
-    %br
-    = f.text_field :deadline
   .field
     = f.text_area :body, "data-preview" => true
 

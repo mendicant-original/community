@@ -20,8 +20,8 @@
     %div= activity.author_link
     - if activity.deadline.present?
       %div.deadline
-        %span{:title => 'deadline'}= activity.deadline
-    %div.posted= "Added: #{activity.created_at}"
+        %span{:title => 'Deadline'}= activity.deadline
+    %div.posted= activity.created_at
 
   - if !@activities
     - if @activity.approved_participants.any?

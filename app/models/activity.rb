@@ -14,14 +14,18 @@ class Activity < ActiveRecord::Base
   has_slug 'title', :max_length  => 20,
                     :on_conflict => :append_id
 
-  validates_presence_of   :title, :body, :author
-  validate :deadline_has_to_be_after_today
+  validates_presence_of :title, :body, :author
+  validate              :deadline_is_in_the_future
 
   scope :active,   where(:archived => false)
   scope :archived, where(:archived => true)
   scope :deadline_sensitive,
-        where("deadline IS NULL OR deadline > ?", Time.now).
-        order("deadline asc, created_at asc")
+          select(%{*,
+            CASE WHEN deadline >= current_date
+            THEN deadline
+            ELSE NULL
+            END AS future_deadline}).
+          order("future_deadline ASC, created_at DESC")
 
   def self.readable
     active
@@ -44,7 +48,9 @@ class Activity < ActiveRecord::Base
     end
   end
 
-  def deadline_has_to_be_after_today
+  private
+
+  def deadline_is_in_the_future
     if !deadline.blank? && deadline < Time.now
       errors.add(:deadline, "has to be after today")
     end
