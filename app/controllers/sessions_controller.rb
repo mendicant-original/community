@@ -1,14 +1,6 @@
 class SessionsController < ApplicationController
   before_filter :check_permissions, :only => [:create]
 
-  def new
-    if Rails.env.development?
-      redirect_to '/auth/developer'
-    else
-      redirect_to '/auth/github'
-    end
-  end
-
   def create
     unless user = User.find_by_uid(auth_hash['uid'])
       user = User.create_from_hash(auth_hash, :name  => uniweb_user.name,
@@ -21,13 +13,13 @@ class SessionsController < ApplicationController
       self.current_user = user
     end
 
-    redirect_back_or_default root_path
+    redirect_to request.env['omniauth.origin'] || root_path
   end
 
   def destroy
     self.current_user = nil
 
-    redirect_to root_path
+    redirect_to request.env['HTTP_REFERER'] || root_path
   end
 
   def failure

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :signed_in?, :admin?
+  helper_method :current_user, :signed_in?, :admin?, :login_path
 
   before_filter :update_unread_count
 
@@ -25,7 +25,6 @@ class ApplicationController < ActionController::Base
 
   def user_required
     unless signed_in?
-      store_location
       redirect_to login_path
       return true
     end
@@ -37,7 +36,6 @@ class ApplicationController < ActionController::Base
         flash[:error] = "You must be an admin to access this area!"
         redirect_to root_path
       else
-        store_location
         redirect_to login_path
       end
     end
@@ -47,21 +45,11 @@ class ApplicationController < ActionController::Base
     [:new, :create, :edit, :update, :destroy]
   end
 
-  def store_location
-    session[:return_to] = request.fullpath
-  end
-
-  def access_denied
-    flash[:alert] = "Sorry, you can't access this area"
-    redirect_back_or_default root_path
-  end
-
-  def redirect_back_or_default(default)
-    redirect_to(session[:return_to] || default)
-    session[:return_to] = nil
-  end
-
   def update_unread_count
     @inbox = Inbox.new(current_user)
+  end
+
+  def login_path
+    Rails.env.development? ? '/auth/developer' : '/auth/github'
   end
 end
