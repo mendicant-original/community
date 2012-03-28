@@ -11,10 +11,16 @@ module Readable
 
   module ClassMethods
     def unread_count_by(user)
-      total = count
-      total = readable.count if respond_to?(:readable)
+      if respond_to?(:readable)
+        total = readable.count
+        read  = read_by(user).
+                  where("#{readable.table_name}.id IN (?)", readable).count
+      else
+        total = count
+        read  = read_by(user).count
+      end
 
-      total - read_by(user).count
+      total - read
     end
 
     def read_all(user)
