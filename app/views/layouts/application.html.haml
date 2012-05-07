@@ -15,5 +15,14 @@
   %body
     = render "shared/navigation"
     = render "shared/section_header"
+
+    #site-alert
+      Hey there! Did you know we are rebuilding
+      = link_to "Mendicant", "http://mendicantuniversity.org"
+      from the ground up? Part of that process means we are putting all of our
+      projects on hold, including this site. Check out
+      = link_to "the details", "http://mendicantuniversity.org/updates/2012/05/06/building-a-new-mu.html"
+      and get involved today!
+
     #container= yield
     = render "shared/footer"
