@@ -4,7 +4,7 @@ set :whenever_identifier, defer { application }
 require 'whenever/capistrano'
 
 set :application, "community"
-set :repository,  "git://github.com/mendicant-university/community.git"
+set :repository,  "git://github.com/mendicant-original/community.git"
 
 set :scm, :git
 set :deploy_to, "/var/rapp/#{application}"
