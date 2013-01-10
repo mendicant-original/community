@@ -12,7 +12,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'cocoon'
 gem 'jquery-rails'
 
-gem 'draper',    :git => "git://github.com/jcasimir/draper.git"
+gem 'draper'
 gem 'redcarpet', '~> 2.1.0'
 gem 'slugger'
 gem 'md_preview'
@@ -29,7 +29,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier',     '>= 1.0.3'
-  gem 'compass',      '~> 0.12.alpha'
+  gem 'compass-rails'
 end
 
 gem 'capistrano'
