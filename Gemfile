@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.1.2'
+gem 'rails', '~> 3.1.11'
 
+gem 'json', '~> 1.7.7'
 gem 'pg'
 
 gem 'omniauth-github', '~> 1.0.0'
