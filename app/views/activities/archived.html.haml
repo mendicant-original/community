@@ -1,9 +1,0 @@
-- content_for(:section_name) do
-  = link_to "Activities", activities_path
-  &raquo; Archives
-- content_for :section_controls do
-  = link_to "Post an activity", new_activity_path, :class => "clean-gray"
-
-#activities= render :partial => "activity", :collection => @activities
-
-= will_paginate @activities

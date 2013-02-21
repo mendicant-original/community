@@ -1,8 +1,0 @@
-- content_for(:title) { @page.title }
-
-#page
-  = md(@page.body)
-
-- if current_user.try(:admin)
-  .control-bar
-    = link_to "Edit", edit_admin_page_path(@page), :class => "clean-gray"

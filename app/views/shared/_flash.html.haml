@@ -1,7 +1,0 @@
-#flash
-  - flash.each do |flashtype, message|
-    %div{:class => "flash #{flashtype} animated bounceIn", :id => "flash-#{flashtype}"}
-      = message
-  - unless flash.empty?
-    :javascript
-      Flash.init();

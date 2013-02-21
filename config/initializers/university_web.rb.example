@@ -1,7 +1,0 @@
-# Basic auth credentials for University Web
-# Only required in production mode
-#
-module UniversityWeb
-  SERVICE_ID   = "< basic auth user >"
-  SERVICE_PASS = "< basic auth password >"
-end

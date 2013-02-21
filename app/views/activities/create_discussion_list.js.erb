@@ -1,6 +1,0 @@
-<% if @discussion_list.persisted? %>
-  $('#discussion-list').html('<%= @discussion_list.email_address %>');
-<% else %>
-  var errors = '<%= escape_javascript(@discussion_list.errors.full_messages.join) %>';
-  $('#discussion-list .errors').html(errors)
-<% end %>
