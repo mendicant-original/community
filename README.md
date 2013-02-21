@@ -1,4 +1,4 @@
-![Community Logo](https://github.com/mendicant-university/community/raw/master/doc/community.png)
+![Community Logo](https://github.com/mendicant-original/community/raw/master/doc/community.png)
 
 A community based site for [Mendicant University](http://mendicantuniversity.org). For more information about the site, check out its
 [about page](http://community.mendicantuniversity.org/about).
@@ -13,7 +13,7 @@ or SQLite are not officially supported.
 
 To install a development version of Community, follow these steps:
 
-1. Fork our GitHub repository: <http://github.com/mendicant-university/community>
+1. Fork our GitHub repository: <http://github.com/mendicant-original/community>
 2. Clone the fork to your computer
 3. If you don't already have bundler installed, get it by running `gem install bundler`
 4. Run `bundle install` to install all of the project's dependencies
@@ -29,13 +29,13 @@ bundle exec rake setup
 
 ## Contributing
 
-Features and bugs are tracked through [Github Issues](https://github.com/mendicant-university/community/issues).
+Features and bugs are tracked through [Github Issues](https://github.com/mendicant-original/community/issues).
 
 Contributors retain copyright to their work but must agree to release their
 contributions under the [Affero GPL version 3](http://www.gnu.org/licenses/agpl.html).
 
 If you would like to help with developing Community, just file a ticket in our
-[issue tracker](https://github.com/mendicant-university/community/issues)
+[issue tracker](https://github.com/mendicant-original/community/issues)
 and we will find something to keep you busy.
 
 ### Submitting a Pull Request
@@ -60,7 +60,7 @@ and we will find something to keep you busy.
 Jordan Byron // [jordanbyron.com](http://jordanbyron.com) <br/>
 Gregory Brown // [majesticseacreature.com](http://majesticseacreature.com/)
 
-[Full List](https://github.com/mendicant-university/community/contributors)
+[Full List](https://github.com/mendicant-original/community/contributors)
 
 ## License
 
