@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 
 set :whenever_identifier, defer { application }
-require 'whenever/capistrano'
+# require 'whenever/capistrano'
 
 set :application, "community"
 set :repository,  "git://github.com/mendicant-original/community.git"
