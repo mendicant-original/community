@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>
+Method shelters for ruby - an alternative for refinements
+- Mendicant Community
+</title>
+<link href="/assets/application-5cc15a40d968db399082b9b5a3f278f6.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/assets/application-5ef90d50c2400be9515a40349af829aa.js" type="text/javascript"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="Qlrq4XwJlSHblEkmXXCTKyjNJPeYAdQmNzcJKvMhAZ0=" name="csrf-token" />
+
+</head>
+<body>
+<nav>
+<span class='title'>
+<a href="/"><strong>Community</strong> @ Mendicant University</a>
+</span>
+<div id='flash'>
+</div>
+
+<span class='nav'>
+
+<a href="/articles">Updates</a>
+<a href="/about">About</a>
+<span id='account'>
+</span>
+</span>
+</nav>
+
+
+<div id='site-alert'>
+Hi Friend! This is a static copy of Mendicant's Community Site. We are
+no loner updating it, but check out
+<a href="http://mendicantuniversity.org">our main site</a>
+for the latest news about the school. Thanks for visiting!
+</div>
+<div id='container'>
+<article class="article" id="article_59"><div class='article_title'>
+Method shelters for ruby - an alternative for refinements
+</div>
+<div class='article_content'><p>Method shelters are an alternative concept to limit the consequences of monkey patching in ruby to a specific context. Method shelters are an alternative approach to <a href="http://www.rubyinside.com/ruby-refinements-an-overview-of-a-new-proposed-ruby-feature-3978.html">refinements</a>, which was suggested at the end of 2010.</p>
+<p>Method shelters were proposed by <a href="https://twitter.com/#!/flexfrank">@flexfrank</a> and you can check out a <a href="http://www.slideshare.net/flexfrank/method-shelters-another-way-to-resolve-class-extension-conflicts">presentation from the end of 2011</a>, that explains the concept of method shelters and different concepts to solve the same problem. You may also have a look at a <a href="https://github.com/flexfrank/ruby_with_method_shelters">prototype implementation at github</a>, based on ruby 1.9.2, and a little <a href="https://github.com/flexfrank/ruby_with_method_shelters/blob/ruby_with_mehtod_shelters/README-SHELTERS.txt">readme</a> explaining the concept.</p>
+<p>The author gave a presentation at the <a href="http://www.aosd.net/2012/">AOSD conference</a>. Personally I like method shelters better than the proposed refinements, what do you think?</p>
+</div>
+<div class='user_info'>
+<a href="/people/PragTob"><img alt="Tobias Pfeiffer" src="http://www.gravatar.com/avatar/8480daec7137f28565bc2d2e666b915a?s=100&amp;d=http%3A%2F%2Fcommunity.mendicantuniversity.org%2Fassets%2Favatar-b96e028f25fd5f569a542b80a869eb32.png" style="width: 100px; height: 100px;" /></a>
+<p>
+by
+<a href="/people/PragTob">Tobias Pfeiffer</a>
+</p>
+<p class='posted'>
+March 30, 2012
+</p>
+</div>
+
+</article><a href="/articles" id="back-link">&laquo; There is more where that came from</a>
+
+</div>
+<footer>
+<a href="/about">About Community</a>
+&bull;
+<a href="http://mendicantuniversity.org">A Mendicant University Project</a>
+&bull;
+<a href="https://github.com/mendicant-original/community#readme">Fork me on GitHub</a>
+</footer>
+
+</body>
+</html>

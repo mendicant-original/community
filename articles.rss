@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community @ Mendicant University</title>
+    <description>Mendicant University's Community Site</description>
+    <link>http://community.mendicantuniversity.org</link>
+    <send href="http://community.mendicantuniversity.org/articles.rss" rel="self" type="application/rss+xml">atom:link</send>
+    <item>
+      <title>DaVinci LMS: A minimalistic Learning Management System</title>
+      <description>&lt;p&gt;When I was in university Pablo de Olavide we used WebCT for the online presence of teachers and students. It was an extremely useful web system. Among the many thing WebCT could do was to manage documents. So teachers will upload notes for the Java class at the start of the course and students will be able to download it, study it and raise questions before the actual class starts. It was a very useful document store. Another very useful feature that we used intensively was the Task system. So a teacher will say &amp;#39;Solve problems 13-18 and send me the code&amp;#39;. We will solve them and then send back the code, all using the web interface. It was very handy.&lt;/p&gt;
+&lt;p&gt;There are many other features, but they were all irrelevant since we didn&amp;#39;t use them. Nonetheless it wasn&amp;#39;t all perfect. It was far from perfect. The idea, the utility of the application was very good, yet the implementation could be much better. It was slow. The UI was ugly. Some times it will just explode and we will be without WebCT a few days until the IT figure it out what went wrong. Also, it was incredible costly for the university to use it, not just because of the important investment in IT infrastructure to serve 20000 users, but the actual cost of licensing the software. To get you an idea, they can&amp;#39;t afford to upgrade to new versions of WebCT. And since the world is in recession and particularly in Spain the government is cutting education budget by 20% (for real) it doesn&amp;#39;t seem likely that they will be able to update in years.&lt;/p&gt;
+&lt;p&gt;So that was the situation. When I was at my final year I took a web development course. I learnt a lot of technologies but the one that caught my eye was Ruby on Rails. It was an amazing piece of technology that allowed small teams to deliver working software in a matter of days instead of weeks or months. Real speed. I decided that I wanted to give it a go to creating a Learning Management System(LMS). I deliberately wanted it to be dead simple to use and to install. I didn&amp;#39;t want universities to need a whole staff of IT just to support the platform. It must be open source, so that they could modify the source code to meet they particular needs. It needed to be fast so that people could spend their time actually learning and not just using the learning platform. It should be able to store documents and manage tasks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Speed
+&lt;/li&gt;&lt;li&gt;Open source
+&lt;/li&gt;&lt;li&gt;Easy to use 
+&lt;/li&gt;&lt;li&gt;Easy to deploy
+&lt;/li&gt;&lt;li&gt;Document store
+&lt;/li&gt;&lt;li&gt;Task Management
+&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;My first attempt was a shit. I didn&amp;#39;t really knew how to use Rails and I was a beginner in CSS, HTML, knew nothing about JS. I made every possible mistake. I failed to create useful software, but I learned more and more of Rails. I started again. And again. And again. Each time a new project. Each time a new approach, different tools, different UI, different database, different testing approach, etc. It has become sort of my &amp;#39;Hello World&amp;#39; application whenever I want to test a new cutting edge tech.&lt;/p&gt;
+&lt;p&gt;This time, the new tech I wanted to give it try was Apotomo, a component oriented framework for Rails. I also happen to be reading Designed For Use, a book on Usability, how to improve user interfaces so that they are intuitive, natural, discoverable, easy to learn and master. So as a was reading the book I was designing the UI of the new DaVinci LMS prototype. I think this time I have actually achieve to produce a fully working application that meets the IT needs to a school. And so I wanted to make it public, so that people can try it and give me feedback on what is right and what is not right. Also, I can use more fellow developers on this project so you welcome to contribute.&lt;/p&gt;
+&lt;p&gt;Check it out: &lt;a href="https://github.com/Nerian/DaVinci-LMS"&gt;https://github.com/Nerian/DaVinci-LMS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And there is an online demo: &lt;a href="http://davinci-lms-testing.herokuapp.com/en/login"&gt;http://davinci-lms-testing.herokuapp.com/en/login&lt;/a&gt;&lt;/p&gt;
+</description>
+      <author>siotopo@gmail.com (Gonzalo Rodríguez-Baltanás Díaz)</author>
+      <pubDate>Thu, 26 Apr 2012 14:45:23 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/davinci-lms-a-minimalistic-learning-mana</link>
+      <guid>http://community.mendicantuniversity.org/articles/davinci-lms-a-minimalistic-learning-mana</guid>
+    </item>
+    <item>
+      <title>Meteor: A seemingly magical JS something-something</title>
+      <description>&lt;div align="center"&gt;
+&lt;iframe src="http://player.vimeo.com/video/40104996" width="600" height="480" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;If this interests you, please catch up with me to discuss either via &lt;strong&gt;#mendicant&lt;/strong&gt; on Freenode, or via the mendicant-alumni mailing list if you&amp;#39;re a MU community member.&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Fri, 13 Apr 2012 01:23:20 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/meteor-a-seemingly-magical-js-something</link>
+      <guid>http://community.mendicantuniversity.org/articles/meteor-a-seemingly-magical-js-something</guid>
+    </item>
+    <item>
+      <title>Is Node.js Better?</title>
+      <description>&lt;p&gt;While the title screams link bait, Brixen has authored an &lt;a href="http://brixen.io//2012/4/9/is_node_js_better"&gt;excellent article&lt;/a&gt; on how we should be more skeptical and scientific in our approach to programming and technology in general.&lt;/p&gt;
+&lt;p&gt;Highlights include the need for criticism and conflict to advance ideas forward, avoiding logical fallacies such as appealing to authority, and taking an honest look at ourselves and our motivations.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;m especially interested to see what everyone thinks about his assertion, &amp;quot;Programming is a behavioral science.&amp;quot; Perhaps we can discuss this during &lt;a href="http://community.mendicantuniversity.org/activities/social-gathering-thu"&gt;Thursday&amp;#39;s Social Gathering&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>shane@emmons.io (Shane Emmons)</author>
+      <pubDate>Tue, 10 Apr 2012 00:25:18 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/is-node-js-better</link>
+      <guid>http://community.mendicantuniversity.org/articles/is-node-js-better</guid>
+    </item>
+    <item>
+      <title>Hat Tip #2: Jordan Byron</title>
+      <description>&lt;p&gt;&lt;img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Coolidge_after_signing_indian_treaty.jpg/160px-Coolidge_after_signing_indian_treaty.jpg" style="float: right; margin: 10px;"&gt;&lt;/p&gt;
+&lt;p&gt;Mendicant University often has so much going on that it&amp;#39;s hard to slow down and say thanks to the folks who are making a huge difference around here. But because it never hurts to give credit where credit is due, this series of community posts is all about offering periodic &lt;a href="http://en.wikipedia.org/wiki/Hat_tip"&gt;hat tips&lt;/a&gt; to folks who have been doing excellent work for the school and the broader community.&lt;/p&gt;
+&lt;p&gt;This time around, my hat goes off to Mendicant University&amp;#39;s co-founder, &lt;a href="http://community.mendicantuniversity.org/people/jordanbyron"&gt;Jordan Byron&lt;/a&gt;. While his work has benefited us from day one, he has done more work than I have for this community over the last few months. In addition to launching this community website, he also ran our &amp;quot;Mending Mendicant&amp;quot; month in February. Lots of folks contributed great patches to our various projects, but Jordan was the one who had to review and merge all of them.&lt;/p&gt;
+&lt;p&gt;In March, Jordan ran our third web development course, and helped the students work on building an early prototype for replacing our existing classroom management software . In addition to the course, Jordan also represented Mendicant University in a short lightning talk at MountainWest RubyConf. As if all of that weren&amp;#39;t enough, he also participated in the &lt;a href="http://community.mendicantuniversity.org/articles/2012-ct-mission-of-mercy"&gt;5th annual Connecticut Mission of Mercy event&lt;/a&gt;, using his technical skills to help real people in pain get the dental treatment they need.&lt;/p&gt;
+&lt;p&gt;I can&amp;#39;t be more proud to have such an amazingly productive and helpful co-founder, and I can say without hesitation that Mendicant University would not exist without him. If you find time to offer him a few words of thanks, please do so!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please feel free to email me suggestions for who should receive the next hat tip in recognition of their contributions to Mendicant University, the Ruby ecosystem, or the world.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Sun, 01 Apr 2012 23:24:05 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/hat-tip-2-jordan-byron</link>
+      <guid>http://community.mendicantuniversity.org/articles/hat-tip-2-jordan-byron</guid>
+    </item>
+    <item>
+      <title>Method shelters for ruby - an alternative for refinements</title>
+      <description>&lt;p&gt;Method shelters are an alternative concept to limit the consequences of monkey patching in ruby to a specific context. Method shelters are an alternative approach to &lt;a href="http://www.rubyinside.com/ruby-refinements-an-overview-of-a-new-proposed-ruby-feature-3978.html"&gt;refinements&lt;/a&gt;, which was suggested at the end of 2010.&lt;/p&gt;
+&lt;p&gt;Method shelters were proposed by &lt;a href="https://twitter.com/#!/flexfrank"&gt;@flexfrank&lt;/a&gt; and you can check out a &lt;a href="http://www.slideshare.net/flexfrank/method-shelters-another-way-to-resolve-class-extension-conflicts"&gt;presentation from the end of 2011&lt;/a&gt;, that explains the concept of method shelters and different concepts to solve the same problem. You may also have a look at a &lt;a href="https://github.com/flexfrank/ruby_with_method_shelters"&gt;prototype implementation at github&lt;/a&gt;, based on ruby 1.9.2, and a little &lt;a href="https://github.com/flexfrank/ruby_with_method_shelters/blob/ruby_with_mehtod_shelters/README-SHELTERS.txt"&gt;readme&lt;/a&gt; explaining the concept.&lt;/p&gt;
+&lt;p&gt;The author gave a presentation at the &lt;a href="http://www.aosd.net/2012/"&gt;AOSD conference&lt;/a&gt;. Personally I like method shelters better than the proposed refinements, what do you think?&lt;/p&gt;
+</description>
+      <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
+      <pubDate>Fri, 30 Mar 2012 09:40:22 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/method-shelters-for-ruby-an-alternative</link>
+      <guid>http://community.mendicantuniversity.org/articles/method-shelters-for-ruby-an-alternative</guid>
+    </item>
+    <item>
+      <title>Global Hack Day #3 (Thursday April 5)</title>
+      <description>&lt;p&gt;Many Ruby users groups have periodic hack nights where folks get together and work on their own projects while sharing questions and ideas with one another. Recently, we&amp;#39;ve been trying  to do something similar here at Mendicant University, but on a global scale.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;d like to show off one of your own projects, get a code review, or possibly help others with their projects, please join us in the &lt;strong&gt;#mendicant&lt;/strong&gt; channel on Freenode on Thursday April 5 between 18:00 - 02:00 UTC. How long you stick around is up to you, we welcome folks who just want to drop in and say hello as well as those who are looking for an eight hour long coding marathon.&lt;/p&gt;
+&lt;p&gt;The only important thing is that you come ready to work. That means either bringing your own code to hack on and discuss, or volunteering to help others with their projects, either by reviewing their code/ideas or by sending them some patches. Save the trading of cat pictures and horrible MIDI files for some other time and place. &lt;img src="/assets/emojis/smile.png" class="emoji" title=":smile:" alt=":smile:" height="20" width="20"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/emojis/star.png" class="emoji" title=":star:" alt=":star:" height="20" width="20"&gt; This is a public event; all are welcome to participate. Spread the word!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS: If you are a Mendicant University community member, please &lt;a href="http://community.mendicantuniversity.org/activities/global-hack-day-3-th"&gt;RSVP on this page&lt;/a&gt; if you plan on attending. Folks from the broader community are welcome to just drop in!&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Fri, 30 Mar 2012 01:26:53 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/global-hack-day-3-thursday-april-3</link>
+      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-3-thursday-april-3</guid>
+    </item>
+    <item>
+      <title>2012 CT Mission of Mercy</title>
+      <description>&lt;p&gt;This past week I participated in &lt;a href="http://cfdo.org/cfdo1_ctmom.html"&gt;Connecticut&amp;#39;s 5th Mission of Mercy&lt;/a&gt; free dental clinic in Danbury, CT. In two days the clinic treated over 2,000 patients and provided over $1.3 million in free dental care to those in need.&lt;/p&gt;
+&lt;p&gt;Way back in 2009 I wrote &lt;a href="https://github.com/jordanbyron/mission_of_mercy#readme"&gt;a Rails application&lt;/a&gt; to handle the logistics of running these massive clinics. This past year &lt;a href="https://github.com/jordanbyron/mission_of_mercy/contributors"&gt;several Mendicant community members&lt;/a&gt; helped me upgrade the app to Rails 3.1 and add several new features to streamline the check-in process.&lt;/p&gt;
+&lt;p&gt;I hope &lt;a href="http://www.flickr.com/photos/ctmissionofmercy/sets/72157629651889743/"&gt;these pictures&lt;/a&gt; from the clinic help illustrate how a handful of developers from around the world can come together and make a real positive impact on people&amp;#39;s lives &lt;img src="/assets/emojis/heart.png" class="emoji" title=":heart:" alt=":heart:" height="20" width="20"&gt;&lt;/p&gt;
+</description>
+      <author>jordan.byron@gmail.com (Jordan Byron)</author>
+      <pubDate>Thu, 29 Mar 2012 23:35:09 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/2012-ct-mission-of-mercy</link>
+      <guid>http://community.mendicantuniversity.org/articles/2012-ct-mission-of-mercy</guid>
+    </item>
+    <item>
+      <title>Introducing Jackpot: SaaS Billing as a Rails Engine</title>
+      <description>&lt;p&gt;I would like to introduce you my new open source project: &lt;a href="https://github.com/pellegrino/jackpot"&gt;Jackpot&lt;/a&gt;. It started out here during my core skills project as my and now its going through a major overhaul to get ready to hit its primetime. &lt;/p&gt;
+&lt;p&gt;Jackpot has pretty high ambitions, though. It aims to become the easiest way to get paid using rails. It abstracts all the nasty details and let you focus on writing your appliaction, not billing code. Billing code is a boring thing to write, so i expect you not having to do it all by yourself, at least not all the time. &lt;/p&gt;
+&lt;p&gt;I hope you may find that interesting and useful. As always, i look forward for any feedback the community may have. &lt;/p&gt;
+&lt;p&gt;Check for more details at this &lt;a href="http://vitorpellegrino.com/blog/2012/03/27/jackpot-billing-made-easy-for-rails-apps/"&gt;blog post&lt;/a&gt;&lt;/p&gt;
+</description>
+      <author>vitorp@gmail.com (Vitor Pellegrino)</author>
+      <pubDate>Tue, 27 Mar 2012 16:31:46 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/introducing-jackpot-saas-billing-as-a-ra</link>
+      <guid>http://community.mendicantuniversity.org/articles/introducing-jackpot-saas-billing-as-a-ra</guid>
+    </item>
+    <item>
+      <title>Practicing Ruby Volume 2 is now freely available</title>
+      <description>&lt;p&gt;Keeping with my promise to release content from my &lt;a href="http://practicingruby.com"&gt;Practicing Ruby journal&lt;/a&gt;, I&amp;#39;ve put together a massive link dump of articles from its second volume. Please enjoy them and share them with your friends.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/tmxmprhfrpwq"&gt;Issue 2.1: Ways to load code&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/bhftubljbomqpmifbibmzmptlxhoin"&gt;Issue 2.2: How to attack sticky problems&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/mvzhovpjbghr"&gt;Issue 2.3: A closure is a double edged sword&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/ggcwduoyfqmz"&gt;Issue 2.4: Implementing Enumerable &amp;amp; Enumerator in Ruby&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/afshdqdholth"&gt;Issue 2.5: Thoughts on regression testing&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/vbmlgkdtahzd"&gt;Issue 2.6: Learning new things step-by-step&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/ozkzbsdmagcm"&gt;Issue 2.7: &amp;quot;Unobtrusive Ruby&amp;quot; in Practice&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/jleygxejeopq"&gt;Issue 2.8: Ruby and the singleton pattern don&amp;#39;t get along&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/qyxvmrgmhuln"&gt;Issue 2.9: Building Unix-style command line applications&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/nlhxgszkgenq"&gt;Issue 2.10: From requirements discovery to release&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/iptocucwujtj"&gt;Issue 2.11: Domain specific API construction&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/oelhlibhtlkx"&gt;Issue 2.12: Working with binary file formats&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/gthgvfebjvyn"&gt;Issue 2.13: Designing business reporting applications&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/vpxpovppchww"&gt;Issue 2.14: Thoughts on &amp;quot;Arguments and Results&amp;quot;, Part 1&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a href="http://practicingruby.com/articles/shared/wdykkrmdfjvf"&gt;Issue 2.15: Thoughts on &amp;quot;Arguments and Results&amp;quot;, Part 2&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Practicing Ruby is a subscriber-supported service, and is literally how I pay my bills. If you like these articles and want to help make sure I can keep writing more of them, please &lt;a href="http://practicingruby.com/"&gt;become a subscriber&lt;/a&gt;. There is lots of content available to members that has not been publicly released yet, and I&amp;#39;m adding more articles regularly.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS: Anyone who can&amp;#39;t pay the full $8/month fee for ANY reason is welcome to contact gregory.t.brown@gmail.com for a free account.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Mon, 26 Mar 2012 11:50:40 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/practicing-ruby-volume-2-now-freely-avai</link>
+      <guid>http://community.mendicantuniversity.org/articles/practicing-ruby-volume-2-now-freely-avai</guid>
+    </item>
+    <item>
+      <title>Occupy Wall Street is a Django app</title>
+      <description>&lt;p&gt;With some node.js for the chat.  In case you were wondering... the code is &lt;a href="https://github.com/jart/occupywallst"&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>ericgj72@gmail.com (Eric Gjertsen)</author>
+      <pubDate>Thu, 22 Mar 2012 20:21:42 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/occupy-wall-street-is-a-django-app</link>
+      <guid>http://community.mendicantuniversity.org/articles/occupy-wall-street-is-a-django-app</guid>
+    </item>
+    <item>
+      <title>W3Clove Developer Portal</title>
+      <description>&lt;p&gt;I&amp;#39;ve launched the W3Clove Developer Portal, where you&amp;#39;ll find all the documentation about the W3Clove platform:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://developer.w3clove.com"&gt;http://developer.w3clove.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The site currently holds the API documentation, so it deprecates the previous guides (I&amp;#39;ll be redirecting the old pages here).&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s built with nanoc, styled with bootstrap and ready to deploy on heroku, and released as open source, so feel free to fork it here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jaimeiniesta/developer.w3clove.com"&gt;https://github.com/jaimeiniesta/developer.w3clove.com&lt;/a&gt;&lt;/p&gt;
+</description>
+      <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
+      <pubDate>Tue, 13 Mar 2012 16:21:27 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/w3clove-developer-portal</link>
+      <guid>http://community.mendicantuniversity.org/articles/w3clove-developer-portal</guid>
+    </item>
+    <item>
+      <title>Diode Matrix</title>
+      <description>&lt;p&gt;In &lt;a href="http://www.cca.org/blog/20120222-Diode-Matrix.shtml"&gt;this blog post&lt;/a&gt;, Dave Fischer describes some really cool looking and ridiculously low tech old hardware from the 1950-1970s. &lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.cca.org/blog/images/diode-matrix-1.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Dave explains what code is stored on board in his post, but it took me a few minutes to see how the octal codes correspond to the matrix. If you need a hint, here&amp;#39;s what the top row of the matrix decodes as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt; &amp;quot;0100000001010000&amp;quot;.reverse.to_i(2).to_s(8)
+=&amp;gt; &amp;quot;5002&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Favorite quote from the post: &lt;em&gt;&amp;quot;The ROM is easily user-writable using a soldering iron and pair of wire cutters.&amp;quot;&lt;/em&gt; &lt;img src="/assets/emojis/trollface.png" class="emoji" title=":trollface:" alt=":trollface:" height="20" width="20"&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Sat, 10 Mar 2012 03:40:10 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/diode-matrix</link>
+      <guid>http://community.mendicantuniversity.org/articles/diode-matrix</guid>
+    </item>
+    <item>
+      <title>W3Clove Developers Forum</title>
+      <description>&lt;p&gt;On my way to convert the W3Clove service into a platform for developers interested in building awesome apps on top of its API, I&amp;#39;ve created the &lt;a href="https://groups.google.com/d/forum/w3clove-developers"&gt;w3clove-developers&lt;/a&gt; google group.&lt;/p&gt;
+&lt;p&gt;It can also be reached from &lt;a href="http://w3clove.com/forum"&gt;w3clove.com/forum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You&amp;#39;re welcome to join if you want to discuss the API, the service itself, or the ruby gems behind it.&lt;/p&gt;
+</description>
+      <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
+      <pubDate>Fri, 09 Mar 2012 22:37:58 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/w3clove-developers-forum</link>
+      <guid>http://community.mendicantuniversity.org/articles/w3clove-developers-forum</guid>
+    </item>
+    <item>
+      <title>Hat Tip #1: Samnang Chhun</title>
+      <description>&lt;p&gt;&lt;img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Coolidge_after_signing_indian_treaty.jpg/160px-Coolidge_after_signing_indian_treaty.jpg" style="float: right; margin: 10px;"&gt;&lt;/p&gt;
+&lt;p&gt;Mendicant University often has so much going on that it&amp;#39;s hard to slow down and say thanks to the folks who are making a huge difference around here. However, I&amp;#39;d like to start doing exactly that by offering periodic &lt;a href="http://en.wikipedia.org/wiki/Hat_tip"&gt;hat tips&lt;/a&gt; to folks who have been doing excellent work for the school and the broader community.&lt;/p&gt;
+&lt;p&gt;While last month&amp;#39;s push to improve Mendicant University&amp;#39;s infrastructure saw tons of code contributions from over a dozen of our community members, I want to specifically thank &lt;a href="http://community.mendicantuniversity.org/people/samnang"&gt;Samnang Chhun&lt;/a&gt; for his efforts. It seems that someone forgot to tell Samnang that our focused month of contributing to Mendicant University&amp;#39;s projects has ended, because he just keeps on sending in ideas and patches as fast as we can read them.&lt;/p&gt;
+&lt;p&gt;Thanks a lot Samnang, you&amp;#39;re making Mendicant University a better place through your efforts. Keep it up!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please feel free to email me suggestions for who should receive the next hat tip in recognition of their contributions to Mendicant University, the Ruby ecosystem, or the world.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Fri, 09 Mar 2012 17:49:39 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/hat-tip-1-samnang-chhun</link>
+      <guid>http://community.mendicantuniversity.org/articles/hat-tip-1-samnang-chhun</guid>
+    </item>
+    <item>
+      <title>Secure your Rails apps!</title>
+      <description>&lt;p&gt;You might have already heard about how &lt;a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57"&gt;github got hacked&lt;/a&gt; during the course of a discussion about &lt;a href="https://github.com/rails/rails/issues/5228"&gt;safer defaults regarding the mass assignment vulnerability&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;a href="http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/"&gt;my new blog post&lt;/a&gt; I talk a bit about what happened there, what this vulnerability is and how to protect against it. I also point the reader to further security resources like the &lt;a href="http://guides.rubyonrails.org/security.html"&gt;Ruby on Rails security guide&lt;/a&gt; and the &lt;a href="http://brakemanscanner.org/"&gt;brakeman vulnerability scanner&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As security is always of the utmost importance and with the number of &amp;quot;hackers&amp;quot; trying to exploit this vulnerability probably rising, as it is all over the news, I highly encourage you to &lt;a href="http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/"&gt;read it&lt;/a&gt; if you feel unsure about your knowledge of the mass assignment vulnerability.&lt;/p&gt;
+</description>
+      <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
+      <pubDate>Tue, 06 Mar 2012 01:31:41 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/secure-your-rails-apps</link>
+      <guid>http://community.mendicantuniversity.org/articles/secure-your-rails-apps</guid>
+    </item>
+    <item>
+      <title>W3Clove Newsletter</title>
+      <description>&lt;p&gt;Following our plan to make the W3Clove project self-sustainable, I&amp;#39;ve sent the first issue of the monthly &lt;a href="http://t.co/Hrz5ScIl"&gt;W3Clove Newsletter&lt;/a&gt;, about the API, the FIGHT! game, the graphical redesign and financial status.&lt;/p&gt;
+&lt;p&gt;If you want to receive the next issues right in your inbox, &lt;a href="http://eepurl.com/i9J4z"&gt;subscribe here&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
+      <pubDate>Sat, 03 Mar 2012 16:41:50 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/w3clove-newsletter</link>
+      <guid>http://community.mendicantuniversity.org/articles/w3clove-newsletter</guid>
+    </item>
+    <item>
+      <title>Why Waterfall was a big misunderstanding from the beginning </title>
+      <description>&lt;p&gt;My new &lt;a href="http://pragtob.wordpress.com/2012/03/02/why-waterfall-was-a-big-misunderstanding-from-the-beginning-reading-the-original-paper/"&gt;blog post&lt;/a&gt; deals with the &amp;quot;Waterfall&amp;quot; process model and how the first paper about it already highlighted its weakness. Unfortunately few people know about this, so let&amp;#39;s change that!&lt;/p&gt;
+&lt;p&gt;You may know the &amp;quot;infamous&amp;quot; Waterfall model, which was supposedly invented back in 1970 in a paper written by Winston Royce and can be seen as some kind of the &amp;quot;arch enemy&amp;quot; of agile methodologies.
+The problem is just that this paper didn&amp;#39;t advocate the Waterfall model! It identified the pattern, highlighting its deficiencies and suggesting improvements. These improvements actually contain some agile thoughts, such as &amp;quot;involve the customer&amp;quot;! Winston Royce has been totally misunderstood...&lt;/p&gt;
+&lt;p&gt;Unfortunately this fact is little known and even PhD lecturers in the field of Software Development Processes seem to be unaware of this fact, at least some of them that I know. That&amp;#39;s why I dedicated &lt;a href="http://pragtob.wordpress.com/2012/03/02/why-waterfall-was-a-big-misunderstanding-from-the-beginning-reading-the-original-paper/"&gt;a blog post&lt;/a&gt; to this topic. In this blog post I walk the reader through the original paper of Winston Royce. I show the deficiencies of the model, which he identified more than 40 years ago, as well as the improvements he suggests. &lt;/p&gt;
+&lt;p&gt;And the next time someone wants you to do Waterfall-style development, please tell them that Waterfall was just a big misunderstanding from the beginning ;-)&lt;/p&gt;
+</description>
+      <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
+      <pubDate>Fri, 02 Mar 2012 17:34:21 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/why-waterfall-was-a-big-misunderstanding</link>
+      <guid>http://community.mendicantuniversity.org/articles/why-waterfall-was-a-big-misunderstanding</guid>
+    </item>
+    <item>
+      <title>Virtual Tour of Mendicant University</title>
+      <description>&lt;p style="text-align: center;"&gt;&lt;iframe width="640" height="360" src="http://www.youtube.com/embed/sdJ31WMuRQM?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;We built this video for &lt;a href="http://www.openeducationweek.org/"&gt;Open Education Week&lt;/a&gt;. I wrote the script, &lt;a href="/people/jordanbyron"&gt;Jordan&lt;/a&gt; narrated, and we both hacked on the slide deck. &lt;a href="/people/sindhri"&gt;Jia&lt;/a&gt; helped us out a lot with the general direction on things. We hope that it represents Mendicant University accurately, if at a birds-eye view.&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Thu, 01 Mar 2012 08:21:48 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/virtual-tour-of-mendicant-university</link>
+      <guid>http://community.mendicantuniversity.org/articles/virtual-tour-of-mendicant-university</guid>
+    </item>
+    <item>
+      <title>Turning a GitHub Issue into a Pull Request</title>
+      <description>&lt;p&gt;That&amp;#39;s right folks, such a feat is indeed possible - no more splitting discussions between the issue and the corresponding pull request. This is command-line-only, though.&lt;/p&gt;
+&lt;p&gt;Here&amp;#39;s what you need:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Install Chris Wanstrath&amp;#39;s &lt;a href="https://github.com/defunkt/hub"&gt;hub&lt;/a&gt; gem; I recommend that you alias it go &lt;code&gt;git&lt;/code&gt; also.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;Clone the main repo with a plain old &lt;code&gt;git clone&lt;/code&gt;; you might want to use git&amp;#39;s new powers and reference a GitHub username and repo for that.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;Run &lt;code&gt;git fork&lt;/code&gt;. This will fork the repo (surprise!) and also add your fork as a remote with your GitHub username as it&amp;#39;s name.&lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;You can now hack away with your usual workflow (create topic branch and push to it). &lt;/p&gt;
+&lt;/li&gt;&lt;li&gt;&lt;p&gt;When you are ready to create a pull request (that is, you want/need someone to look at your code, because &lt;a href="http://community.mendicantuniversity.org/articles/github-pull-requests-are-discussions"&gt;pull requests are discussions&lt;/a&gt;), run the following command: &lt;code&gt;git pull-request -i ISSUE_NUMBER&lt;/code&gt; et voilà! This attaches your code to the issue, even maintaining chronological order between the commits and the comments, and also redirects the issue&amp;#39;s url to the pull request. C&amp;#39;est fantastique!&lt;/p&gt;
+&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;There are a couple other switches you can use with &lt;code&gt;pull-request&lt;/code&gt; and a million other things that &lt;code&gt;hub&lt;/code&gt; does, definitely check it out. Personally, I love that my git workflow can now be entirely CLI-based.&lt;/p&gt;
+</description>
+      <author>tn.pablo@gmail.com (Pablo Torres)</author>
+      <pubDate>Wed, 29 Feb 2012 03:16:52 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/turning-a-github-issue-into-a-pull-reque</link>
+      <guid>http://community.mendicantuniversity.org/articles/turning-a-github-issue-into-a-pull-reque</guid>
+    </item>
+    <item>
+      <title>Global Hack Day #2, Thursday 3/8 19:00-03:00 UTC</title>
+      <description>&lt;p&gt;Many Ruby users groups have periodic hack nights where folks get together and work on their own projects while sharing questions and ideas with one another. We&amp;#39;d like to do something similar here at Mendicant University, on a global scale.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;d like to show off one of your own projects, get a code review, or possibly help others with their projects, please join us in the &lt;strong&gt;#mendicant&lt;/strong&gt; channel on Freenode on Thursday 3/8 between 19:00 and 03:00 UTC. How long you stick around is up to you, we welcome folks who just want to drop in and say hello as well as those who are looking for an eight hour long coding marathon.&lt;/p&gt;
+&lt;p&gt;The only important thing is that you come ready to work. That means either bringing your own code to hack on and discuss, or volunteering to help others with their projects, either by reviewing their code/ideas or by sending them some patches. Don&amp;#39;t attend this event if all you want to do is trade cat pictures. &lt;img src="/assets/emojis/smile.png" class="emoji" title=":smile:" alt=":smile:" height="20" width="20"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/emojis/star.png" class="emoji" title=":star:" alt=":star:" height="20" width="20"&gt; This is a public event; all are welcome to participate. Spread the word!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS: If you are a Mendicant University community member, please &lt;a href="http://community.mendicantuniversity.org/activities/global-hack-day-2-th"&gt;RSVP on this page&lt;/a&gt; if you plan on attending. Folks from the broader community are welcome to just drop in!&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Tue, 28 Feb 2012 14:28:56 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/global-hack-day-2-thursday-3-8-19-00-03-</link>
+      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-2-thursday-3-8-19-00-03-</guid>
+    </item>
+    <item>
+      <title>Looking over Steve Klabnik's shoulder</title>
+      <description>&lt;p&gt;Steve posted an entry on his blog called &lt;a href="http://blog.steveklabnik.com/posts/2012-02-22-two-pomodoros"&gt;Two Pomodoros&lt;/a&gt;
+containing a non-narrated video of him working on the RubyGems project.
+(For those unfamiliar with the &lt;a href="http://www.pomodorotechnique.com/"&gt;Pomodoro Technique&lt;/a&gt;, as I am, two Pomodoros = 50 minutes.)&lt;/p&gt;
+&lt;p&gt;Why record almost an hour of editing with vim and running tests? Steve explains his own reasoning for doing this in the post. Go read it; it&amp;#39;s brief.&lt;/p&gt;
+&lt;p&gt;Perhaps a better question is, why &lt;em&gt;watch&lt;/em&gt; someone editing and running tests? When it comes to open source, I&amp;#39;m a newbie. I suppose I expected to catch a glimpse of hyper-efficient workflow, the super-secret sauce of the Ruby Hero. Which is exactly what Steve tells us not to expect.&lt;/p&gt;
+&lt;p&gt;What we see instead is someone methodically improving a piece of software, one edit at a time, complete with the occasional fumbling that makes me feel like a blockhead when I do it myself. Only he&amp;#39;s doing it in public, where other people can offer criticism, hopefully constructive. Gutsy, and pretty cool.&lt;/p&gt;
+</description>
+      <author>six.impossible@gmail.com (Gregory Parkhurst)</author>
+      <pubDate>Fri, 24 Feb 2012 01:16:06 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/looking-over-steve-klabniks-shoulder</link>
+      <guid>http://community.mendicantuniversity.org/articles/looking-over-steve-klabniks-shoulder</guid>
+    </item>
+    <item>
+      <title>Tempr - no fussin' temporal expressions</title>
+      <description>&lt;p&gt;I just released &lt;a href="https://github.com/ericgj/tempr"&gt;Tempr&lt;/a&gt;, a library for lazily building and evaluating temporal expressions.  I&amp;#39;d be glad for any comments! &lt;/p&gt;
+&lt;p&gt;My motivation in writing this was to replace the old Runt library we use in MU&amp;#39;s &lt;a href="https://github.com/mendicant-university/scheduler"&gt;Scheduler&lt;/a&gt;, which can&amp;#39;t run in Ruby 1.9.x. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What the heck are temporal expressions&lt;/strong&gt;, you ask?  &lt;/p&gt;
+&lt;p&gt;Say you have an appointment &lt;em&gt;every third Thursday of each month at 12:30pm, for an hour&lt;/em&gt; . If you want a list of all such appointments for a given date range, using Tempr it&amp;#39;s:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;range.extend(Tempr::DateTimeRange)
+appointments = range.each_month.thursday(2).each_time_of_day(&amp;quot;12:30pm&amp;quot;, 60*60)
+appointments.to_a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or you want to know if another time conflicts?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;appointments.cover?(another_time)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="https://github.com/ericgj/tempr"&gt;Tempr&lt;/a&gt; makes this sort of thing easy, and cleans up code that would otherwise be doing a bunch of low level manual date processing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; &lt;a href="https://github.com/ericgj/portera"&gt;I&amp;#39;ve re-written the Scheduler using Tempr&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>ericgj72@gmail.com (Eric Gjertsen)</author>
+      <pubDate>Thu, 16 Feb 2012 18:07:15 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/tempr-no-fussin-temporal-expressions</link>
+      <guid>http://community.mendicantuniversity.org/articles/tempr-no-fussin-temporal-expressions</guid>
+    </item>
+    <item>
+      <title>W3Clove: beyond charity</title>
+      <description>&lt;p&gt;Today I talked with Gregory Brown in the #mendicant-alumni IRC channel, to see how the &lt;a href="http://community.mendicantuniversity.org/articles/w3clove-is-now-charity-driven"&gt;charity-driven model that we started for W3Clove&lt;/a&gt; was going and think about the next steps in search of financial sustainability.&lt;/p&gt;
+&lt;p&gt;The Pledgie campaign has raised $240 in one week, and that&amp;#39;s great as it allows me to cover the expenses I had in the previous months, and is enough for 2 or 3 months more of hosting.&lt;/p&gt;
+&lt;p&gt;But, donations are hard to maintain. You&amp;#39;ve got to be reminding everyone of the need for donations, and this is tiring for everybody. It&amp;#39;s a good start, but if you want sustainability, you need a supporter network.&lt;/p&gt;
+&lt;p&gt;So, the next step is building this supporter network. A supporter will be a user that loves the service provided &lt;em&gt;and&lt;/em&gt; is conscious that by making use of it, is making the server spend money. So, to keep the service alive, decides to support it with a monthly subscription.&lt;/p&gt;
+&lt;p&gt;What does the supporter get in return of this monthly fee, apart from feeling well about supporting a great service? &lt;a href="https://gist.github.com/1784822"&gt;Check out this gist&lt;/a&gt; for the ideas we came up with.&lt;/p&gt;
+</description>
+      <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
+      <pubDate>Thu, 09 Feb 2012 23:02:38 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/w3clove-beyond-charity</link>
+      <guid>http://community.mendicantuniversity.org/articles/w3clove-beyond-charity</guid>
+    </item>
+    <item>
+      <title>Global Hack Day #1, 2012-02-16, 19:00 - 03:00 UTC</title>
+      <description>&lt;p&gt;Many Ruby users groups have periodic hack nights where folks get together and work on their own projects while sharing questions and ideas with one another. We&amp;#39;d like to do something similar here at Mendicant University, on a global scale.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;d like to show off one of your own projects, get a code review, or possibly help others with their projects, please join us in the &lt;strong&gt;#mendicant&lt;/strong&gt; channel on Freenode on Thursday 2/16 between 19:00 and 03:00 UTC. How long you stick around is up to you, we welcome folks who just want to drop in and say hello as well as those who are looking for an eight hour long coding marathon.&lt;/p&gt;
+&lt;p&gt;The only important thing is that you come ready to work. That means either bringing your own code to hack on and discuss, or volunteering to help others with their projects, either by reviewing their code/ideas or by sending them some patches. Don&amp;#39;t attend this event if all you want to do is trade cat pictures. &lt;img src="/assets/emojis/smile.png" class="emoji" title=":smile:" alt=":smile:" height="20" width="20"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/assets/emojis/star.png" class="emoji" title=":star:" alt=":star:" height="20" width="20"&gt; This is a public event; all are welcome to participate. Spread the word!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS: If you are a Mendicant University community member, please &lt;a href="http://community.mendicantuniversity.org/activities/global-hack-day-1-2012-02-16-7pm-3am-utc"&gt;RSVP on this page&lt;/a&gt; if you plan on attending.&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Tue, 07 Feb 2012 20:36:06 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</link>
+      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</guid>
+    </item>
+    <item>
+      <title>Learning at Mendicant University</title>
+      <description>&lt;p&gt;In &lt;a href="http://brentvatne.github.com/mendicant-university/"&gt;this blog post&lt;/a&gt; I reflect on my experiences during the Mendicant University Core Skills course, which I completed earlier this week. I hope that it will give prospective students and interested onlookers a better understanding of what the school is all about. I summarize the goals of the university, what students go through, how the course differed from my traditional educational experiences, and quickly touch on how you can get involved.&lt;/p&gt;
+</description>
+      <author>brentvatne@gmail.com (Brent Vatne)</author>
+      <pubDate>Fri, 03 Feb 2012 23:00:52 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/learning-at-mendicant-university</link>
+      <guid>http://community.mendicantuniversity.org/articles/learning-at-mendicant-university</guid>
+    </item>
+    <item>
+      <title>Newman: Because the mail never stops!</title>
+      <description>&lt;p&gt;Over the last few days I&amp;#39;ve been working on a new micro-framework called &lt;a href="https://github.com/mendicant-university/newman"&gt;Newman&lt;/a&gt; which can be used to simplify the task of building email based applications. This is based on the integration exercise from our January 2012 core skills session, and wouldn&amp;#39;t be possible without help from several of the students from our alumni network. I&amp;#39;d particularly like to thank &lt;a href="/people/brentvatne"&gt;Brent&lt;/a&gt;, &lt;a href="/people/csherin"&gt;Sherin&lt;/a&gt;, &lt;a href="/people/bglusman"&gt;Brian&lt;/a&gt;, and &lt;a href="/people/ericgj"&gt;Eric&lt;/a&gt; for their help with testing and ideas as I worked towards a first release.&lt;/p&gt;
+&lt;p&gt;Please check out the project, and consider participating in this &lt;a href="http://practicingruby.com/articles/shared/rtzdzdwwzfxm"&gt;Practicing Ruby exercise&lt;/a&gt; related to it, even if you&amp;#39;re not a subscriber.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS: We&amp;#39;re going to try to integrate Newman with the community app to give us ad-hoc mailing list for organizing our activities... more on that soon&lt;/em&gt;&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Fri, 03 Feb 2012 02:27:44 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/newman-the-mail-never-stops</link>
+      <guid>http://community.mendicantuniversity.org/articles/newman-the-mail-never-stops</guid>
+    </item>
+    <item>
+      <title>W3Clove is now charity-driven</title>
+      <description>&lt;p&gt;I&amp;#39;ve removed all ads from &lt;a href="http://w3clove.com"&gt;W3Clove.com&lt;/a&gt; and started a &lt;a href="http://pledgie.com/campaigns/16674"&gt;pledgie campaign&lt;/a&gt; to ask for donations to help me pay the hosting fees.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ve also copyedited the site to tell what it really is, a personal project run by a single developer (instead of all those enterprisey plurals &amp;quot;our spider...&amp;quot;), and included a brief history about &lt;a href="http://w3clove.com/faqs#how_did_this_project_start"&gt;how the project was born at the Mendicant University&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With all this, I try to find a way to produce not only software, but also online services that are monetary and ethically sustainable. I prefer removing ads and ask users directly for donations, making them conscious about the costs that every web service has.&lt;/p&gt;
+</description>
+      <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
+      <pubDate>Wed, 01 Feb 2012 12:02:46 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/w3clove-is-now-charity-driven</link>
+      <guid>http://community.mendicantuniversity.org/articles/w3clove-is-now-charity-driven</guid>
+    </item>
+    <item>
+      <title>Results from the January 2012 core skills course</title>
+      <description>&lt;p&gt;We have officially wrapped up the first core skills course of 2012, and I am happy to report it was an amazing session! Ten of thirteen students made it through to the end, which is the best pass rate in the history of Mendicant University. We certainly didn&amp;#39;t lower the bar though: the students just really worked their butts off.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/1712322"&gt;Check out this gist&lt;/a&gt; for a complete list of the projects students worked on.&lt;/p&gt;
+</description>
+      <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
+      <pubDate>Tue, 31 Jan 2012 18:22:45 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/results-from-the-january-2012-core-skill</link>
+      <guid>http://community.mendicantuniversity.org/articles/results-from-the-january-2012-core-skill</guid>
+    </item>
+    <item>
+      <title>Learning to Program: How I did it, and why you (probably) should</title>
+      <description>&lt;p&gt;I&amp;#39;ve been stewing over a blog post for several months, unsure of how to accurately portray my journey so far in learning to program in a way that would help others understand how incredibly life-changing this activity can be.&lt;/p&gt;
+&lt;p&gt;In addition to &amp;quot;learn, learn, learn&amp;quot;, my goal for the next few years is to drag more of a spotlight over to programming and do my best to make sure people know 1) why programmers are so freakin&amp;#39; special and 2) that anybody can do this.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s posted in 3 parts:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://brandonhays.com/blog/2012/01/23/learning-to-program-part-i-how-i-did-it/"&gt;Part 1&lt;/a&gt; is just my story, you can skip it if you&amp;#39;d like. It may accidentally contain hidden signposts for others to perhaps follow, but it&amp;#39;s just that: my story.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://brandonhays.com/blog/2012/01/24/learning-to-program-pt-ii-lessons-that-changed-my-life/"&gt;Part 2&lt;/a&gt; is like 15 condensed blog posts I&amp;#39;ve been meaning to write with a few of the lessons I&amp;#39;ve picked up in learning to program and just trying to be observant about the culture and attitudes of those I work with.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://brandonhays.com/blog/2012/01/25/learning-to-program-part-iii-why-you-should-learn-and-why-its-easier-than-you-think/"&gt;Part 3&lt;/a&gt; is how new people can get started, and why they probably should.&lt;/p&gt;
+</description>
+      <author>brandon.hays@gmail.com (Brandon Hays)</author>
+      <pubDate>Mon, 30 Jan 2012 23:50:56 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/learning-to-program-how-i-did-it-and-why</link>
+      <guid>http://community.mendicantuniversity.org/articles/learning-to-program-how-i-did-it-and-why</guid>
+    </item>
+    <item>
+      <title>I'm learning vim. Here's how I'm doing it.</title>
+      <description>&lt;p&gt;I&amp;#39;ve used a &lt;a href="http://msdn.microsoft.com/en-us/vstudio"&gt;big, bloated IDE&lt;/a&gt; for most of my development career. I am very productive with it, but I&amp;#39;ve always resented the fact that I am bound to being productive on a single OS and in a small number of languages.&lt;/p&gt;
+&lt;p&gt;When I took up Ruby development a year ago, my reliance on an IDE was immediately apparent. I use a Mac at home, and so I started working in &lt;a href="http://macromates.com/"&gt;Textmate&lt;/a&gt; and tried &lt;a href="http://www.jetbrains.com/ruby/"&gt;RubyMine&lt;/a&gt;, but I was still struggling to feel comfortable or fast in any environment other than the aforementioned IDE. &lt;/p&gt;
+&lt;p&gt;A few weeks ago when I went back to watch several &lt;a href="https://www.destroyallsoftware.com/screencasts"&gt;DestroyAllSoftware&lt;/a&gt; screencasts on vim, I was (once again) wowed by Gary&amp;#39;s proficiency (and efficiency) in vim.&lt;/p&gt;
+&lt;p&gt;So, I&amp;#39;ve committed to learning vim to become more productive without the crutch of an expensive tool and to decouple myself from a specific OS. &lt;a href="https://gist.github.com/21082979a5473a297452"&gt;Here&amp;#39;s what I&amp;#39;ve done so far&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <author>chris@geihsler.net (Chris Geihsler)</author>
+      <pubDate>Mon, 30 Jan 2012 22:10:29 +0000</pubDate>
+      <link>http://community.mendicantuniversity.org/articles/im-learning-vim-heres-how-im-doing-it</link>
+      <guid>http://community.mendicantuniversity.org/articles/im-learning-vim-heres-how-im-doing-it</guid>
+    </item>
+  </channel>
+</rss>

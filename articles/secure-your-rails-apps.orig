@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>
+Secure your Rails apps!
+- Mendicant Community
+</title>
+<link href="/assets/application-5cc15a40d968db399082b9b5a3f278f6.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/assets/application-5ef90d50c2400be9515a40349af829aa.js" type="text/javascript"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="Qlrq4XwJlSHblEkmXXCTKyjNJPeYAdQmNzcJKvMhAZ0=" name="csrf-token" />
+
+</head>
+<body>
+<nav>
+<span class='title'>
+<a href="/"><strong>Community</strong> @ Mendicant University</a>
+</span>
+<div id='flash'>
+</div>
+
+<span class='nav'>
+
+<a href="/articles">Updates</a>
+<a href="/about">About</a>
+<span id='account'>
+</span>
+</span>
+</nav>
+
+
+<div id='site-alert'>
+Hi Friend! This is a static copy of Mendicant's Community Site. We are
+no loner updating it, but check out
+<a href="http://mendicantuniversity.org">our main site</a>
+for the latest news about the school. Thanks for visiting!
+</div>
+<div id='container'>
+<article class="article highlight" id="article_46"><div class='article_title'>
+Secure your Rails apps!
+</div>
+<div class='article_content'><p>You might have already heard about how <a href="https://github.com/rails/rails/commit/b83965785db1eec019edf1fc272b1aa393e6dc57">github got hacked</a> during the course of a discussion about <a href="https://github.com/rails/rails/issues/5228">safer defaults regarding the mass assignment vulnerability</a>.</p>
+<p>In <a href="http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/">my new blog post</a> I talk a bit about what happened there, what this vulnerability is and how to protect against it. I also point the reader to further security resources like the <a href="http://guides.rubyonrails.org/security.html">Ruby on Rails security guide</a> and the <a href="http://brakemanscanner.org/">brakeman vulnerability scanner</a>.</p>
+<p>As security is always of the utmost importance and with the number of &quot;hackers&quot; trying to exploit this vulnerability probably rising, as it is all over the news, I highly encourage you to <a href="http://pragtob.wordpress.com/2012/03/06/secure-your-rails-apps/">read it</a> if you feel unsure about your knowledge of the mass assignment vulnerability.</p>
+</div>
+<div class='user_info'>
+<a href="/people/PragTob"><img alt="Tobias Pfeiffer" src="http://www.gravatar.com/avatar/8480daec7137f28565bc2d2e666b915a?s=100&amp;d=http%3A%2F%2Fcommunity.mendicantuniversity.org%2Fassets%2Favatar-b96e028f25fd5f569a542b80a869eb32.png" style="width: 100px; height: 100px;" /></a>
+<p>
+by
+<a href="/people/PragTob">Tobias Pfeiffer</a>
+</p>
+<p class='posted'>
+March 06, 2012
+</p>
+</div>
+
+</article><a href="/articles" id="back-link">&laquo; There is more where that came from</a>
+
+</div>
+<footer>
+<a href="/about">About Community</a>
+&bull;
+<a href="http://mendicantuniversity.org">A Mendicant University Project</a>
+&bull;
+<a href="https://github.com/mendicant-original/community#readme">Fork me on GitHub</a>
+</footer>
+
+</body>
+</html>
