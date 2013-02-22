@@ -4,7 +4,7 @@
     <title>Community @ Mendicant University</title>
     <description>Mendicant University's Community Site</description>
     <link>http://community.mendicantuniversity.org</link>
-    <send href="http://community.mendicantuniversity.org/articles.rss" rel="self" type="application/rss+xml">atom:link</send>
+    <send href="http://community.dev/articles.rss" rel="self" type="application/rss+xml">atom:link</send>
     <item>
       <title>DaVinci LMS: A minimalistic Learning Management System</title>
       <description>&lt;p&gt;When I was in university Pablo de Olavide we used WebCT for the online presence of teachers and students. It was an extremely useful web system. Among the many thing WebCT could do was to manage documents. So teachers will upload notes for the Java class at the start of the course and students will be able to download it, study it and raise questions before the actual class starts. It was a very useful document store. Another very useful feature that we used intensively was the Task system. So a teacher will say &amp;#39;Solve problems 13-18 and send me the code&amp;#39;. We will solve them and then send back the code, all using the web interface. It was very handy.&lt;/p&gt;
@@ -26,8 +26,8 @@
 </description>
       <author>siotopo@gmail.com (Gonzalo Rodríguez-Baltanás Díaz)</author>
       <pubDate>Thu, 26 Apr 2012 14:45:23 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/davinci-lms-a-minimalistic-learning-mana</link>
-      <guid>http://community.mendicantuniversity.org/articles/davinci-lms-a-minimalistic-learning-mana</guid>
+      <link>http://community.dev/articles/davinci-lms-a-minimalistic-learning-mana</link>
+      <guid>http://community.dev/articles/davinci-lms-a-minimalistic-learning-mana</guid>
     </item>
     <item>
       <title>Meteor: A seemingly magical JS something-something</title>
@@ -38,8 +38,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Fri, 13 Apr 2012 01:23:20 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/meteor-a-seemingly-magical-js-something</link>
-      <guid>http://community.mendicantuniversity.org/articles/meteor-a-seemingly-magical-js-something</guid>
+      <link>http://community.dev/articles/meteor-a-seemingly-magical-js-something</link>
+      <guid>http://community.dev/articles/meteor-a-seemingly-magical-js-something</guid>
     </item>
     <item>
       <title>Is Node.js Better?</title>
@@ -49,8 +49,8 @@
 </description>
       <author>shane@emmons.io (Shane Emmons)</author>
       <pubDate>Tue, 10 Apr 2012 00:25:18 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/is-node-js-better</link>
-      <guid>http://community.mendicantuniversity.org/articles/is-node-js-better</guid>
+      <link>http://community.dev/articles/is-node-js-better</link>
+      <guid>http://community.dev/articles/is-node-js-better</guid>
     </item>
     <item>
       <title>Hat Tip #2: Jordan Byron</title>
@@ -63,8 +63,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Sun, 01 Apr 2012 23:24:05 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/hat-tip-2-jordan-byron</link>
-      <guid>http://community.mendicantuniversity.org/articles/hat-tip-2-jordan-byron</guid>
+      <link>http://community.dev/articles/hat-tip-2-jordan-byron</link>
+      <guid>http://community.dev/articles/hat-tip-2-jordan-byron</guid>
     </item>
     <item>
       <title>Method shelters for ruby - an alternative for refinements</title>
@@ -74,8 +74,8 @@
 </description>
       <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
       <pubDate>Fri, 30 Mar 2012 09:40:22 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/method-shelters-for-ruby-an-alternative</link>
-      <guid>http://community.mendicantuniversity.org/articles/method-shelters-for-ruby-an-alternative</guid>
+      <link>http://community.dev/articles/method-shelters-for-ruby-an-alternative</link>
+      <guid>http://community.dev/articles/method-shelters-for-ruby-an-alternative</guid>
     </item>
     <item>
       <title>Global Hack Day #3 (Thursday April 5)</title>
@@ -87,8 +87,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Fri, 30 Mar 2012 01:26:53 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/global-hack-day-3-thursday-april-3</link>
-      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-3-thursday-april-3</guid>
+      <link>http://community.dev/articles/global-hack-day-3-thursday-april-3</link>
+      <guid>http://community.dev/articles/global-hack-day-3-thursday-april-3</guid>
     </item>
     <item>
       <title>2012 CT Mission of Mercy</title>
@@ -98,8 +98,8 @@
 </description>
       <author>jordan.byron@gmail.com (Jordan Byron)</author>
       <pubDate>Thu, 29 Mar 2012 23:35:09 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/2012-ct-mission-of-mercy</link>
-      <guid>http://community.mendicantuniversity.org/articles/2012-ct-mission-of-mercy</guid>
+      <link>http://community.dev/articles/2012-ct-mission-of-mercy</link>
+      <guid>http://community.dev/articles/2012-ct-mission-of-mercy</guid>
     </item>
     <item>
       <title>Introducing Jackpot: SaaS Billing as a Rails Engine</title>
@@ -110,8 +110,8 @@
 </description>
       <author>vitorp@gmail.com (Vitor Pellegrino)</author>
       <pubDate>Tue, 27 Mar 2012 16:31:46 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/introducing-jackpot-saas-billing-as-a-ra</link>
-      <guid>http://community.mendicantuniversity.org/articles/introducing-jackpot-saas-billing-as-a-ra</guid>
+      <link>http://community.dev/articles/introducing-jackpot-saas-billing-as-a-ra</link>
+      <guid>http://community.dev/articles/introducing-jackpot-saas-billing-as-a-ra</guid>
     </item>
     <item>
       <title>Practicing Ruby Volume 2 is now freely available</title>
@@ -139,8 +139,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Mon, 26 Mar 2012 11:50:40 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/practicing-ruby-volume-2-now-freely-avai</link>
-      <guid>http://community.mendicantuniversity.org/articles/practicing-ruby-volume-2-now-freely-avai</guid>
+      <link>http://community.dev/articles/practicing-ruby-volume-2-now-freely-avai</link>
+      <guid>http://community.dev/articles/practicing-ruby-volume-2-now-freely-avai</guid>
     </item>
     <item>
       <title>Occupy Wall Street is a Django app</title>
@@ -148,8 +148,8 @@
 </description>
       <author>ericgj72@gmail.com (Eric Gjertsen)</author>
       <pubDate>Thu, 22 Mar 2012 20:21:42 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/occupy-wall-street-is-a-django-app</link>
-      <guid>http://community.mendicantuniversity.org/articles/occupy-wall-street-is-a-django-app</guid>
+      <link>http://community.dev/articles/occupy-wall-street-is-a-django-app</link>
+      <guid>http://community.dev/articles/occupy-wall-street-is-a-django-app</guid>
     </item>
     <item>
       <title>W3Clove Developer Portal</title>
@@ -161,8 +161,8 @@
 </description>
       <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
       <pubDate>Tue, 13 Mar 2012 16:21:27 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/w3clove-developer-portal</link>
-      <guid>http://community.mendicantuniversity.org/articles/w3clove-developer-portal</guid>
+      <link>http://community.dev/articles/w3clove-developer-portal</link>
+      <guid>http://community.dev/articles/w3clove-developer-portal</guid>
     </item>
     <item>
       <title>Diode Matrix</title>
@@ -177,8 +177,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Sat, 10 Mar 2012 03:40:10 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/diode-matrix</link>
-      <guid>http://community.mendicantuniversity.org/articles/diode-matrix</guid>
+      <link>http://community.dev/articles/diode-matrix</link>
+      <guid>http://community.dev/articles/diode-matrix</guid>
     </item>
     <item>
       <title>W3Clove Developers Forum</title>
@@ -188,8 +188,8 @@
 </description>
       <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
       <pubDate>Fri, 09 Mar 2012 22:37:58 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/w3clove-developers-forum</link>
-      <guid>http://community.mendicantuniversity.org/articles/w3clove-developers-forum</guid>
+      <link>http://community.dev/articles/w3clove-developers-forum</link>
+      <guid>http://community.dev/articles/w3clove-developers-forum</guid>
     </item>
     <item>
       <title>Hat Tip #1: Samnang Chhun</title>
@@ -201,8 +201,8 @@
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Fri, 09 Mar 2012 17:49:39 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/hat-tip-1-samnang-chhun</link>
-      <guid>http://community.mendicantuniversity.org/articles/hat-tip-1-samnang-chhun</guid>
+      <link>http://community.dev/articles/hat-tip-1-samnang-chhun</link>
+      <guid>http://community.dev/articles/hat-tip-1-samnang-chhun</guid>
     </item>
     <item>
       <title>Secure your Rails apps!</title>
@@ -212,8 +212,8 @@
 </description>
       <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
       <pubDate>Tue, 06 Mar 2012 01:31:41 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/secure-your-rails-apps</link>
-      <guid>http://community.mendicantuniversity.org/articles/secure-your-rails-apps</guid>
+      <link>http://community.dev/articles/secure-your-rails-apps</link>
+      <guid>http://community.dev/articles/secure-your-rails-apps</guid>
     </item>
     <item>
       <title>W3Clove Newsletter</title>
@@ -222,8 +222,8 @@
 </description>
       <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
       <pubDate>Sat, 03 Mar 2012 16:41:50 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/w3clove-newsletter</link>
-      <guid>http://community.mendicantuniversity.org/articles/w3clove-newsletter</guid>
+      <link>http://community.dev/articles/w3clove-newsletter</link>
+      <guid>http://community.dev/articles/w3clove-newsletter</guid>
     </item>
     <item>
       <title>Why Waterfall was a big misunderstanding from the beginning </title>
@@ -235,8 +235,8 @@ The problem is just that this paper didn&amp;#39;t advocate the Waterfall model!
 </description>
       <author>tobias.pfeiffer@student.hpi.uni-potsdam.de (Tobias Pfeiffer)</author>
       <pubDate>Fri, 02 Mar 2012 17:34:21 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/why-waterfall-was-a-big-misunderstanding</link>
-      <guid>http://community.mendicantuniversity.org/articles/why-waterfall-was-a-big-misunderstanding</guid>
+      <link>http://community.dev/articles/why-waterfall-was-a-big-misunderstanding</link>
+      <guid>http://community.dev/articles/why-waterfall-was-a-big-misunderstanding</guid>
     </item>
     <item>
       <title>Virtual Tour of Mendicant University</title>
@@ -245,8 +245,8 @@ The problem is just that this paper didn&amp;#39;t advocate the Waterfall model!
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Thu, 01 Mar 2012 08:21:48 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/virtual-tour-of-mendicant-university</link>
-      <guid>http://community.mendicantuniversity.org/articles/virtual-tour-of-mendicant-university</guid>
+      <link>http://community.dev/articles/virtual-tour-of-mendicant-university</link>
+      <guid>http://community.dev/articles/virtual-tour-of-mendicant-university</guid>
     </item>
     <item>
       <title>Turning a GitHub Issue into a Pull Request</title>
@@ -264,8 +264,8 @@ The problem is just that this paper didn&amp;#39;t advocate the Waterfall model!
 </description>
       <author>tn.pablo@gmail.com (Pablo Torres)</author>
       <pubDate>Wed, 29 Feb 2012 03:16:52 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/turning-a-github-issue-into-a-pull-reque</link>
-      <guid>http://community.mendicantuniversity.org/articles/turning-a-github-issue-into-a-pull-reque</guid>
+      <link>http://community.dev/articles/turning-a-github-issue-into-a-pull-reque</link>
+      <guid>http://community.dev/articles/turning-a-github-issue-into-a-pull-reque</guid>
     </item>
     <item>
       <title>Global Hack Day #2, Thursday 3/8 19:00-03:00 UTC</title>
@@ -277,8 +277,8 @@ The problem is just that this paper didn&amp;#39;t advocate the Waterfall model!
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Tue, 28 Feb 2012 14:28:56 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/global-hack-day-2-thursday-3-8-19-00-03-</link>
-      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-2-thursday-3-8-19-00-03-</guid>
+      <link>http://community.dev/articles/global-hack-day-2-thursday-3-8-19-00-03-</link>
+      <guid>http://community.dev/articles/global-hack-day-2-thursday-3-8-19-00-03-</guid>
     </item>
     <item>
       <title>Looking over Steve Klabnik's shoulder</title>
@@ -291,8 +291,8 @@ containing a non-narrated video of him working on the RubyGems project.
 </description>
       <author>six.impossible@gmail.com (Gregory Parkhurst)</author>
       <pubDate>Fri, 24 Feb 2012 01:16:06 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/looking-over-steve-klabniks-shoulder</link>
-      <guid>http://community.mendicantuniversity.org/articles/looking-over-steve-klabniks-shoulder</guid>
+      <link>http://community.dev/articles/looking-over-steve-klabniks-shoulder</link>
+      <guid>http://community.dev/articles/looking-over-steve-klabniks-shoulder</guid>
     </item>
     <item>
       <title>Tempr - no fussin' temporal expressions</title>
@@ -314,8 +314,8 @@ appointments.to_a
 </description>
       <author>ericgj72@gmail.com (Eric Gjertsen)</author>
       <pubDate>Thu, 16 Feb 2012 18:07:15 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/tempr-no-fussin-temporal-expressions</link>
-      <guid>http://community.mendicantuniversity.org/articles/tempr-no-fussin-temporal-expressions</guid>
+      <link>http://community.dev/articles/tempr-no-fussin-temporal-expressions</link>
+      <guid>http://community.dev/articles/tempr-no-fussin-temporal-expressions</guid>
     </item>
     <item>
       <title>W3Clove: beyond charity</title>
@@ -327,8 +327,8 @@ appointments.to_a
 </description>
       <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
       <pubDate>Thu, 09 Feb 2012 23:02:38 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/w3clove-beyond-charity</link>
-      <guid>http://community.mendicantuniversity.org/articles/w3clove-beyond-charity</guid>
+      <link>http://community.dev/articles/w3clove-beyond-charity</link>
+      <guid>http://community.dev/articles/w3clove-beyond-charity</guid>
     </item>
     <item>
       <title>Global Hack Day #1, 2012-02-16, 19:00 - 03:00 UTC</title>
@@ -340,8 +340,8 @@ appointments.to_a
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Tue, 07 Feb 2012 20:36:06 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</link>
-      <guid>http://community.mendicantuniversity.org/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</guid>
+      <link>http://community.dev/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</link>
+      <guid>http://community.dev/articles/global-hack-day-1-2012-02-16-7pm-3am-utc</guid>
     </item>
     <item>
       <title>Learning at Mendicant University</title>
@@ -349,8 +349,8 @@ appointments.to_a
 </description>
       <author>brentvatne@gmail.com (Brent Vatne)</author>
       <pubDate>Fri, 03 Feb 2012 23:00:52 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/learning-at-mendicant-university</link>
-      <guid>http://community.mendicantuniversity.org/articles/learning-at-mendicant-university</guid>
+      <link>http://community.dev/articles/learning-at-mendicant-university</link>
+      <guid>http://community.dev/articles/learning-at-mendicant-university</guid>
     </item>
     <item>
       <title>Newman: Because the mail never stops!</title>
@@ -360,8 +360,8 @@ appointments.to_a
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Fri, 03 Feb 2012 02:27:44 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/newman-the-mail-never-stops</link>
-      <guid>http://community.mendicantuniversity.org/articles/newman-the-mail-never-stops</guid>
+      <link>http://community.dev/articles/newman-the-mail-never-stops</link>
+      <guid>http://community.dev/articles/newman-the-mail-never-stops</guid>
     </item>
     <item>
       <title>W3Clove is now charity-driven</title>
@@ -371,8 +371,8 @@ appointments.to_a
 </description>
       <author>jaimeiniesta@gmail.com (Jaime Iniesta)</author>
       <pubDate>Wed, 01 Feb 2012 12:02:46 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/w3clove-is-now-charity-driven</link>
-      <guid>http://community.mendicantuniversity.org/articles/w3clove-is-now-charity-driven</guid>
+      <link>http://community.dev/articles/w3clove-is-now-charity-driven</link>
+      <guid>http://community.dev/articles/w3clove-is-now-charity-driven</guid>
     </item>
     <item>
       <title>Results from the January 2012 core skills course</title>
@@ -381,8 +381,8 @@ appointments.to_a
 </description>
       <author>gregory_brown@letterboxes.org (Gregory Brown)</author>
       <pubDate>Tue, 31 Jan 2012 18:22:45 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/results-from-the-january-2012-core-skill</link>
-      <guid>http://community.mendicantuniversity.org/articles/results-from-the-january-2012-core-skill</guid>
+      <link>http://community.dev/articles/results-from-the-january-2012-core-skill</link>
+      <guid>http://community.dev/articles/results-from-the-january-2012-core-skill</guid>
     </item>
     <item>
       <title>Learning to Program: How I did it, and why you (probably) should</title>
@@ -395,8 +395,8 @@ appointments.to_a
 </description>
       <author>brandon.hays@gmail.com (Brandon Hays)</author>
       <pubDate>Mon, 30 Jan 2012 23:50:56 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/learning-to-program-how-i-did-it-and-why</link>
-      <guid>http://community.mendicantuniversity.org/articles/learning-to-program-how-i-did-it-and-why</guid>
+      <link>http://community.dev/articles/learning-to-program-how-i-did-it-and-why</link>
+      <guid>http://community.dev/articles/learning-to-program-how-i-did-it-and-why</guid>
     </item>
     <item>
       <title>I'm learning vim. Here's how I'm doing it.</title>
@@ -407,8 +407,8 @@ appointments.to_a
 </description>
       <author>chris@geihsler.net (Chris Geihsler)</author>
       <pubDate>Mon, 30 Jan 2012 22:10:29 +0000</pubDate>
-      <link>http://community.mendicantuniversity.org/articles/im-learning-vim-heres-how-im-doing-it</link>
-      <guid>http://community.mendicantuniversity.org/articles/im-learning-vim-heres-how-im-doing-it</guid>
+      <link>http://community.dev/articles/im-learning-vim-heres-how-im-doing-it</link>
+      <guid>http://community.dev/articles/im-learning-vim-heres-how-im-doing-it</guid>
     </item>
   </channel>
 </rss>
